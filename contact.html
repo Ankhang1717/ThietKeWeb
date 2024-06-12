@@ -28,6 +28,39 @@
 	<link rel="stylesheet" href="css/nouislider.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
+	
+	<style>
+		/* iframe {
+			max-width: 100%;
+			height: 450px;
+		} */
+
+		.row {
+			margin: 0 auto;
+			max-width: 1260px; /* Adjust as needed */
+			padding: 0 15px;  /* Adjust as needed */
+		}
+
+		/* Adjust the form for a more compact layout */
+		.contact_form .form-group {
+			margin-bottom: 15px;
+		}
+
+		.contact_form .col-md-6 {
+			padding: 0 15px;
+		}
+
+		.contact_form .col-md-12 {
+			padding: 0 15px;
+		}
+
+		/* Adjusting container padding */
+		.container {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+    </style>
+
 </head>
 
 <body>
@@ -77,7 +110,7 @@
 								</ul>
 							</li>
 							<li class="nav-item active"><a class="nav-link" href="contact.html">Liên hệ</a></li>
-							<li class="nav-item"><a class="nav-link" href="tuyendung.html">Tuyển dụng</a></li>
+							<li class="nav-item"><a class="nav-link" href="chinhsach.html">Chính sách</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="nav-item active"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
@@ -119,13 +152,15 @@
 
 	<!--================Contact Area =================-->
 	<section class="contact_area section_gap_bottom">
+		<br>
 		<div class="container">
-			<div id="mapBox" class="mapBox" data-lat="40.701083" data-lon="-74.1522848" data-zoom="13" data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia."
-			 data-mlat="40.701083" data-mlon="-74.1522848">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.5883669608747!2d105.82623827476868!3d21.009131388453373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac800f450807%3A0x419a49bcd94b693a!2zSOG7jWMgVmnhu4duIE5nw6JuIEjDoG5n!5e0!3m2!1svi!2s!4v1718158582491!5m2!1svi!2s" width="1100" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
+			<br>
 			<div class="row">
 				<div class="col-lg-3">
 					<div class="contact_info">
+						<h3>THÔNG TIN LIÊN HỆ</h3> <br>
 						<div class="info_item">
 							<i class="lnr lnr-home"></i>
 							<h6>Hà Nội, Việt Nam</h6>
@@ -144,6 +179,7 @@
 					</div>
 				</div>
 				<div class="col-lg-9">
+					<h3 class="text-center">GỬI THÔNG TIN</h3> <br>
 					<form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
 						<div class="col-md-6">
 							<div class="form-group">
