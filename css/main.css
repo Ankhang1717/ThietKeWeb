@@ -4164,6 +4164,59 @@ label {
   border-radius: 5px;
   border: none; }
 
+  /* CSS cho Size Guide */
+.sizeguide img {
+  display: none;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Kiểu mặc định cho Size Guide */
+.ml-size__size-guide {
+  color: inherit; /* Sử dụng màu hiện tại của phần tử cha */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Kiểu khi di chuột qua Size Guide */
+.ml-size__size-guide:hover {
+  color: #007bff; /* Màu xanh khi di chuột qua */
+  text-decoration: underline; /* Gạch chân khi di chuột qua */
+}
+
+#toggleSizeGuide:checked + label + #sizeGuideImage {
+  display: block;
+}
+
+
+.size-select {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 24px;
+  margin-top: 0px;
+}
+
+.size-select label {
+  font-size: 14px;
+  color: #777777;
+  color: #777777;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.size-select select {
+  font-size: 14px;
+  padding: 8px;
+  width: 76px;
+  border: 1px solid #eeeeee;
+  border-radius: 3px;
+  padding-left: 10px;
+}
+
+
 /* End Single Product Area css
 ============================================================================================ */
 /* Cart Area css
@@ -5791,3 +5844,4 @@ label {
     color: #ffba00; }
 
 /*# sourceMappingURL=main.css.map */
+

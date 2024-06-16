@@ -49,12 +49,12 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Trang chủ</a></li>
-							<li class="nav-item submenu dropdown">
+							<li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+							<li class="nav-item submenu dropdown active">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Sản phẩm</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="category.html">Loại sản phẩm</a></li>
+									<li class="nav-item active"><a class="nav-link" href="category.html">Loại sản phẩm</a></li>
 									<li class="nav-item"><a class="nav-link" href="checkout.html">Thanh toán sản phẩm</a></li>
 									<li class="nav-item"><a class="nav-link" href="cart.html">Giỏ hàng</a></li>
 									<li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
@@ -145,17 +145,48 @@
 							<li><a href="#"><span>Tình trạng</span> : Còn hàng</a></li>
 						</ul>
 						<p></p>
+						<!-- Start of size-select -->
+						<div class="size-select">
+							<label for="shoeSize">Chọn size:</label>
+							<select id="shoeSize" name="shoeSize">
+								<!-- Tạo các option từ 38 đến 44 -->
+								<script>
+									// Số bắt đầu và kết thúc
+									var startSize = 38;
+									var endSize = 44;
+									// Bước tăng size
+									var step = 0.5;
+	
+									// Tạo các option từ startSize đến endSize với bước nhảy là step
+									for (var size = startSize; size <= endSize; size += step) {
+										var option = document.createElement('option');
+										option.value = size;
+										option.textContent = size;
+										document.getElementById('shoeSize').appendChild(option);
+									}
+								</script>
+							</select>
+						</div>						
+                        <!-- End of size-select -->
 						<div class="product_count">
 							<label for="qty">Số lượng:</label>
 							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
 							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
 							 class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;
-							&amp; sst > 0 ) result.value--;return false;"
+							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 0 ) result.value--;return false;"
 							 class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
 						</div>
+						<!-- Start of Size Guide -->
+						<div class="sizeguide">
+							<input type="checkbox" id="toggleSizeGuide" style="display:none;">
+							<label for="toggleSizeGuide" class="ml-size__size-guide" style="cursor:pointer;">Size Guide</label>
+							<img id="sizeGuideImage" src="img/size/nikesize.png" alt="Size Guide">
+						</div>
+						<!-- End of Size Guide -->
+						
+						
 						<div class="card_area d-flex align-items-center">
-							<a class="primary-btn" href="#">Add to Cart</a>
+							<a class="primary-btn" href="#">Thêm vào giỏ hàng</a>
 							<a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
 							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
 						</div>
@@ -171,38 +202,32 @@
 		<div class="container">
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
 				<li class="nav-item">
-					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
+					<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Mô tả</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-					 aria-selected="false">Specification</a>
+					 aria-selected="false">Thông số kỹ thuật</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-					 aria-selected="false">Comments</a>
+					 aria-selected="false">Bình luận</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link active" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review"
+					<a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review"
 					 aria-selected="false">Reviews</a>
 				</li>
 			</ul>
 			<div class="tab-content" id="myTabContent">
-				<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
-					<p>Beryl Cook is one of Britain’s most talented and amusing artists .Beryl’s pictures feature women of all shapes
-						and sizes enjoying themselves .Born between the two world wars, Beryl Cook eventually left Kendrick School in
-						Reading at the age of 15, where she went to secretarial school and then into an insurance office. After moving to
-						London and then Hampton, she eventually married her next door neighbour from Reading, John Cook. He was an
-						officer in the Merchant Navy and after he left the sea in 1956, they bought a pub for a year before John took a
-						job in Southern Rhodesia with a motor company. Beryl bought their young son a box of watercolours, and when
-						showing him how to use it, she decided that she herself quite enjoyed painting. John subsequently bought her a
-						child’s painting set for her birthday and it was with this that she produced her first significant work, a
-						half-length portrait of a dark-skinned lady with a vacant expression and large drooping breasts. It was aptly
-						named ‘Hangover’ by Beryl’s husband and</p>
-					<p>It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we are seeing
-						more and more recipe books and Internet websites that are dedicated to the act of cooking for one. Divorce and
-						the death of spouses or grown children leaving for college are all reasons that someone accustomed to cooking for
-						more than one would suddenly need to learn how to adjust all the cooking practices utilized before into a
-						streamlined plan of cooking that is more efficient for one person creating less</p>
+				<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+					<p>NIKE TIEMPO LEGEND 10 ELITE FG MAD BRILLIANCE</p>
+					<p>Đầu tháng 7/2023, Nike chính thức trình làng thế hệ thứ 10 của dòng giày đá banh huyền thoại Tiempo.
+						Lần đầu tiên trong lịch sử, nhà Swoosh đã loại bỏ chất liệu da tự nhiên trên upper của dòng giày này, 
+						thay vào đó hãng sử dụng loại chất liệu FlyTouch hoàn toàn mới. Nhờ cải tiến quan trọng này đã biến 
+						Legend 10 trở thành thế hệ Tiempo nhẹ nhất từ trước đến nay mà bạn có thể sở hữu!</p>
+					<p>"Mad Brilliance Pack" sẽ là bộ sưu tập giày bóng đá chính của Nike tại kỳ EURO và Copa Amercia 2024 
+						vào mùa hè này. Sở hữu phối màu "Pink Foam/Black" đầy bắt mắt, mẫu giày đá bóng Nike Tiempo Legend 10 
+						"Mad Brilliance Pack" sẽ được những ngôi sao hàng đầu nhà Swoosh mang trên chân như Virgil Van Dijk, 
+						Jamal Musiala, Frenkie De Jong, Thibaut Courtois, Ronald Araujo, William Saliba…</p>
 				</div>
 				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 					<div class="table-responsive">
@@ -210,66 +235,66 @@
 							<tbody>
 								<tr>
 									<td>
-										<h5>Width</h5>
+										<h5>Năm sản xuất</h5>
 									</td>
 									<td>
-										<h5>128mm</h5>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<h5>Height</h5>
-									</td>
-									<td>
-										<h5>508mm</h5>
+										<h5>2024</h5>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<h5>Depth</h5>
+										<h5>Chất liệu</h5>
 									</td>
 									<td>
-										<h5>85mm</h5>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<h5>Weight</h5>
-									</td>
-									<td>
-										<h5>52gm</h5>
+										<h5>FlyTouch Plus - da tổng hợp thay thế da Kangaroo</h5>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<h5>Quality checking</h5>
+										<h5>Công nghệ</h5>
 									</td>
 									<td>
-										<h5>yes</h5>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<h5>Freshness Duration</h5>
-									</td>
-									<td>
-										<h5>03days</h5>
+										<h5>Cổ thun Flyknit ôm chân, khuôn đế thiết kế mới bám sân, lót giày Nike-Grip chống trượt và đường kẻ Microdots giúp người chơi kiểm soát tốt hơn.</h5>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<h5>When packeting</h5>
+										<h5>Trọng lượng</h5>
 									</td>
 									<td>
-										<h5>Without touch of hand</h5>
+										<h5>205 gram/chiếc (Size 41)</h5>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<h5>Each Box contains</h5>
+										<h5>Phong cách</h5>
 									</td>
 									<td>
-										<h5>60pcs</h5>
+										<h5>Kiểm soát, kĩ thuật</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>Vị trí</h5>
+									</td>
+									<td>
+										<h5>Hậu vệ / Tiền vệ trung tâm</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>Form giày</h5>
+									</td>
+									<td>
+										<h5>Phù hợp chân bè.</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>Cầu thủ đại diện</h5>
+									</td>
+									<td>
+										<h5>F. De Jong, Van Dijk, R. Araujo</h5>
 									</td>
 								</tr>
 							</tbody>
@@ -291,9 +316,7 @@
 											<a class="reply_btn" href="#">Reply</a>
 										</div>
 									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
+									<p>Giày ngon vcl</p>
 								</div>
 								<div class="review_item reply">
 									<div class="media">
@@ -306,9 +329,7 @@
 											<a class="reply_btn" href="#">Reply</a>
 										</div>
 									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
+									<p>Ngon thật</p>
 								</div>
 								<div class="review_item">
 									<div class="media">
@@ -321,45 +342,43 @@
 											<a class="reply_btn" href="#">Reply</a>
 										</div>
 									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
+									<p>Xịn</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-6">
 							<div class="review_box">
-								<h4>Post a comment</h4>
+								<h4>Để lại bình luận</h4>
 								<form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
 									<div class="col-md-12">
 										<div class="form-group">
-											<input type="text" class="form-control" id="name" name="name" placeholder="Your Full name">
+											<input type="text" class="form-control" id="name" name="name" placeholder="Họ và tên">
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
-											<input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
+											<input type="email" class="form-control" id="email" name="email" placeholder="Địa chỉ Email">
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
-											<input type="text" class="form-control" id="number" name="number" placeholder="Phone Number">
+											<input type="text" class="form-control" id="number" name="number" placeholder="Số điện thoại">
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
-											<textarea class="form-control" name="message" id="message" rows="1" placeholder="Message"></textarea>
+											<textarea class="form-control" name="message" id="message" rows="1" placeholder="Bình luận"></textarea>
 										</div>
 									</div>
 									<div class="col-md-12 text-right">
-										<button type="submit" value="submit" class="btn primary-btn">Submit Now</button>
+										<button type="submit" value="submit" class="btn primary-btn">Gửi</button>
 									</div>
 								</form>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
+				<div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="row total_rate">
@@ -690,10 +709,8 @@
 						<h6>Follow Us</h6>
 						<p>Let us be social</p>
 						<div class="footer-social d-flex align-items-center">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-dribbble"></i></a>
-							<a href="#"><i class="fa fa-behance"></i></a>
+							<a href="https://www.facebook.com/profile.php?id=61561220214597&is_tour_dismissed"><i class="fa fa-facebook"></i></a>
+							<a href="https://www.instagram.com/tiny_sports12?igsh=bHQ5YnlocmFic3Fh&utm_source=qr"><i class="fa fa-instagram"></i></a>
 						</div>
 					</div>
 				</div>
