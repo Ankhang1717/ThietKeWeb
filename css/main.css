@@ -1501,12 +1501,26 @@ h1, h2, h3, h4, h5, h6 {
       .active-product-area .owl-nav .owl-next {
         margin-top: -20px;
         right: 28%; } }
-
+/* chỉnh hover ảnh */
 .single-product {
-  margin-bottom: 50px; }
+  /* overflow: hidden; */
+  margin-bottom: 50px;
+  position: relative;
+  text-align: center;
+  background: #f9f9ff;
+  padding: 10px;
+  border: 1px solid #eee;
+  transition: box-shadow 0.3s ease-in-out; }
   .single-product img {
     margin-bottom: 20px;
-    width: 100%; }
+    width: 100%; 
+    transition: transform 0.5s ease;}
+    .single-product:hover img {
+      transform: scale(1.15); /* Phóng to ảnh 20% */
+  }
+  .single-product:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
   .single-product .product-details h6 {
     font-size: 16px;
     text-transform: uppercase; }
