@@ -28,37 +28,53 @@
 	<link rel="stylesheet" href="css/nouislider.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
-	
-	<style>
-		/* iframe {
-			max-width: 100%;
-			height: 450px;
-		} */
 
-		.row {
-			margin: 0 auto;
-			max-width: 1260px; /* Adjust as needed */
-			padding: 0 15px;  /* Adjust as needed */
-		}
+    <style>
+        
+        .list-job .item-job .desc-job .-ap {
+            margin-right: 5px;
+            color: #000;
+        }
+        .-ap, .ap {
+            font-family: 'ap' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .desc-job {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .desc-job .-ap {
+            margin-right: 10px;
+            font-size: 18px;
+        }
 
-		/* Adjust the form for a more compact layout */
-		.contact_form .form-group {
-			margin-bottom: 15px;
-		}
+        .item-h4 a {
+        color: #000;
+        text-decoration: none;
+        }
+        .item-h4 a:hover {
+            color: #ff6c00;
+            text-decoration: underline;
+        }
 
-		.contact_form .col-md-6 {
-			padding: 0 15px;
-		}
+        .jobs {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .location-icon, .time-icon {
+            margin-right: 5px;
+            width: 15px; 
+            height: 15px; 
+        }
 
-		.contact_form .col-md-12 {
-			padding: 0 15px;
-		}
-
-		/* Adjusting container padding */
-		.container {
-			padding-left: 15px;
-			padding-right: 15px;
-		}
     </style>
 
 </head>
@@ -79,7 +95,7 @@
 						<span class="icon-bar"></span>
 					</button>
 					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
 							<li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
 							<li class="nav-item submenu dropdown">
@@ -109,7 +125,7 @@
 									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
 								</ul>
 							</li>
-							<li class="nav-item active"><a class="nav-link" href="contact.html">Liên hệ</a></li>
+							<li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Giới thiệu</a>
@@ -121,7 +137,7 @@
 
 								</ul>
 							</li>
-							<li class="nav-item"><a class="nav-link" href="tuyendung.html">Tuyển Dụng</a></li>
+							<li class="nav-item active"><a class="nav-link" href="tuyendung.html">Tuyển Dụng</a></li>
 
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
@@ -151,73 +167,69 @@
 		<div class="container">
 			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
 				<div class="col-first">
-					<h1>Contact Us!</h1>
+					<h1>Thông tin chi tiết</h1>
 					<nav class="d-flex align-items-center">
 						<a href="index.html">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
-						<a href="contact.html">Liên hệ</a>
+						<a href="tuyendung.html">Tuyển Dụng</a>
 					</nav>
 				</div>
-			</div>
+			</div>  
 		</div>
 	</section>
 	<!-- End Banner Area -->
 
-	<!--================Contact Area =================-->
-	<section class="contact_area section_gap_bottom">
+	<div class="container" style="padding-top: 20px; padding-bottom: 40px; margin: 30px auto;">
 		<br>
-		<div class="container" style = "padding-top: 30px;">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.5883669608747!2d105.82623827476868!3d21.009131388453373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac800f450807%3A0x419a49bcd94b693a!2zSOG7jWMgVmnhu4duIE5nw6JuIEjDoG5n!5e0!3m2!1svi!2s!4v1718158582491!5m2!1svi!2s" width="1100" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-			</div>
-			<br>
-			<div class="row" style = "padding-top: 20px;">
-				<div class="col-lg-3">
-					<div class="contact_info">
-						<h3>THÔNG TIN LIÊN HỆ</h3> <br>
-						<div class="info_item">
-							<i class="lnr lnr-home"></i>
-							<h6>Hà Nội, Việt Nam</h6>
-							<p>12 Chùa Bộc, Quang Trung, Đống Đa</p>
-						</div>
-						<div class="info_item">
-							<i class="lnr lnr-phone-handset"></i>
-							<h6><a href="#">+84 394 666 666</a></h6>
-							<p>Thời gian làm việc: 8:00 đến 21:00 Tất cả các ngày trong tuần</p>
-						</div>
-						<div class="info_item">
-							<i class="lnr lnr-envelope"></i>
-							<h6><a href="#">tinysports@gmail.com</a></h6>
-							<p>Chúng tôi luôn sẵn sàng giải đáp thắc mắc của bạn!</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-9">
-					<h3 class="text-center">GỬI THÔNG TIN</h3> <br>
-					<form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-						<div class="col-md-6">
-							<div class="form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Vui lòng nhập tên" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'">
-							</div>
-							<div class="form-group">
-								<input type="email" class="form-control" id="email" name="email" placeholder="Vui lòng nhập email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'">
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<textarea class="form-control" name="message" id="message" rows="1" placeholder="Vui lòng nhập thông điệp" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'"></textarea>
-							</div>
-						</div>
-						<div class="col-md-12 text-right">
-							<button type="submit" value="submit" class="primary-btn">Gửi</button>
-						</div>
-					</form>
-				</div>
-			</div>
+		<h2 class ="text-center">CƠ HỘI VIỆC LÀM</h2>
+		<div class="row">
+            <div id ="main-wrap">
+                <div class="list-job">
+                    <div class="jobs">
+                        <h4 class="item-h4">
+                            <a href="#">Quản lý cửa hàng (Full-time)</a>
+                        </h4>
+                        <p class="desc-job">
+                            <img src="img/icons8-location-50.png" alt="Location Icon" class="location-icon">
+                            <a class="_blank">12 Chùa Bộc, Quang Trung, Đống Đa</a>
+                        </p>
+                        <p class="desc-job">
+                            <img src="img/icons8-time-50.png" alt="Time Icon" class="time-icon">
+                            <a class="_blank">01/06 - 30/06/2024</a>
+                        </p>
+                        <a href="#" class="genric-btn primary-border">Apply now</a>
+                    </div>
+                    <div class="jobs">
+                        <h4 class="item-h4">
+                            <a href="#">Nhân viên bán hàng (Part-time)</a>
+                        </h4>
+                        <p class="desc-job">
+                        <img src="img/icons8-location-50.png" alt="Location Icon" class="location-icon">
+                            <a class="_blank">12 Chùa Bộc, Quang Trung, Đống Đa</a>
+                        </p>
+                        <p class="desc-job">
+                            <img src="img/icons8-time-50.png" alt="Time Icon" class="time-icon">
+                            <a class="_blank">01/06 - 30/06/2024</a>
+                        </p>
+                        <a href="#" class="genric-btn primary-border">Apply now</a>
+                    </div>
+                    <div class="jobs">
+                        <h4 class="item-h4">
+                            <a href="#">Nhân thu ngân (Full-time)</a>
+                        </h4>
+                        <p class="desc-job">
+                            <img src="img/icons8-location-50.png" alt="Location Icon" class="location-icon">
+                            <a class="_blank">12 Chùa Bộc, Quang Trung, Đống Đa</a>
+                        </p>
+                        <p class="desc-job">
+                            <img src="img/icons8-time-50.png" alt="Time Icon" class="time-icon">
+                            <a class="_blank">01/06 - 30/06/2024</a>
+                        </p>
+                        <a href="#" class="genric-btn primary-border">Apply now</a>
+                    </div>
+                </div>
+            </div>
 		</div>
-	</section>
-	<!--================Contact Area =================-->
+	</div>
 
 	<!-- start footer Area -->
 	<footer class="footer-area section_gap">
@@ -234,7 +246,7 @@
 				<div class="col-lg-4  col-md-6 col-sm-6">
 					<div class="single-footer-widget">
 						<h6>Newsletter</h6>
-						<p>Stay update with our latest</p>
+						<p>Nhận tin mới nhất từ chúng tôi</p>
 						<div class="" id="mc_embed_signup">
 
 							<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
@@ -242,7 +254,7 @@
 
 								<div class="d-flex flex-row">
 
-									<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
+									<input class="form-control" name="EMAIL" placeholder="Vui lòng nhập email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
 									 required="" type="email">
 
 
@@ -280,8 +292,10 @@
 						<h6>Follow Us</h6>
 						<p>Let us be social</p>
 						<div class="footer-social d-flex align-items-center">
-							<a href="https://www.facebook.com/profile.php?id=61561220214597&is_tour_dismissed"><i class="fa fa-facebook"></i></a>
-							<a href="https://www.instagram.com/tiny_sports12?igsh=bHQ5YnlocmFic3Fh&utm_source=qr"><i class="fa fa-instagram"></i></a>
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
 						</div>
 					</div>
 				</div>
