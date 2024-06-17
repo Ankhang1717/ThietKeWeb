@@ -1507,7 +1507,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 50px;
   position: relative;
   text-align: center;
-  background: #f9f9ff;
+  background: #edf1fd;
   padding: 10px;
   border: 1px solid #eee;
   transition: box-shadow 0.3s ease-in-out; }
@@ -1519,7 +1519,7 @@ h1, h2, h3, h4, h5, h6 {
       transform: scale(1.15); /* Phóng to ảnh 20% */
   }
   .single-product:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(100, 72, 255, 0.449);
 }
   .single-product .product-details h6 {
     font-size: 16px;
