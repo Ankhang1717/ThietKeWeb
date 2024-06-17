@@ -1346,7 +1346,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   .features-area {
     padding-top: 0; } }
-.features-area .col-lg-3:last-child .single-features {
+.features-area .col-lg-3:last-child .single-features {  
   border-right: 0; }
   @media (max-width: 575px) {
     .features-area .col-lg-3:last-child .single-features {
@@ -3486,7 +3486,7 @@ label {
 /* Feature Product Area css
 ============================================================================================ */
 .feature_product_area .main_box {
-  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 10px 30px 0px rgba(148, 79, 132, 0.05);
   padding-top: 30px;
   padding-bottom: 30px;
   margin-top: -50px;
