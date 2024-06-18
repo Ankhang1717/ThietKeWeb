@@ -731,29 +731,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/main.js"></script>
 	
 	<script>
-		//lọc sp theo thương hiệu
-		document.addEventListener("DOMContentLoaded", function() {
-		const products = document.querySelectorAll(".single-product");
-		const brandFilterForm = document.getElementById("brand-filter");
-		brandFilterForm.addEventListener("change", filterProducts);
-
-		function filterProducts() {
-		const selectedBrand = document.querySelector('input[name="brand"]:checked')?.value;
-
-		products.forEach(product => {
-			const brand = product.getAttribute('data-brand');
-			if (!selectedBrand || brand === selectedBrand) {
-		product.parentElement.style.display = "block"; // Show product
-		} else {
-		product.parentElement.style.display = "none"; // Hide product
-		}
-		});
-		showFirstPageProducts();
-	}
-		}
-);
-
-	// phân trang
+		// phân trang
 	document.addEventListener('DOMContentLoaded', function() {
     const products = document.querySelectorAll('.single-product');
     const pageLinks = document.querySelectorAll('.page-link');
@@ -806,6 +784,49 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	showFirstPageProducts();
     markCurrentPageActive(firstPageLink);
 });
+		//lọc sp theo thương hiệu
+		document.addEventListener("DOMContentLoaded", function() {
+		const products = document.querySelectorAll(".single-product");
+		const brandFilterForm = document.getElementById("brand-filter");
+		brandFilterForm.addEventListener("change", filterProducts);
+
+		function filterProducts() {
+    const selectedBrand = document.querySelector('input[name="brand"]:checked')?.value;
+
+    // Ẩn tất cả sản phẩm trước khi áp dụng bộ lọc
+    products.forEach(product => {
+        const brand = product.getAttribute('data-brand');
+        if (!selectedBrand || brand === selectedBrand) {
+            product.parentElement.style.display = "block"; // Hiển thị sản phẩm thỏa mãn điều kiện lọc
+        } else {
+            product.parentElement.style.display = "none"; // Ẩn sản phẩm không thỏa mãn
+        }
+    });
+
+    // Đặt lại trang hiện tại về trang đầu tiên và hiển thị các sản phẩm của trang đó
+    const firstPageLink = pageLinks[0];
+    markCurrentPageActive(firstPageLink);
+    showFirstPageProducts();
+}
+
+	function showFirstPageProducts() {
+		const itemsPerPage = 6;
+		let countVisibleProducts = 0;
+    products.forEach((product, index) => {
+        if (product.parentElement.style.display !== 'none') {
+            if (countVisibleProducts < itemsPerPage) {
+                product.parentElement.style.display = 'block';
+                countVisibleProducts++;
+            } else {
+                product.parentElement.style.display = 'none';
+            }
+        }
+    });
+}
+}
+);
+
+	
 
 
 	</script>
