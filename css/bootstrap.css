@@ -6218,7 +6218,7 @@ button.close {
 .carousel-control-next:hover,
 .carousel-control-prev:focus,
 .carousel-control-prev:hover {
-    color: #fff;
+    color:#0062cc;
     text-decoration: none;
     outline: 0;
     opacity: .9
