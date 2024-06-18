@@ -105,7 +105,7 @@
 
     <!-- Start Banner Area -->
     <section class="banner-area organic-breadcrumb">
-        <div class="container">
+        <!-- <div class="container">
             <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
                 <div class="col-first">
                     <h1>Shop Category page</h1>
@@ -116,7 +116,7 @@
                     </nav>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
     <!-- End Banner Area -->
 
@@ -125,6 +125,10 @@
         <div class="container">
             <div class="row s_product_inner">
                 <div class="col-lg-6">
+                    <div class = "product-name-m">
+                    <h3>NIKE TIEMPO LEGEND 10 ELITE FG Mad BRILLIANCE</h3>
+                    <h2>6.000.000 VND</h2>
+                </div>
                     <div class="s_Product_carousel">
                         <div class="single-prd-item">
                             <img class="img-fluid" src="../img/product/football/nike/tiempo/tiempo_green_1.jpg" alt="">
@@ -139,13 +143,14 @@
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="s_product_text">
+                        <div class = "product-name">
                         <h3>NIKE TIEMPO EMERALD LEGEND 10 ELITE</h3>
                         <h2>4.500.000 VND</h2>
+                    </div>
                         <ul class="list">
                             <li><a class="active" href="#"><span>Loại</span> : Giày đá bóng</a></li>
                             <li><a href="#"><span>Tình trạng</span> : Còn hàng</a></li>
                         </ul>
-                        <p></p>
                         <!-- Start of size-select -->
                         <div class="size-select">
                             <label for="shoeSize">Chọn size:</label>
@@ -625,6 +630,49 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			</div>
 		</div>
 	</footer>
+
+    <script>
+		// check độ rộng của page nếu là màn mobile thì ẩn tên sản phẩm ở dưới , và hiện tên sp lên trên image
+		if (window.matchMedia("only screen and (max-width: 760px)").matches) {
+			const b = document.getElementsByClassName('product-name')
+			for (var i = 0; i < b.length; i++) {
+				b[i].style.display = 'none'
+			}
+			const a = document.getElementsByClassName('product-name-m')
+			for (var i = 0; i < a.length; i++) {
+				a[i].style.display = 'block'
+			}
+
+            // const c = document.getElementsByClassName('product-options')
+			// for (var i = 0; i < c.length; i++) {
+			// 	c[i].style.display = 'none'
+			// }
+			// const d = document.getElementsByClassName('product-options-new')
+			// for (var i = 0; i < d.length; i++) {
+			// 	d[i].style.display = 'block'
+			// }
+		} else {
+			const b = document.getElementsByClassName('product-name')
+			for (var i = 0; i < b.length; i++) {
+				b[i].style.display = 'block'
+			}
+
+			const a = document.getElementsByClassName('product-name-m')
+			for (var i = 0; i < a.length; i++) {
+				a[i].style.display = 'none'
+			}
+
+            // const c = document.getElementsByClassName('product-options')
+			// for (var i = 0; i < c.length; i++) {
+			// 	c[i].style.display = 'block'
+			// }
+			// const d = document.getElementsByClassName('product-options-new')
+			// for (var i = 0; i < d.length; i++) {
+			// 	d[i].style.display = 'none'
+			// }
+
+		}
+	</script>
     <!-- End footer Area -->
 
     <script src="../js/vendor/jquery-2.2.4.min.js"></script>
