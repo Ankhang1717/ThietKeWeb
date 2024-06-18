@@ -5894,7 +5894,29 @@ label {
       font-size: 14px;
       color: #888;
   }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    padding: 0px 0;
+  }
   
+  .pagination a {
+    margin: 0 5px;
+    padding: 1px 5px;
+    border: 1px solid #ddd;
+    color: #333;
+    cursor: pointer;
+  }
   
+  .pagination a.active {
+    background-color: #333;
+    color: #fff;
+  }
+  .page-link.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
 /*# sourceMappingURL=main.css.map */
 
