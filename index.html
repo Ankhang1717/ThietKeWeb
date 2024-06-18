@@ -39,10 +39,64 @@
 .single-footer-widget p {
     text-align: justify; /* Justify the paragraph text */
   }
+
+/* Popup container */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Popup content */
+.popup-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Popup Image */
+.popup-content img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+
 	</style>
 </head>
 
 <body>
+
+	<div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="close-btn">&times;</span>
+            <img src="img/popup.jpg" alt="Product Image">
+        </div>
+    </div>
+
+    <script src="js/popup.js"></script>
+
 
 	<!-- Start Header Area -->
 	<header class="header_area sticky-header">
@@ -100,6 +154,7 @@
 
 								</ul>
 							</li>
+							<li class="nav-item"><a class="nav-link" href="tuyendung.html">Tuyển Dụng</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
@@ -1181,7 +1236,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<!--gmaps Js-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE$&loading=async"></script>
 	<script src="js/gmaps.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
