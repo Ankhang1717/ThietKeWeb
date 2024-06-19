@@ -29,7 +29,9 @@
     <link rel="stylesheet" href="../css/ion.rangeSlider.css" />
     <link rel="stylesheet" href="../css/ion.rangeSlider.skinFlat.css" />
     <link rel="stylesheet" href="../css/main.css">
-    
+
+
+
 </head>
 
 <body>
@@ -106,7 +108,7 @@
     <!-- Start Banner Area -->
     <section class="banner-area organic-breadcrumb">
         <div class="container">
-            <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+            <!-- <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
                 <div class="col-first">
                     <h1>Shop Category page</h1>
                     <nav class="d-flex align-items-center">
@@ -115,7 +117,7 @@
                         <a href="../category.html">Loại sản phẩm</a>
                     </nav>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <!-- End Banner Area -->
@@ -125,28 +127,49 @@
         <div class="container">
             <div class="row s_product_inner">
                 <div class="col-lg-6">
+                    <div class = "product-name-m">
+                        <h3>NIKE TIEMPO LEGEND 10 ELITE FG Mad BRILLIANCE</h3>
+                        <h2>6.000.000 VND</h2>
+                    </div>
                     <div class="s_Product_carousel">
                         <div class="single-prd-item">
-                            <img class="img-fluid" src="../img/product/football/nike/tiempo/tiempo_pink_1.jpg" alt="">
+                            <img class="img-fluid" src="../img/product/football/nike/tiempo/tiempo_pink_1.jpg" alt="Sản phẩm 1">
                         </div>
                         <div class="single-prd-item">
-                            <img class="img-fluid" src="../img/product/football/nike/tiempo/tiempo_pink_2.jpg" alt="">
+                            <img class="img-fluid" src="../img/product/football/nike/tiempo/tiempo_pink_2.jpg" alt="Sản phẩm 2">
                         </div>
                         <div class="single-prd-item">
-                            <img class="img-fluid" src="../img/product/football/nike/tiempo/tiempo_pink_3.jpg" alt="">
+                            <img class="img-fluid" src="../img/product/football/nike/tiempo/tiempo_pink_3.jpg" alt="Sản phẩm 3">
                         </div>
                     </div>
+                
+                    <div id="popup2" class="popup2">
+                        <div class="popup2-content">
+                            <span class="close-btn2" id="close-btn2">&times;</span>
+                            <span class="prev-btn" id="prev-btn">&#10094;</span>
+                            <img id="popup2-img" src="" alt="Popup Image">
+                            <span class="next-btn" id="next-btn">&#10095;</span>
+                        </div>
+                    </div>
+                
+                    <script src="../js/popup2.js"></script>
+
+
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="s_product_text">
+                    <div class = "product-name">
                         <h3>NIKE TIEMPO LEGEND 10 ELITE FG Mad BRILLIANCE</h3>
                         <h2>6.000.000 VND</h2>
+                    </div>
                         <ul class="list">
                             <li><a class="active" href="#"><span>Loại</span> : Giày đá bóng</a></li>
                             <li><a href="#"><span>Tình trạng</span> : Còn hàng</a></li>
                         </ul>
-                        <p></p>
+                        <!-- <p></p> -->
                         <!-- Start of size-select -->
+                    
+                        <div class = "product-options">
                         <div class="size-select">
                             <label for="shoeSize">Chọn size:</label>
                             <select id="shoeSize" name="shoeSize">
@@ -173,6 +196,7 @@
 							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 0 ) result.value--;return false;"
 							 class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
 						</div>
+                    </div>
                         <div class="sizeguide">
 							<input type="checkbox" id="toggleSizeGuide" style="display:none;">
 							<label for="toggleSizeGuide" class="ml-size__size-guide" style="cursor:pointer;">Size Guide</label>
@@ -183,6 +207,7 @@
                             <a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
                             <a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
                         </div>
+                    
                     </div>
                 </div>
             </div>
@@ -302,12 +327,12 @@
                                         <img src="img/product/review-1.png" alt="">
                                     </div>
                                     <div class="media-body">
-                                        <h4>Blake Ruiz</h4>
-                                        <h5>12th Feb, 2018 at 05:56 pm</h5>
-                                        <a class="reply_btn" href="#">Reply</a>
+                                        <h4>Trịnh Thị Phi Yến</h4>
+                                        <h5>12th June, 2024 at 05:56 pm</h5>
+                                        <a class="reply_btn" href="#">Trả lời</a>
                                     </div>
                                 </div>
-                                <p>Giày ngon vcl</p>
+                                <p>Vừa mua tặng ny. Ny khen lấy khen để</p>
                             </div>
                             <div class="review_item reply">
                                 <div class="media">
@@ -315,25 +340,25 @@
                                         <img src="img/product/review-2.png" alt="">
                                     </div>
                                     <div class="media-body">
-                                        <h4>Blake Ruiz</h4>
-                                        <h5>12th Feb, 2018 at 05:56 pm</h5>
-                                        <a class="reply_btn" href="#">Reply</a>
+                                        <h4>Nguyễn Thị Hải My</h4>
+                                        <h5>12th June, 2024 at 08:45 pm</h5>
+                                        <a class="reply_btn" href="#">Trả lời</a>
                                     </div>
                                 </div>
-                                <p>Ngon thật</p>
+                                <p>Tặng anh với</p>
                             </div>
                             <div class="review_item">
                                 <div class="media">
                                     <div class="d-flex">
-                                        <img src="img/product/review-3.png" alt="">
+                                        <img src="img/Musiala" alt="">
                                     </div>
                                     <div class="media-body">
-                                        <h4>Blake Ruiz</h4>
-                                        <h5>12th Feb, 2018 at 05:56 pm</h5>
-                                        <a class="reply_btn" href="#">Reply</a>
+                                        <h4>Jamal Musiala</h4>
+                                        <h5>14th June, 2024 at 10:56 pm</h5>
+                                        <a class="reply_btn" href="#">Trả lời</a>
                                     </div>
                                 </div>
-                                <p>Xịn</p>
+                                <p>Đi giày này vào đá hay như NTD</p>
                             </div>
                         </div>
                     </div>
@@ -376,24 +401,24 @@
                             <div class="col-6">
                                 <div class="box_total">
                                     <h5>Overall</h5>
-                                    <h4>4.0</h4>
-                                    <h6>(03 Reviews)</h6>
+                                    <h4>5.0</h4>
+                                    <h6>(03 lượt đánh giá)</h6>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="rating_list">
-                                    <h3>Based on 3 Reviews</h3>
+                                    <h3>Dựa vào 3 đánh giá</h3>
                                     <ul class="list">
                                         <li><a href="#">5 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                                 class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
+                                                 class="fa fa-star"></i><i class="fa fa-star"></i> 03</a></li>
                                         <li><a href="#">4 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                                 class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
+                                                 class="fa fa-star"></i><i class="fa fa-star"></i> 00</a></li>
                                         <li><a href="#">3 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                                 class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
+                                                 class="fa fa-star"></i><i class="fa fa-star"></i> 00</a></li>
                                         <li><a href="#">2 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                                 class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
+                                                 class="fa fa-star"></i><i class="fa fa-star"></i> 00</a></li>
                                         <li><a href="#">1 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                                 class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
+                                                 class="fa fa-star"></i><i class="fa fa-star"></i> 00</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -405,7 +430,7 @@
                                         <img src="img/product/review-1.png" alt="">
                                     </div>
                                     <div class="media-body">
-                                        <h4>Blake Ruiz</h4>
+                                        <h4>Jamal Musiala</h4>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -413,9 +438,7 @@
                                         <i class="fa fa-star"></i>
                                     </div>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                    commodo</p>
+                                <p>Nhẹ, êm, đi giày này vào tôi đá hay như NTD lúc nào không hay</p>
                             </div>
                             <div class="review_item">
                                 <div class="media">
@@ -423,7 +446,7 @@
                                         <img src="img/product/review-2.png" alt="">
                                     </div>
                                     <div class="media-body">
-                                        <h4>Blake Ruiz</h4>
+                                        <h4>Trịnh Thị Phi Yến</h4>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -431,9 +454,7 @@
                                         <i class="fa fa-star"></i>
                                     </div>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                    commodo</p>
+                                <p>Ny khen nên đánh giá 5 sao</p>
                             </div>
                             <div class="review_item">
                                 <div class="media">
@@ -441,7 +462,7 @@
                                         <img src="img/product/review-3.png" alt="">
                                     </div>
                                     <div class="media-body">
-                                        <h4>Blake Ruiz</h4>
+                                        <h4>Frenkie De Jong</h4>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -449,16 +470,14 @@
                                         <i class="fa fa-star"></i>
                                     </div>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                    commodo</p>
+                                <p>Ôm chân, nhẹ, thích hợp cho tiền vệ và hậu vệ</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="review_box">
-                            <h4>Add a Review</h4>
-                            <p>Your Rating:</p>
+                            <h4>Thêm đánh giá</h4>
+                            <p>Đánh giá của bạn</p>
                             <ul class="list">
                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -466,30 +485,30 @@
                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
                             </ul>
-                            <p>Outstanding</p>
+                            <p>Tuyệt vời</p>
                             <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Full name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Full name'">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Họ và tên" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Họ và tên'">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Địa chỉ Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Địa chỉ Email'">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="number" name="number" placeholder="Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'">
+                                        <input type="text" class="form-control" id="number" name="number" placeholder="Số điện thoại" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Số điện thoại'">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <textarea class="form-control" name="message" id="message" rows="1" placeholder="Review" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Review'"></textarea></textarea>
+                                        <textarea class="form-control" name="message" id="message" rows="1" placeholder="Đánh giá" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Đánh giá'"></textarea></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12 text-right">
-                                    <button type="submit" value="submit" class="primary-btn">Submit Now</button>
+                                    <button type="submit" value="submit" class="primary-btn">Gửi</button>
                                 </div>
                             </form>
                         </div>
@@ -629,6 +648,48 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			</div>
 		</div>
 	</footer>
+    <script>
+		// check độ rộng của page nếu là màn mobile thì ẩn tên sản phẩm ở dưới , và hiện tên sp lên trên image
+		if (window.matchMedia("only screen and (max-width: 760px)").matches) {
+			const b = document.getElementsByClassName('product-name')
+			for (var i = 0; i < b.length; i++) {
+				b[i].style.display = 'none'
+			}
+			const a = document.getElementsByClassName('product-name-m')
+			for (var i = 0; i < a.length; i++) {
+				a[i].style.display = 'block'
+			}
+
+            // const c = document.getElementsByClassName('product-options')
+			// for (var i = 0; i < c.length; i++) {
+			// 	c[i].style.display = 'none'
+			// }
+			// const d = document.getElementsByClassName('product-options-new')
+			// for (var i = 0; i < d.length; i++) {
+			// 	d[i].style.display = 'block'
+			// }
+		} else {
+			const b = document.getElementsByClassName('product-name')
+			for (var i = 0; i < b.length; i++) {
+				b[i].style.display = 'block'
+			}
+
+			const a = document.getElementsByClassName('product-name-m')
+			for (var i = 0; i < a.length; i++) {
+				a[i].style.display = 'none'
+			}
+
+            // const c = document.getElementsByClassName('product-options')
+			// for (var i = 0; i < c.length; i++) {
+			// 	c[i].style.display = 'block'
+			// }
+			// const d = document.getElementsByClassName('product-options-new')
+			// for (var i = 0; i < d.length; i++) {
+			// 	d[i].style.display = 'none'
+			// }
+
+		}
+	</script>
     <!-- End footer Area -->
 
     <script src="../js/vendor/jquery-2.2.4.min.js"></script>

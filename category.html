@@ -115,7 +115,7 @@
 	<!-- Start Banner Area -->
 	<section class="banner-area organic-breadcrumb">
 		<div class="container">
-			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+			<!-- <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
 				<div class="col-first">
 					<h1>Trang sản phẩm</h1>
 					<nav class="d-flex align-items-center">
@@ -124,7 +124,7 @@
 						<a href="category.html">Loại sản phẩm</a>
 					</nav>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</section>
 	<!-- End Banner Area -->
@@ -135,22 +135,33 @@
 					<div class="head">Loại sản phẩm</div>
 					<ul class="main-categories">
 						<li class="main-nav-list"><a data-toggle="collapse" href="#fruitsVegetable" aria-expanded="false" aria-controls="fruitsVegetable"><span
-								 class="lnr lnr-arrow-right"></span>Giày đá bóng<span class="number">(36)</span></a>
+								 class="lnr lnr-arrow-right"></span>Giày đá bóng<span class="number" id="total-products-span"></span></a>
 							<ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
-								<li class="main-nav-list child"><a href="#">Nike<span class="number">(12)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Adidas<span class="number">(12)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Puma<span class="number">(12)</span></a></li>
+								<li class="main-nav-list child"><a href="loaisp/dabongnike.html">Nike<span class="number" id="nike-count"></span></a></li>
+								<li class="main-nav-list child"><a href="loaisp/dabongadidas.html">Adidas<span class="number" id="adidas-count"></span></a></li>
+								<li class="main-nav-list child"><a href="loaisp/dabongpuma.html">Puma<span class="number" id="puma-count"></span></a></li>
 							</ul>
+							<script src="../js/brand-count.js"></script>
 						</li>
+						<script src="../js/total-product.js"></script>
 
 						<li class="main-nav-list"><a data-toggle="collapse" href="#meatFish" aria-expanded="false" aria-controls="meatFish"><span
-								 class="lnr lnr-arrow-right"></span>Giày chạy bộ<span class="number">(20)</span></a>
+								 class="lnr lnr-arrow-right"></span>Giày chạy bộ<span class="number"></span></a>
 							<ul class="collapse" id="meatFish" data-toggle="collapse" aria-expanded="false" aria-controls="meatFish">
-								<li class="main-nav-list child"><a href="#">Adidas<span class="number">(08)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Nike<span class="number">(07)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Puma<span class="number">(05)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Adidas<span class="number"></span></a></li>
+								<li class="main-nav-list child"><a href="#">Nike<span class="number"></span></a></li>
+								<li class="main-nav-list child"><a href="#">Puma<span class="number"></span></a></li>
 							</ul>
 						</li>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#basketball" aria-expanded="false" aria-controls="fruitsVegetable"><span
+							class="lnr lnr-arrow-right"></span>Giày bóng rổ<span class="number" id="total-products-span"></span></a>
+					   <ul class="collapse" id="basketball" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
+						   <li class="main-nav-list child"><a href="loaisp/bongronike.html">Nike<span class="number" id="nike-count"></span></a></li>
+						   <li class="main-nav-list child"><a href="loaisp/bongroadidas.html">Adidas<span class="number" id="adidas-count"></span></a></li>
+						   <li class="main-nav-list child"><a href="loaisp/bongropuma.html">Puma<span class="number" id="puma-count"></span></a></li>
+					   </ul>
+					   <script src="../js/brand-count.js"></script>
+				   </li>
 					</ul>
 				</div>
 				<div class="sidebar-filter mt-50">
@@ -161,15 +172,15 @@
 							<ul>
 							  <li class="filter-list">
 								<input class="pixel-radio" type="radio" id="adidas" name="brand" value="adidas">
-								<label for="adidas">Adidas<span>(29)</span></label>
+								<label for="adidas">Adidas<span></span></label>
 							  </li>
 							  <li class="filter-list">
 								<input class="pixel-radio" type="radio" id="nike" name="brand" value="nike">
-								<label for="nike">Nike<span>(29)</span></label>
+								<label for="nike">Nike<span></span></label>
 							  </li>
 							  <li class="filter-list">
 								<input class="pixel-radio" type="radio" id="puma" name="brand" value="puma">
-								<label for="puma">Puma<span>(19)</span></label>
+								<label for="puma">Puma<span></span></label>
 							  </li>
 							</ul>
 						</form>
@@ -178,14 +189,14 @@
 						<div class="head">Màu sắc</div>
 						<form action="#">
 							<ul>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="black" name="color"><label for="black">Black<span>(29)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="balckleather" name="color"><label for="balckleather">Yellow<span>(29)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="blackred" name="color"><label for="blackred">Red<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="gold" name="color"><label for="gold">White<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Grey<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Cream<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Green<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Blue<span>(19)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="black" name="color"><label for="black">Black<span></span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="balckleather" name="color"><label for="balckleather">Yellow<span></span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="blackred" name="color"><label for="blackred">Red<span></span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="gold" name="color"><label for="gold">White<span></span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Grey<span></span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Cream<span></span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Green<span></span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Blue<span></span></label></li>
 							</ul>
 						</form>
 					</div>
@@ -211,16 +222,8 @@
 					<div class="sorting">
 						<select id="sort-select">
 							<option value="default">Mặc định</option>
-							<option value="asc">Giá: Thấp đến cao</option>
-							<option value="desc">Giá: Cao đến thấp</option>
-						</select>
-					</div>
-					
-					<div class="sorting mr-auto">
-						<select>
-							<option value="6">Show 6</option>
-							<option value="12">Show 12</option>
-							<option value="24">Show 24</option>
+							<option value="asc">Giá: Tăng dần</option>
+							<option value="desc">Giá: Giảm dần</option>
 						</select>
 					</div>
 				</div>
@@ -229,7 +232,7 @@
 				
 				<section class="lattest-product-area pb-40 category-list">
 					<div id="product-list">
-					<div class="row">
+					<div class="row" id ="product-container">
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
 							<div class="single-product" data-brand="nike" data-price="6000000">
@@ -302,7 +305,7 @@
 							<div class="single-product" data-brand="adidas" data-price="4000000">
 								<img class="img-fluid" src="img/product/football/adidas/predator/pre_org_1.jpg" alt="">
 								<div class="product-details">
-									<h6>adidas Predator Elite Tongue FG</h6>
+									<h6>Adidas Predator Elite Tongue FG</h6>
 									<div class="price">
 										<h6>4.000.000 VND</h6>
 										<h6 class="l-through">5.500.000 VND</h6>
@@ -366,7 +369,7 @@
 							<div class="single-product" data-brand="adidas" data-price="5500000">
 								<img class="img-fluid" src="img/product/football/adidas/f50/f50_purple_1.jpg" alt="">
 								<div class="product-details">
-									<h6>adidas F50 ELITE FIRM GROUND CLEATS</h6>
+									<h6>Adidas F50 ELITE FIRM GROUND CLEATS</h6>
 									<div class="price">
 										<h6>5.500.000 VND</h6>
 										<h6 class="l-through">6.000.000 VND</h6>
@@ -594,6 +597,102 @@
 									<div class="price">
 										<h6>5.500.000 VND</h6>
 										<h6 class="l-through">6.000.000 VND</h6>
+									</div>
+									<div class="prd-bottom">
+
+										<a href="" class="social-info">
+											<span class="ti-bag"></span>
+											<p class="hover-text">add to bag</p>
+										</a>
+										<a href="" class="social-info">
+											<span class="lnr lnr-heart"></span>
+											<p class="hover-text">Wishlist</p>
+										</a>
+										<a href="" class="social-info">
+											<span class="lnr lnr-sync"></span>
+											<p class="hover-text">compare</p>
+										</a>
+										<a href="" class="social-info">
+											<span class="lnr lnr-move"></span>
+											<p class="hover-text">view more</p>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- single product -->
+						<div class="col-lg-4 col-md-6">
+							<div class="single-product" data-brand="nike" data-price="4500000">
+								<img class="img-fluid" src="img/product/football/nike/phantom/gx2_pink_1.jpg" alt="">
+								<div class="product-details">
+									<h6>Nike Phantom GX2 Elite FG Mad Brilliance</h6>
+									<div class="price">
+										<h6>4.500.000 VND</h6>
+										<h6 class="l-through">6.000.000 VND</h6>
+									</div>
+									<div class="prd-bottom">
+
+										<a href="" class="social-info">
+											<span class="ti-bag"></span>
+											<p class="hover-text">add to bag</p>
+										</a>
+										<a href="" class="social-info">
+											<span class="lnr lnr-heart"></span>
+											<p class="hover-text">Wishlist</p>
+										</a>
+										<a href="" class="social-info">
+											<span class="lnr lnr-sync"></span>
+											<p class="hover-text">compare</p>
+										</a>
+										<a href="" class="social-info">
+											<span class="lnr lnr-move"></span>
+											<p class="hover-text">view more</p>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- single product -->
+						<div class="col-lg-4 col-md-6">
+							<div class="single-product" data-brand="nike" data-price="4500000">
+								<img class="img-fluid" src="img/product/football/nike/tiempo/tiempo_grey_1.jpg" alt="">
+								<div class="product-details">
+									<h6>Nike Tiempo Legend Elite FG Rising Gem</h6>
+									<div class="price">
+										<h6>4.500.000 VND</h6>
+										<h6 class="l-through">6.000.000 VND</h6>
+									</div>
+									<div class="prd-bottom">
+
+										<a href="" class="social-info">
+											<span class="ti-bag"></span>
+											<p class="hover-text">add to bag</p>
+										</a>
+										<a href="" class="social-info">
+											<span class="lnr lnr-heart"></span>
+											<p class="hover-text">Wishlist</p>
+										</a>
+										<a href="" class="social-info">
+											<span class="lnr lnr-sync"></span>
+											<p class="hover-text">compare</p>
+										</a>
+										<a href="" class="social-info">
+											<span class="lnr lnr-move"></span>
+											<p class="hover-text">view more</p>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- single product -->
+						<div class="col-lg-4 col-md-6">
+							<div class="single-product" data-brand="nike" data-price="3500000">
+								<img class="img-fluid" src="img/product/football/nike/mercurial/mer_grey_1.jpg" alt="">
+								<div class="product-details">
+									<h6>Nike Mercurial Vapor XV Elite FG Rising Gem</h6>
+									<div class="price">
+										<h6>3.500.000 VND</h6>
+										<h6 class="l-through">4.000.000 VND</h6>
 									</div>
 									<div class="prd-bottom">
 
@@ -902,108 +1001,84 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/gmaps.min.js"></script>
 	<script src="js/main.js"></script>
 	
+	</script>	
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
-			const products = document.querySelectorAll(".single-product");
-			const brandFilterForm = document.getElementById("brand-filter");
-			const sortSelect = document.querySelector('.filter-bar .sorting:nth-child(1) select');
-			const itemsPerPageSelect = document.querySelector('.filter-bar .sorting.mr-auto select');
-			const pageLinks = document.querySelectorAll('.page-link');
-			let filteredProducts = Array.from(products); // Khởi tạo mảng với tất cả sản phẩm
-			let itemsPerPage = parseInt(itemsPerPageSelect.value); // Số sản phẩm hiển thị trên mỗi trang
-		
-			brandFilterForm.addEventListener("change", filterProducts);
-			sortSelect.addEventListener("change", sortProducts);
-			itemsPerPageSelect.addEventListener("change", changeItemsPerPage);
-		
-			function filterProducts() {
-				const selectedBrand = document.querySelector('input[name="brand"]:checked')?.value;
-				filteredProducts = []; // Làm mới mảng khi có sự thay đổi lựa chọn
-		
-				products.forEach(product => {
-					const brand = product.getAttribute('data-brand');
-					if (!selectedBrand || brand === selectedBrand) {
-						filteredProducts.push(product); // Thêm vào mảng sản phẩm đã lọc
-					}
-				});
-		
-				sortProducts(); // Sắp xếp các sản phẩm đã lọc
-			}
-		
-			function sortProducts() {
-				const sortValue = sortSelect.value;
-				filteredProducts.sort((a, b) => {
-					const priceA = parseFloat(a.getAttribute('data-price'));
-					const priceB = parseFloat(b.getAttribute('data-price'));
-					if (sortValue === 'asc') {
-						return priceA - priceB;
-					} else if (sortValue === 'desc') {
-						return priceB - priceA;
-					} else {
-						return 0;
-					}
-				});
-		
-				showFirstPageProducts(); // Hiển thị các sản phẩm đã lọc và sắp xếp
-			}
-		
-			function changeItemsPerPage() {
-				itemsPerPage = parseInt(itemsPerPageSelect.value);
-				showFirstPageProducts(); // Hiển thị các sản phẩm theo số lượng mới
-			}
-		
-			function showFirstPageProducts() {
-				// Ẩn tất cả các sản phẩm
-				products.forEach(product => {
-					product.parentElement.style.display = 'none';
-				});
-		
-				// Hiển thị số sản phẩm đã lọc trên trang đầu tiên theo tùy chọn
-				for (let i = 0; i < itemsPerPage; i++) {
-					if (filteredProducts[i]) {
-						filteredProducts[i].parentElement.style.display = 'block';
-					}
-				}
-		
-				markCurrentPageActive(pageLinks[0]); // Đánh dấu trang đầu tiên là active
-			}
-		
-			pageLinks.forEach(link => {
-				link.addEventListener('click', paginate);
-			});
-		
-			function paginate(e) {
-				e.preventDefault();
-				const page = parseInt(this.textContent);
-				const startIndex = (page - 1) * itemsPerPage;
-				const endIndex = startIndex + itemsPerPage;
-		
-				// Ẩn tất cả các sản phẩm
-				products.forEach(product => {
-					product.parentElement.style.display = 'none';
-				});
-		
-				// Hiển thị các sản phẩm đã lọc ở trang tương ứng
-				for (let i = startIndex; i < endIndex; i++) {
-					if (filteredProducts[i]) {
-						filteredProducts[i].parentElement.style.display = 'block';
-					}
-				}
-		
-				markCurrentPageActive(this); // Đánh dấu trang hiện tại là active
-			}
-		
-			function markCurrentPageActive(currentLink) {
-				pageLinks.forEach(link => {
-					link.classList.remove('active');
-				});
-				currentLink.classList.add('active');
-			}
-		
-			showFirstPageProducts(); // Ban đầu hiển thị các sản phẩm trên trang đầu tiên
-		});
-		</script>
-			
+    const products = document.querySelectorAll(".single-product");
+    const brandFilterForm = document.getElementById("brand-filter");
+    const pageLinks = document.querySelectorAll('.page-link');
+    let filteredProducts = Array.from(products); // Khởi tạo mảng với tất cả sản phẩm
+
+    brandFilterForm.addEventListener("change", filterProducts);
+
+    function filterProducts() {
+        const selectedBrand = document.querySelector('input[name="brand"]:checked')?.value;
+        filteredProducts = []; // Làm mới mảng khi có sự thay đổi lựa chọn
+
+        products.forEach(product => {
+            const brand = product.getAttribute('data-brand');
+            if (!selectedBrand || brand === selectedBrand) {
+                filteredProducts.push(product); // Thêm vào mảng sản phẩm đã lọc
+            }
+        });
+
+        showFirstPageProducts(); // Hiển thị các sản phẩm đã lọc trên trang đầu tiên
+    }
+
+    function showFirstPageProducts() {
+        const itemsPerPage = 6;
+        // Ẩn tất cả các sản phẩm
+        products.forEach(product => {
+            product.parentElement.style.display = 'none';
+        });
+
+        // Hiển thị tối đa 6 sản phẩm đã lọc trên trang đầu tiên
+        for (let i = 0; i < itemsPerPage; i++) {
+            if (filteredProducts[i]) {
+                filteredProducts[i].parentElement.style.display = 'block';
+            }
+        }
+
+        markCurrentPageActive(pageLinks[0]); // Đánh dấu trang đầu tiên là active
+    }
+
+    pageLinks.forEach(link => {
+        link.addEventListener('click', paginate);
+    });
+
+    function paginate(e) {
+        e.preventDefault();
+        const page = parseInt(this.textContent);
+        const startIndex = (page - 1) * 6;
+        const endIndex = startIndex + 6;
+
+        // Ẩn tất cả các sản phẩm
+        products.forEach(product => {
+            product.parentElement.style.display = 'none';
+        });
+
+        // Hiển thị các sản phẩm đã lọc ở trang tương ứng
+        for (let i = startIndex; i < endIndex; i++) {
+            if (filteredProducts[i]) {
+                filteredProducts[i].parentElement.style.display = 'block';
+            }
+        }
+
+        markCurrentPageActive(this); // Đánh dấu trang hiện tại là active
+    }
+
+    function markCurrentPageActive(currentLink) {
+        pageLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+        currentLink.classList.add('active');
+    }
+
+    showFirstPageProducts(); // Ban đầu hiển thị các sản phẩm trên trang đầu tiên
+});
+
+
+	</script>
 </body>
 
 </html>
