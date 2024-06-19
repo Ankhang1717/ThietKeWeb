@@ -1748,6 +1748,12 @@ h1, h2, h3, h4, h5, h6 {
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s; }
+  .single-related-product:hover img {
+    transform: scale(1.15); /* Phóng to ảnh 15% */
+}
+.single-related-product:hover {
+  box-shadow: 0 10px 20px rgba(100, 72, 255, 0.449);
+}
   .single-related-product .desc {
     margin: 10px 0px 10px 15px; }
   .single-related-product .price h6 {
@@ -5716,5 +5722,67 @@ label {
     border-color: #007bff;
 }
 
+
+.popup2 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup2-content {
+  position: relative;
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  top: calc(5% + 10px); /* Lùi xuống dưới 20px */
+}
+
+.popup2-content img {
+  width: 100%;
+  height: auto;
+}
+
+.close-btn2,
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.close-btn2 {
+  top: 10px;
+  right: 8px;
+}
+
+.prev-btn {
+  left: 4px;
+}
+
+.next-btn {
+  right: 4px;
+}
+
+.close-btn2:hover,
+.prev-btn:hover,
+.next-btn:hover {
+  color: black;
+}
 /*# sourceMappingURL=main.css.map */
 
