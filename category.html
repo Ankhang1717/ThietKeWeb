@@ -135,20 +135,22 @@
 					<div class="head">Loại sản phẩm</div>
 					<ul class="main-categories">
 						<li class="main-nav-list"><a data-toggle="collapse" href="#fruitsVegetable" aria-expanded="false" aria-controls="fruitsVegetable"><span
-								 class="lnr lnr-arrow-right"></span>Giày đá bóng<span class="number">(36)</span></a>
+								 class="lnr lnr-arrow-right"></span>Giày đá bóng<span class="number" id="total-products-span"></span></a>
 							<ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
-								<li class="main-nav-list child"><a href="#">Nike<span class="number">(12)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Adidas<span class="number">(12)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Puma<span class="number">(12)</span></a></li>
+								<li class="main-nav-list child"><a href="loaisp/dabongnike.html">Nike<span class="number" id="nike-count"></span></a></li>
+								<li class="main-nav-list child"><a href="loaisp/dabongadidas.html">Adidas<span class="number" id="adidas-count"></span></a></li>
+								<li class="main-nav-list child"><a href="loaisp/dabongpuma.html">Puma<span class="number" id="puma-count"></span></a></li>
 							</ul>
+							<script src="../js/brand-count.js"></script>
 						</li>
+						<script src="../js/total-product.js"></script>
 
 						<li class="main-nav-list"><a data-toggle="collapse" href="#meatFish" aria-expanded="false" aria-controls="meatFish"><span
-								 class="lnr lnr-arrow-right"></span>Giày chạy bộ<span class="number">(20)</span></a>
+								 class="lnr lnr-arrow-right"></span>Giày chạy bộ<span class="number"></span></a>
 							<ul class="collapse" id="meatFish" data-toggle="collapse" aria-expanded="false" aria-controls="meatFish">
-								<li class="main-nav-list child"><a href="#">Adidas<span class="number">(08)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Nike<span class="number">(07)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Puma<span class="number">(05)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Adidas<span class="number"></span></a></li>
+								<li class="main-nav-list child"><a href="#">Nike<span class="number"></span></a></li>
+								<li class="main-nav-list child"><a href="#">Puma<span class="number"></span></a></li>
 							</ul>
 						</li>
 					</ul>
@@ -161,15 +163,15 @@
 							<ul>
 							  <li class="filter-list">
 								<input class="pixel-radio" type="radio" id="adidas" name="brand" value="adidas">
-								<label for="adidas">Adidas<span>(29)</span></label>
+								<label for="adidas">Adidas<span></span></label>
 							  </li>
 							  <li class="filter-list">
 								<input class="pixel-radio" type="radio" id="nike" name="brand" value="nike">
-								<label for="nike">Nike<span>(29)</span></label>
+								<label for="nike">Nike<span></span></label>
 							  </li>
 							  <li class="filter-list">
 								<input class="pixel-radio" type="radio" id="puma" name="brand" value="puma">
-								<label for="puma">Puma<span>(19)</span></label>
+								<label for="puma">Puma<span></span></label>
 							  </li>
 							</ul>
 						</form>
@@ -178,14 +180,14 @@
 						<div class="head">Màu sắc</div>
 						<form action="#">
 							<ul>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="black" name="color"><label for="black">Black<span>(29)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="balckleather" name="color"><label for="balckleather">Yellow<span>(29)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="blackred" name="color"><label for="blackred">Red<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="gold" name="color"><label for="gold">White<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Grey<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Cream<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Green<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Blue<span>(19)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="black" name="color"><label for="black">Black<span></span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="balckleather" name="color"><label for="balckleather">Yellow<span></span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="blackred" name="color"><label for="blackred">Red<span></span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="gold" name="color"><label for="gold">White<span></span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Grey<span></span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Cream<span></span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Green<span></span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Blue<span></span></label></li>
 							</ul>
 						</form>
 					</div>
@@ -215,20 +217,13 @@
 							<option value="desc">Giá: Cao đến thấp</option>
 						</select>
 					</div>
-					<div class="sorting mr-auto">
-						<select>
-							<option value="6">Show 6</option>
-							<option value="12">Show 12</option>
-							<option value="24">Show 24</option>
-						</select>
-					</div>
 				</div>
 				<!-- End Filter Bar -->
 				<!-- Start Best Seller -->
 				
 				<section class="lattest-product-area pb-40 category-list">
 					<div id="product-list">
-					<div class="row">
+					<div class="row" id ="product-container">
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
 							<div class="single-product" data-brand="nike">
@@ -301,7 +296,7 @@
 							<div class="single-product" data-brand="adidas">
 								<img class="img-fluid" src="img/product/football/adidas/predator/pre_org_1.jpg" alt="">
 								<div class="product-details">
-									<h6>adidas Predator Elite Tongue FG</h6>
+									<h6>Adidas Predator Elite Tongue FG</h6>
 									<div class="price">
 										<h6>4.000.000 VND</h6>
 										<h6 class="l-through">5.500.000 VND</h6>
@@ -365,7 +360,7 @@
 							<div class="single-product" data-brand="adidas">
 								<img class="img-fluid" src="img/product/football/adidas/f50/f50_purple_1.jpg" alt="">
 								<div class="product-details">
-									<h6>adidas F50 ELITE FIRM GROUND CLEATS</h6>
+									<h6>Adidas F50 ELITE FIRM GROUND CLEATS</h6>
 									<div class="price">
 										<h6>5.500.000 VND</h6>
 										<h6 class="l-through">6.000.000 VND</h6>
