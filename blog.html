@@ -591,46 +591,96 @@
                         </aside>
                         
                         <aside class="single_sidebar_widget popular_post_widget">
-                            <h3 class="widget_title styled-title">BÀI VIẾT PHỔ BIẾN</h3>
+                            <h3 class="widget_title styled-title">BÀI VIẾT VỪA XEM</h3>
                             <div class="media post_item">
-                                <img src="img/blog/popular-post/post1.jpg" alt="post">
-                                <div class="media-body">
-                                    <a href="nguoinoitieng_blog.html">
-                                        <h3 class = "styled-title">Điểm mặt 17 ngôi sao nổi tiếng là những dân chơi giày thứ thiệt
-                                        </h3>
-                                    </a>
-                                </div>
+                                
                             </div>
                             <div class="media post_item">
-                                <img src="img/blog/popular-post/post2.jpg" alt="post">
-                                <div class="media-body">
-                                    <a href="xuhuongthoitrang_blog.html">
-                                        <h3 class = "styled-title">Xu hướng sneaker tiếp tục được ưa chuộng sang năm 2024</h3>
-                                    </a>
-                                </div>
+                                
                             </div>
                             <div class="media post_item">
-                                <img src="img/blog/popular-post/post3.jpg" alt="post">
-                                <div class="media-body">
-                                    <a href="chamsoc_blog.html">
-                                        <h3 class = "styled-title">Bí kíp chăm sóc giày da đúng cách bền đẹp như mới
-                                        </h3>
-                                    </a>
-                                </div>
-                            </div>
+                                
                             <div class="media post_item">
-                                <img src="img/blog/popular-post/post4.jpg" alt="post">
-                                <div class="media-body">
-                                    <a href="mixgiay_blog.html">
-                                        <h3 class = "styled-title">Tổng hợp lưu ý và 14 outfit "bất bại" phải thử ngay!
-                                        </h3>
-                                    </a>
-                                </div>
+                                
                             </div>
                             <div class="br"></div>
                         </aside>
 
-
+                        <script>
+                            // Function to save the viewed post to localStorage
+                            function saveViewedPost(postTitle, postUrl, postImage) {
+                                const viewedPosts = JSON.parse(localStorage.getItem('viewedPosts')) || [];
+                        
+                                // Check if the post already exists in the array
+                                const exists = viewedPosts.some(post => post.url === postUrl);
+                        
+                                if (!exists) {
+                                    // Add new post to the beginning of the array
+                                    viewedPosts.unshift({ title: postTitle, url: postUrl, image: postImage });
+                        
+                                    // Limit the array to 4 items
+                                    if (viewedPosts.length > 4) {
+                                        viewedPosts.pop();
+                                    }
+                        
+                                    // Save back to localStorage
+                                    localStorage.setItem('viewedPosts', JSON.stringify(viewedPosts));
+                                }
+                            }
+                        
+                            // Function to display viewed posts
+                            function displayViewedPosts() {
+                                const viewedPosts = JSON.parse(localStorage.getItem('viewedPosts')) || [];
+                        
+                                const container = document.querySelector('.popular_post_widget');
+                                container.innerHTML = '<h3 class="widget_title styled-title">BÀI VIẾT VỪA XEM</h3>';
+                        
+                                viewedPosts.forEach(post => {
+                                    const postItem = document.createElement('div');
+                                    postItem.classList.add('media', 'post_item');
+                        
+                                    postItem.innerHTML = `
+                                        <img src="${post.image}" alt="${post.title}" style="width: 80px; height: 80px; margin-right: 15px;">
+                                        <div class="media-body">
+                                            <a href="${post.url}">
+                                                <h3>${post.title}</h3>
+                                            </a>
+                                        </div>
+                                    `;
+                        
+                                    container.appendChild(postItem);
+                                });
+                        
+                                const br = document.createElement('div');
+                                br.classList.add('br');
+                                container.appendChild(br);
+                            }
+                        
+                            document.addEventListener('DOMContentLoaded', function () {
+                                // Save the current post when viewing its details
+                                const postTitle = document.querySelector('.blog_details h2').innerText;
+                                const postUrl = window.location.href;
+                                const postImage = document.querySelector('.blog_post img').src;
+                        
+                                saveViewedPost(postTitle, postUrl, postImage);
+                        
+                                // Display the viewed posts
+                                displayViewedPosts();
+                            });
+                        
+                            // Event listener to update viewed posts on clicking a new post link
+                            document.querySelectorAll('.blog_post a.white_bg_btn').forEach(link => {
+                                link.addEventListener('click', function() {
+                                    const postTitle = this.closest('.blog_post').querySelector('.blog_details h2').innerText;
+                                    const postUrl = this.href;
+                                    const postImage = this.closest('.blog_post').querySelector('img').src;
+                        
+                                    saveViewedPost(postTitle, postUrl, postImage);
+                                    displayViewedPosts();
+                                });
+                            });
+                        </script>
+                        
 
                         <aside class="single_sidebar_widget ads_widget">
                             <a href="#"><img class="img-fluid" src="img/blog/giay11.png" alt=""></a>
