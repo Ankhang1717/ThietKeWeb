@@ -32,4 +32,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let pumaBasketballCount = countProductsByIdAndBrand("basketball", "puma");
     document.getElementById("puma-basketball-count").textContent = ` (${pumaBasketballCount})`;
+
+        // Count all basketball products
+        let totalRunnerCount = countProductsByIdAndBrand("runner");
+        document.getElementById("total-runner-count").textContent = ` (${totalRunnerCount})`;
+    
+        // Count basketball products by brand
+        let nikeRunnerCount = countProductsByIdAndBrand("runner", "nike");
+        document.getElementById("nike-runner-count").textContent = ` (${nikeRunnerCount})`;
+    
+        let adidasRunnerCount = countProductsByIdAndBrand("runner", "adidas");
+        document.getElementById("adidas-runner-count").textContent = ` (${adidasRunnerCount})`;
+    
+        let pumaRunnerCount = countProductsByIdAndBrand("runner", "puma");
+        document.getElementById("puma-runner-count").textContent = ` (${pumaRunnerCount})`;
 });
