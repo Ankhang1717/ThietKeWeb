@@ -4,10 +4,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Lấy thẻ span để hiển thị tổng số sản phẩm
     var totalProductsSpan = document.getElementById('total-products-span');
-
+    var totalProductsSpanAll = document.getElementById('total-products-span-all');
     // Đếm số lượng sản phẩm
     var totalProducts = products.length;
 
     // Hiển thị tổng số sản phẩm trong thẻ span
     totalProductsSpan.textContent = ' (' + totalProducts + ')';
+    totalProductsSpanAll.textContent = ' (' + totalProducts + ')';
 });
