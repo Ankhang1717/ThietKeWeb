@@ -33,11 +33,11 @@ document.addEventListener("DOMContentLoaded", function() {
     let pumaBasketballCount = countProductsByIdAndBrand("basketball", "puma");
     document.getElementById("puma-basketball-count").textContent = ` (${pumaBasketballCount})`;
 
-        // Count all basketball products
+        // Count all runner products
         let totalRunnerCount = countProductsByIdAndBrand("runner");
         document.getElementById("total-runner-count").textContent = ` (${totalRunnerCount})`;
     
-        // Count basketball products by brand
+        // Count runner products by brand
         let nikeRunnerCount = countProductsByIdAndBrand("runner", "nike");
         document.getElementById("nike-runner-count").textContent = ` (${nikeRunnerCount})`;
     
