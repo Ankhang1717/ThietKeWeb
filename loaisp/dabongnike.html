@@ -164,7 +164,7 @@
 						</form>
                         <script src="../js/total-product.js"></script>
 					</div>
-					<div class="common-filter">
+					<!-- <div class="common-filter">
 						<div class="head">Màu sắc</div>
 						<form action="#">
 							<ul>
@@ -178,8 +178,8 @@
 								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Blue<span>(19)</span></label></li>
 							</ul>
 						</form>
-					</div>
-					<div class="common-filter">
+					</div> -->
+					<!-- <div class="common-filter">
 						<div class="head">Giá</div>
 						<div class="price-range-area">
 							<div id="price-range"></div>
@@ -192,7 +192,7 @@
 								<div id="upper-value"></div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<div class="col-xl-9 col-lg-8 col-md-7">
@@ -215,7 +215,7 @@
 					<div class="row">
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="nike">
+							<div class="single-product" data-brand="nike" id ="football">
 							  <a href="../chitietsp/single-product.html">
 								<img class="img-fluid" src="../img/product/football/nike/tiempo/tiempo_pink_1.jpg" alt="">
 								<div class="product-details">
@@ -225,22 +225,18 @@
 									<h6 class="l-through">6.500.000 VND</h6>
 								  </div>
 								</a>
-								<div class="prd-bottom">
-								  <a href="" class="social-info">
-									<span class="ti-bag"></span>
-									<p class="hover-text">add to bag</p>
-								  </a>
-								  <a href="../chitietsp/single-product.html" class="social-info">
-									<span class="lnr lnr-move"></span>
-									<p class="hover-text">view more</p>
-								  </a>
+								<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+									<a href="" class="add-to-cart-btn">
+										<span class="ti-bag"></span>
+										<span class="btn-text">Thêm vào giỏ</span>
+									</a>
 								</div>
 							  </div>
 							</div>
 						  </div>
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="nike">
+							<div class="single-product" data-brand="nike" id ="football">
 								<a href="../chitietsp/tiempoxanh.html">
 								<img class="img-fluid" src="../img/product/football/nike/tiempo/tiempo_green_1.jpg" alt="">
 								<div class="product-details">
@@ -261,7 +257,7 @@
 
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="nike">
+							<div class="single-product" data-brand="nike" id ="football">
 								<img class="img-fluid" src="../img/product/football/nike/mercurial/mer_pink_1.jpg" alt="">
 								<div class="product-details">
 									<h6>Nike Mercurial Vapor 15 Elite FG Mad Brilliance</h6>
@@ -281,7 +277,7 @@
 					
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="nike">
+							<div class="single-product" data-brand="nike" id ="football">
 								<img class="img-fluid" src="../img/product/football/nike/phantom/gx2_grey_1.jpg" alt="">
 								<div class="product-details">
 									<h6>Nike Phantom GX2 Elite FG Rising Gem</h6>
@@ -319,7 +315,63 @@
 								</div>
 							</div>
 						</div>
-						
+
+						<div class="col-lg-4 col-md-6">
+							<div class="single-product" data-brand="nike" data-price="4500000" id ="football">
+								<img class="img-fluid" src="../img/product/football/nike/phantom/gx2_pink_1.jpg" alt="">
+								<div class="product-details">
+									<h6>Nike Phantom GX2 Elite FG Mad Brilliance</h6>
+									<div class="price">
+										<h6>4.500.000 VND</h6>
+										<h6 class="l-through">6.000.000 VND</h6>
+									</div>
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
+											<span class="ti-bag"></span>
+											<span class="btn-text">Thêm vào giỏ</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- single product -->
+						<div class="col-lg-4 col-md-6">
+							<div class="single-product" data-brand="nike" data-price="4500000" id ="football">
+								<img class="img-fluid" src="../img/product/football/nike/tiempo/tiempo_grey_1.jpg" alt="">
+								<div class="product-details">
+									<h6>Nike Tiempo Legend Elite FG Rising Gem</h6>
+									<div class="price">
+										<h6>4.500.000 VND</h6>
+										<h6 class="l-through">6.000.000 VND</h6>
+									</div>
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
+											<span class="ti-bag"></span>
+											<span class="btn-text">Thêm vào giỏ</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- single product -->
+						<div class="col-lg-4 col-md-6">
+							<div class="single-product" data-brand="nike" data-price="3500000" id ="football">
+								<img class="img-fluid" src="../img/product/football/nike/mercurial/mer_grey_1.jpg" alt="">
+								<div class="product-details">
+									<h6>Nike Mercurial Vapor XV Elite FG Rising Gem</h6>
+									<div class="price">
+										<h6>3.500.000 VND</h6>
+										<h6 class="l-through">4.000.000 VND</h6>
+									</div>
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
+											<span class="ti-bag"></span>
+											<span class="btn-text">Thêm vào giỏ</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
 					
 				</section>
 				<!-- End Best Seller -->

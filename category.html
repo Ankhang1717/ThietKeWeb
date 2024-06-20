@@ -129,16 +129,15 @@
 					<div class="head">Loại sản phẩm</div>
 					<ul class="main-categories">
 						<li class="main-nav-list"><a data-toggle="collapse" href="#fruitsVegetable" aria-expanded="false" aria-controls="fruitsVegetable"><span
-								 class="lnr lnr-arrow-right"></span>Giày đá bóng<span class="number" id="total-products-span"></span></a>
-							<ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
-								<li class="main-nav-list child"><a href="loaisp/dabong.html">All<span class="number" id="total-products-span-all"></span></a></li>
-								<li class="main-nav-list child"><a href="loaisp/dabongnike.html">Nike<span class="number" id="nike-count"></span></a></li>
-								<li class="main-nav-list child"><a href="loaisp/dabongadidas.html">Adidas<span class="number" id="adidas-count"></span></a></li>
-								<li class="main-nav-list child"><a href="loaisp/dabongpuma.html">Puma<span class="number" id="puma-count"></span></a></li>
-							</ul>
+								 class="lnr lnr-arrow-right"></span>Giày đá bóng<span class="number"></span></a>
+								 <ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
+									<li class="main-nav-list child"><a href="loaisp/dabong.html">All<span class="number" id="total-football-count"></span></a></li>
+									<li class="main-nav-list child"><a href="loaisp/dabongnike.html">Nike<span class="number" id="nike-football-count"></span></a></li>
+									<li class="main-nav-list child"><a href="loaisp/dabongadidas.html">Adidas<span class="number" id="adidas-football-count"></span></a></li>
+									<li class="main-nav-list child"><a href="loaisp/dabongpuma.html">Puma<span class="number" id="puma-football-count"></span></a></li>
+								</ul>
 
 						</li>
-						<script src="../js/total-product.js"></script>
 						<script src="../js/brand-count.js"></script>
 
 						
@@ -155,12 +154,12 @@
 						</li>
 						<li class="main-nav-list"><a data-toggle="collapse" href="#basketball" aria-expanded="false" aria-controls="fruitsVegetable"><span
 							class="lnr lnr-arrow-right"></span>Giày bóng rổ<span class="number" id="total-products-span-1"></span></a>
-					   <ul class="collapse" id="basketball" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
-							<li class="main-nav-list child"><a href="loaisp/bongropuma.html">All<span class="number" id="total-products-span-all-1"></span></a></li>
-						   <li class="main-nav-list child"><a href="loaisp/bongronike.html">Nike<span class="number" id="nike-count-1"></span></a></li>
-						   <li class="main-nav-list child"><a href="loaisp/bongroadidas.html">Adidas<span class="number" id="adidas-count-1"></span></a></li>
-						   <li class="main-nav-list child"><a href="loaisp/bongropuma.html">Puma<span class="number" id="puma-count-1"></span></a></li>
-					   </ul>
+							<ul class="collapse" id="basketball" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
+								<li class="main-nav-list child"><a href="loaisp/bongropuma.html">All<span class="number" id="total-basketball-count"></span></a></li>
+								<li class="main-nav-list child"><a href="loaisp/bongronike.html">Nike<span class="number" id="nike-basketball-count"></span></a></li>
+								<li class="main-nav-list child"><a href="loaisp/bongroadidas.html">Adidas<span class="number" id="adidas-basketball-count"></span></a></li>
+								<li class="main-nav-list child"><a href="loaisp/bongropuma.html">Puma<span class="number" id="puma-basketball-count"></span></a></li>
+							</ul>
 					   <script src="../js/brand-count.js"></script>
 				   </li>
 					</ul>
@@ -186,7 +185,7 @@
 							</ul>
 						</form>
 					</div>
-					<div class="common-filter">
+					<!-- <div class="common-filter">
 						<div class="head">Màu sắc</div>
 						<form action="#">
 							<ul>
@@ -200,8 +199,8 @@
 								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Blue<span></span></label></li>
 							</ul>
 						</form>
-					</div>
-					<div class="common-filter">
+					</div> -->
+					<!-- <div class="common-filter">
 						<div class="head">Giá</div>
 						<div class="price-range-area">
 							<div id="price-range"></div>
@@ -214,7 +213,7 @@
 								<div id="upper-value"></div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<div class="col-xl-9 col-lg-8 col-md-7">
@@ -236,7 +235,8 @@
 					<div class="row" id ="product-container">
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="nike" data-price="6000000">
+						
+							<div class="single-product" data-brand="nike" data-price="6000000" id ="football">
 							  <a href="chitietsp/single-product.html">
 								<img class="img-fluid" src="img/product/football/nike/tiempo/tiempo_pink_1.jpg" alt="">
 								<div class="product-details">
@@ -253,11 +253,13 @@
 									</a>
 								</div>
 							  </div>
-							</div>
+						
+						</div>
 						  </div>
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="nike" data-price="4500000">
+							
+							<div class="single-product" data-brand="nike" data-price="4500000" id ="football">
 								<a href="chitietsp/tiempoxanh.html">
 								<img class="img-fluid" src="img/product/football/nike/tiempo/tiempo_green_1.jpg" alt="">
 								<div class="product-details">
@@ -273,12 +275,13 @@
 										</a>
 									</div>
 								</div>
-							</div>
+							
+						</div>
 						</div>
 						<!-- single product -->
 						 
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="adidas" data-price="4000000">
+							<div class="single-product" data-brand="adidas" data-price="4000000" id ="football">
 								<img class="img-fluid" src="img/product/football/adidas/predator/pre_org_1.jpg" alt="">
 								<div class="product-details">
 									<h6>Adidas Predator Elite Tongue FG</h6>
@@ -297,7 +300,7 @@
 						</div>
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="nike" data-price="4500000">
+							<div class="single-product" data-brand="nike" data-price="4500000" id ="football">
 								<img class="img-fluid" src="img/product/football/nike/mercurial/mer_pink_1.jpg" alt="">
 								<div class="product-details">
 									<h6>Nike Mercurial Vapor 15 Elite FG Mad Brilliance</h6>
@@ -316,7 +319,7 @@
 						</div>
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="adidas" data-price="5500000">
+							<div class="single-product" data-brand="adidas" data-price="5500000" id ="football">
 								<img class="img-fluid" src="img/product/football/adidas/f50/f50_purple_1.jpg" alt="">
 								<div class="product-details">
 									<h6>Adidas F50 ELITE FIRM GROUND CLEATS</h6>
@@ -335,7 +338,7 @@
 						</div>
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="nike" data-price="3500000">
+							<div class="single-product" data-brand="nike" data-price="3500000" id ="football">
 								<img class="img-fluid" src="img/product/football/nike/phantom/gx2_grey_1.jpg" alt="">
 								<div class="product-details">
 									<h6>Nike Phantom GX2 Elite FG Rising Gem</h6>
@@ -354,7 +357,7 @@
 						</div>
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="puma" data-price="5500000">
+							<div class="single-product" data-brand="puma" data-price="5500000" id ="football">
 								<img class="img-fluid" src="img/product/football/puma/future/fut_white_1.jpg" alt="">
 								<div class="product-details">
 									<h6>PUMA Future 7 “NJR Creativity”</h6>
@@ -373,7 +376,7 @@
 						</div>
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="adidas" data-price="3500000">
+							<div class="single-product" data-brand="adidas" data-price="3500000" id ="football">
 								<img class="img-fluid" src="img/product/football/adidas/copa/copa_white_1.jpg" alt="">
 								<div class="product-details">
 									<h6>Adidas Copa Pure 2 Elite Leather FG</h6>
@@ -392,7 +395,7 @@
 						</div>
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="nike" data-price="3500000">
+							<div class="single-product" data-brand="nike" data-price="3500000" id ="football">
 								<img class="img-fluid" src="img/product/football/nike/mercurial/mer_green_1.jpg" alt="">
 								<div class="product-details">
 									<h6>Nike Air Zoom Mercurial Vapor XV Elite FG</h6>
@@ -411,7 +414,7 @@
 						</div>
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="puma" data-price="2500000">
+							<div class="single-product" data-brand="puma" data-price="2500000" id ="football">
 								<img class="img-fluid" src="img/product/football/puma/ultra/ultra_white_1.jpg" alt="">
 								<div class="product-details">
 									<h6>PUMA Ultra Ultimate FG Fire Orchid</h6>
@@ -430,7 +433,7 @@
 						</div>
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="puma" data-price="2500000">
+							<div class="single-product" data-brand="puma" data-price="2500000" id ="football">
 								<img class="img-fluid" src="img/product/football/puma/king/king_blue_1.jpg" alt="">
 								<div class="product-details">
 									<h6>PUMA King Ultimate FG Silver Sky</h6>
@@ -449,7 +452,7 @@
 						</div>
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="adidas" data-price="5500000">
+							<div class="single-product" data-brand="adidas" data-price="5500000" id ="football">
 								<img class="img-fluid" src="img/product/football/adidas/f50/f50_white_ll_1.jpg" alt="">
 								<div class="product-details">
 									<h6>Adidas F50 Elite Laceless FG</h6>
@@ -468,7 +471,7 @@
 						</div>
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="nike" data-price="4500000">
+							<div class="single-product" data-brand="nike" data-price="4500000" id ="football">
 								<img class="img-fluid" src="img/product/football/nike/phantom/gx2_pink_1.jpg" alt="">
 								<div class="product-details">
 									<h6>Nike Phantom GX2 Elite FG Mad Brilliance</h6>
@@ -487,7 +490,7 @@
 						</div>
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="nike" data-price="4500000">
+							<div class="single-product" data-brand="nike" data-price="4500000" id ="football">
 								<img class="img-fluid" src="img/product/football/nike/tiempo/tiempo_grey_1.jpg" alt="">
 								<div class="product-details">
 									<h6>Nike Tiempo Legend Elite FG Rising Gem</h6>
@@ -506,7 +509,7 @@
 						</div>
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="nike" data-price="3500000">
+							<div class="single-product" data-brand="nike" data-price="3500000" id ="football">
 								<img class="img-fluid" src="img/product/football/nike/mercurial/mer_grey_1.jpg" alt="">
 								<div class="product-details">
 									<h6>Nike Mercurial Vapor XV Elite FG Rising Gem</h6>
@@ -523,6 +526,177 @@
 								</div>
 							</div>
 						</div>
+												<!-- single product -->
+						 
+												<div class="col-lg-4 col-md-6">
+													<div class="single-product" data-brand="adidas" id ="basketball">
+														<img class="img-fluid" src="../img/product/basketball/adidas/hardelvol6_1.jpg" alt="">
+														<div class="product-details">
+															<h6>adidas Harden Vol. 6</h6>
+															<div class="price">
+																<h6>1.200.000 VND</h6>
+																<h6 class="l-through">2.500.000 VND</h6>
+															</div>
+															<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+																<a href="" class="add-to-cart-btn">
+																	<span class="ti-bag"></span>
+																	<span class="btn-text">Thêm vào giỏ</span>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+													<!-- single product -->
+												<div class="col-lg-4 col-md-6">
+													<div class="single-product" data-brand="adidas" id ="basketball">
+														<img class="img-fluid" src="../img/product/basketball/adidas/adizeroselect_1.jpg" alt="">
+															<div class="product-details">
+																<h6>adidas Adizero Select</h6>
+																<div class="price">
+																<h6>1.800.000 VND</h6>
+																<h6 class="l-through">2.000.000 VND</h6>
+																</div>
+																<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+																	<a href="" class="add-to-cart-btn">
+																		<span class="ti-bag"></span>
+																		<span class="btn-text">Thêm vào giỏ</span>
+																	</a>
+																</div>
+															</div>
+													</div>
+											</div>
+						<!-- single product -->
+						<div class="col-lg-4 col-md-6">
+							<div class="single-product" data-brand="adidas" id ="basketball">
+								<img class="img-fluid" src="../img/product/basketball/adidas/traeunlimited_1.jpg" alt="">
+								<div class="product-details">
+									<h6>Adidas Trae Unlimited</h6>
+									<div class="price">
+										<h6>3.500.000 VND</h6>
+										<h6 class="l-through">5.000.000 VND</h6>
+									</div>
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
+											<span class="ti-bag"></span>
+											<span class="btn-text">Thêm vào giỏ</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="single-product" data-brand="nike" id ="basketball">
+								<img class="img-fluid" src="../img/product/basketball/nike/ja1_1.jpg" alt="">
+								<div class="product-details">
+									<h6>nike ja 1</h6>
+									<div class="price">
+										<h6>2.200.000 VND</h6>
+										<h6 class="l-through">2.900.000 VND</h6>
+									</div>
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
+											<span class="ti-bag"></span>
+											<span class="btn-text">Thêm vào giỏ</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+							<!-- single product -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-product" data-brand="nike" id ="basketball">
+                                <img class="img-fluid" src="../img/product/basketball/nike/kd17_1.jpg" alt="">
+                                    <div class="product-details">
+                                        <h6>nike kd17</h6>
+                                        <div class="price">
+                                        <h6>2.400.000 VND</h6>
+                                        <h6 class="l-through">3.000.000 VND</h6>
+                                        </div>
+										<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+											<a href="" class="add-to-cart-btn">
+												<span class="ti-bag"></span>
+												<span class="btn-text">Thêm vào giỏ</span>
+											</a>
+										</div>
+                                    </div>
+                            </div>
+                    </div>
+<!-- single product -->
+<div class="col-lg-4 col-md-6">
+    <div class="single-product" data-brand="nike" id ="basketball">
+        <img class="img-fluid" src="../img/product/basketball/nike/lebron21_1.jpg" alt="">
+        <div class="product-details">
+            <h6>nike lebron 21</h6>
+            <div class="price">
+                <h6>1.900.000 VND</h6>
+                <h6 class="l-through">3.000.000 VND</h6>
+            </div>
+			<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+				<a href="" class="add-to-cart-btn">
+					<span class="ti-bag"></span>
+					<span class="btn-text">Thêm vào giỏ</span>
+				</a>
+			</div>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+	<div class="single-product" data-brand="puma" id ="basketball">
+		<img class="img-fluid" src="../img/product/basketball/puma/mb03_1.jpg" alt="">
+		<div class="product-details">
+			<h6>puma mb.03</h6>
+			<div class="price">
+				<h6>2.200.000 VND</h6>
+				<h6 class="l-through">2.900.000 VND</h6>
+			</div>
+			<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+				<a href="" class="add-to-cart-btn">
+					<span class="ti-bag"></span>
+					<span class="btn-text">Thêm vào giỏ</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- single product -->
+<div class="col-lg-4 col-md-6">
+	<div class="single-product" data-brand="puma" id ="basketball">
+		<img class="img-fluid" src="../img/product/basketball/puma/risenitro_1.jpg" alt="">
+			<div class="product-details">
+				<h6>puma rise nitro</h6>
+				<div class="price">
+				<h6>1.000.000 VND</h6>
+				<h6 class="l-through">2.000.000 VND</h6>
+				</div>
+				<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+					<a href="" class="add-to-cart-btn">
+						<span class="ti-bag"></span>
+						<span class="btn-text">Thêm vào giỏ</span>
+					</a>
+				</div>
+			</div>
+	</div>
+</div>
+<!-- single product -->
+<div class="col-lg-4 col-md-6">
+<div class="single-product" data-brand="puma" id ="basketball">
+<img class="img-fluid" src="../img/product/basketball/puma/scootzeros_1.jpg" alt="">
+<div class="product-details">
+<h6>puma scoot zeros</h6>
+<div class="price">
+<h6>1.900.000 VND</h6>
+<h6 class="l-through">2.200.000 VND</h6>
+</div>
+<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+<a href="" class="add-to-cart-btn">
+<span class="ti-bag"></span>
+<span class="btn-text">Thêm vào giỏ</span>
+</a>
+</div>
+</div>
+</div>
+</div>
 					</div>
 				</div>
 				</section>
@@ -530,13 +704,13 @@
 				<!-- Start Filter Bar -->
 				<div class="filter-bar d-flex flex-wrap align-items-center">
 					<div class="pagination">
-						<a href="#" class="prev-arrow"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
 						<a href="#" class="page-link active">1</a>
 						<a href="#" class="page-link">2</a>
 						<a href="#" class="page-link">3</a>
-						<a href="#" class="dot-dot"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+						<a href="#" class="page-link">4</a>
+						<a href="#" class="page-link">5</a>
 						<a href="#" class="page-link">6</a>
-						<a href="#" class="next-arrow"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+
 					</div>
 				</div>
 				<!-- End Filter Bar -->
