@@ -28,7 +28,12 @@
 	<link rel="stylesheet" href="css/nouislider.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
 	
+	<style>
+ 
+	</style>
+
 </head>
 
 <body id="category">
@@ -88,7 +93,21 @@
 								</ul>
 							</li>
 							<li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
-							<li class="nav-item"><a class="nav-link" href="../tuyendung/tuyendung.html">Tuyển dụng</a></li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">Giới thiệu</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="gioithieu.html">Giới thiệu</a></li>
+									<li class="nav-item"><a class="nav-link" href="dichvu.html">Điều khoản dịch vụ</a>
+									</li>
+									<li class="nav-item"><a class="nav-link" href="doitra.html">Chính sách đổi trả</a>
+									</li>
+									<li class="nav-item"><a class="nav-link" href="baomat.html">Chính sách bảo mật</a>
+									</li>
+
+								</ul>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="../tuyendung.html">Tuyển dụng</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
@@ -100,7 +119,7 @@
 				</div>
 			</nav>
 		</div>
-		<div class="search_input" id="search_input_box">
+		<!-- <div class="search_input" id="search_input_box">
 			<div class="container">
 				<form class="d-flex justify-content-between">
 					<input type="text" class="form-control" id="search_input" placeholder="Search Here">
@@ -108,7 +127,7 @@
 					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
 				</form>
 			</div>
-		</div>
+		</div> -->
 	</header>
 	<!-- End Header Area -->
 
@@ -137,13 +156,19 @@
 						<li class="main-nav-list"><a data-toggle="collapse" href="#fruitsVegetable" aria-expanded="false" aria-controls="fruitsVegetable"><span
 								 class="lnr lnr-arrow-right"></span>Giày đá bóng<span class="number" id="total-products-span"></span></a>
 							<ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
+								<li class="main-nav-list child"><a href="loaisp/dabong.html">All<span class="number" id="total-products-span-all"></span></a></li>
 								<li class="main-nav-list child"><a href="loaisp/dabongnike.html">Nike<span class="number" id="nike-count"></span></a></li>
 								<li class="main-nav-list child"><a href="loaisp/dabongadidas.html">Adidas<span class="number" id="adidas-count"></span></a></li>
 								<li class="main-nav-list child"><a href="loaisp/dabongpuma.html">Puma<span class="number" id="puma-count"></span></a></li>
 							</ul>
-							<script src="../js/brand-count.js"></script>
+
 						</li>
 						<script src="../js/total-product.js"></script>
+						<script src="../js/brand-count.js"></script>
+
+						
+				
+						
 
 						<li class="main-nav-list"><a data-toggle="collapse" href="#meatFish" aria-expanded="false" aria-controls="meatFish"><span
 								 class="lnr lnr-arrow-right"></span>Giày chạy bộ<span class="number"></span></a>
@@ -997,11 +1022,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<!--gmaps Js-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE&loading=async&callback=initMap&v=weekly"></script>
 	<script src="js/gmaps.min.js"></script>
 	<script src="js/main.js"></script>
 	
-	</script>	
+	 </script>	
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
     const products = document.querySelectorAll(".single-product");
@@ -1076,8 +1101,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     showFirstPageProducts(); // Ban đầu hiển thị các sản phẩm trên trang đầu tiên
 });
-
-
 	</script>
 </body>
 
