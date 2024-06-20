@@ -1,0 +1,40 @@
+.new-class-name {
+    text-align: center; /* Căn giữa nội dung */
+}
+
+.add-to-cart-btn {
+    display: inline-block; /* Hiển thị nút theo kiểu block để có thể định dạng */
+    background-color: #828bb2; /* Màu nền của nút */
+    color: #fff; /* Màu chữ */
+    padding: 8px 16px; /* Khoảng cách đệm bên trong nút */
+    text-decoration: none; /* Loại bỏ gạch chân dưới của liên kết */
+    border-radius: 4px; /* Bo góc của nút */
+    font-size: 14px; /* Độ lớn của font chữ */
+    position: relative; /* Cho phép sử dụng vị trí tương đối cho phần tử con */
+    transition: background-color 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+.add-to-cart-btn .btn-text {
+    position: absolute; /* Sử dụng vị trí tuyệt đối để điều chỉnh */
+    top: 7px; /* Đưa chữ lên đầu của nút */
+    left: 100%; /* Đặt vị trí bên phải của nút (100%) */
+    margin-left: 10px; /* Khoảng cách từ chữ đến nút */
+    transform: translateX(-100%); /* Dịch chữ đi theo chiều ngang  transform: translateY(-50%); /* Dịch chữ lên trên để căn giữa */
+    opacity: 0; /* Bắt đầu ẩn chữ đi */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Hiệu ứng xuất hiện dần khi hover */
+	white-space: nowrap; /* Chỉ hiển thị trên một dòng */
+}
+.add-to-cart-btn:hover {
+	background-color: #fd7e14; /* Màu nền của nút */
+}
+
+.add-to-cart-btn:hover .btn-text {
+    opacity: 1; /* Hiển thị chữ khi hover */
+    transform: translateX(0); /* Di chuyển chữ về vị trí ban đầu */
+	
+}
+
+.add-to-cart-btn .ti-bag {
+    margin-right: 0px; /* Khoảng cách giữa biểu tượng và viền nút */
+}
+

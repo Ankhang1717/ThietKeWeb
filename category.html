@@ -24,15 +24,13 @@
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/themify-icons.css">
-	<link rel="stylesheet" href="css/nice-select.css">
+	<!-- <link rel="stylesheet" href="css/nice-select.css"> -->
 	<link rel="stylesheet" href="css/nouislider.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
-	
-	<style>
- 
-	</style>
+	<link rel="stylesheet" href="css/gio.css">
+
 
 </head>
 
@@ -54,43 +52,20 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+							<li class="nav-item "><a class="nav-link" href="index.html">Trang chủ</a></li>
 							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Sản phẩm</a>
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">Sản phẩm</a>
 								<ul class="dropdown-menu">
 									<li class="nav-item active"><a class="nav-link" href="category.html">Loại sản phẩm</a></li>
-									<li class="nav-item"><a class="nav-link" href="checkout.html">Thanh toán sản phẩm</a></li>
+									<li class="nav-item"><a class="nav-link" href="checkout.html">Thanh toán sản
+											phẩm</a></li>
 									<li class="nav-item"><a class="nav-link" href="cart.html">Giỏ hàng</a></li>
-									<li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
 								</ul>
 							</li>
-						
-
-							<nav class="navbar navbar-expand-lg navbar-light">
-								<div class="container">
-									<!-- Other navigation items -->
-									<div class="collapse navbar-collapse">
-										<ul class="navbar-nav ml-auto">
-											<!-- Other nav items -->
-											<li class="nav-item">
-												<a href="blog.html" class="nav-link">Blog</a>
-											</li>
-											<!-- Other nav items -->
-										</ul>
-									</div>
-								</div>
-							</nav>
-
-							
 							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Pages</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="login.html">Đăng nhập</a></li>
-									<li class="nav-item"><a class="nav-link" href="tracking.html">Theo dõi đơn hàng</a></li>
-									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-								</ul>
+								<a href="blog.html" class="nav-link"
+									aria-haspopup="true" aria-expanded="false">Blog</a>
 							</li>
 							<li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
 							<li class="nav-item submenu dropdown">
@@ -107,7 +82,7 @@
 
 								</ul>
 							</li>
-							<li class="nav-item"><a class="nav-link" href="../tuyendung.html">Tuyển dụng</a></li>
+							<li class="nav-item"><a class="nav-link" href="tuyendung/tuyendung.html">Tuyển Dụng</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
@@ -179,11 +154,12 @@
 							</ul>
 						</li>
 						<li class="main-nav-list"><a data-toggle="collapse" href="#basketball" aria-expanded="false" aria-controls="fruitsVegetable"><span
-							class="lnr lnr-arrow-right"></span>Giày bóng rổ<span class="number" id="total-products-span"></span></a>
+							class="lnr lnr-arrow-right"></span>Giày bóng rổ<span class="number" id="total-products-span-1"></span></a>
 					   <ul class="collapse" id="basketball" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
-						   <li class="main-nav-list child"><a href="loaisp/bongronike.html">Nike<span class="number" id="nike-count"></span></a></li>
-						   <li class="main-nav-list child"><a href="loaisp/bongroadidas.html">Adidas<span class="number" id="adidas-count"></span></a></li>
-						   <li class="main-nav-list child"><a href="loaisp/bongropuma.html">Puma<span class="number" id="puma-count"></span></a></li>
+							<li class="main-nav-list child"><a href="loaisp/bongropuma.html">All<span class="number" id="total-products-span-all-1"></span></a></li>
+						   <li class="main-nav-list child"><a href="loaisp/bongronike.html">Nike<span class="number" id="nike-count-1"></span></a></li>
+						   <li class="main-nav-list child"><a href="loaisp/bongroadidas.html">Adidas<span class="number" id="adidas-count-1"></span></a></li>
+						   <li class="main-nav-list child"><a href="loaisp/bongropuma.html">Puma<span class="number" id="puma-count-1"></span></a></li>
 					   </ul>
 					   <script src="../js/brand-count.js"></script>
 				   </li>
@@ -270,23 +246,11 @@
 									<h6 class="l-through">6.500.000 VND</h6>
 								  </div>
 								</a>
-								<div class="prd-bottom">
-								  <a href="" class="social-info">
-									<span class="ti-bag"></span>
-									<p class="hover-text">add to bag</p>
-								  </a>
-								  <a href="" class="social-info">
-									<span class="lnr lnr-heart"></span>
-									<p class="hover-text">Wishlist</p>
-								  </a>
-								  <a href="" class="social-info">
-									<span class="lnr lnr-sync"></span>
-									<p class="hover-text">compare</p>
-								  </a>
-								  <a href="" class="social-info">
-									<span class="lnr lnr-move"></span>
-									<p class="hover-text">view more</p>
-								  </a>
+								<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+									<a href="" class="add-to-cart-btn">
+										<span class="ti-bag"></span>
+										<span class="btn-text">Thêm vào giỏ</span>
+									</a>
 								</div>
 							  </div>
 							</div>
@@ -302,23 +266,10 @@
 										<h6>4.500.000 VND</h6>
 										<h6 class="l-through">6.000.000 VND</h6>
 									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
 											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<span class="btn-text">Thêm vào giỏ</span>
 										</a>
 									</div>
 								</div>
@@ -335,23 +286,10 @@
 										<h6>4.000.000 VND</h6>
 										<h6 class="l-through">5.500.000 VND</h6>
 									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
 											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<span class="btn-text">Thêm vào giỏ</span>
 										</a>
 									</div>
 								</div>
@@ -367,23 +305,10 @@
 										<h6>4.500.000 VND</h6>
 										<h6 class="l-through">5.000.000 VND</h6>
 									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
 											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<span class="btn-text">Thêm vào giỏ</span>
 										</a>
 									</div>
 								</div>
@@ -399,23 +324,10 @@
 										<h6>5.500.000 VND</h6>
 										<h6 class="l-through">6.000.000 VND</h6>
 									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
 											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<span class="btn-text">Thêm vào giỏ</span>
 										</a>
 									</div>
 								</div>
@@ -431,23 +343,10 @@
 										<h6>3.500.000 VND</h6>
 										<h6 class="l-through">5.000.000 VND</h6>
 									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
 											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<span class="btn-text">Thêm vào giỏ</span>
 										</a>
 									</div>
 								</div>
@@ -463,23 +362,10 @@
 										<h6>5.500.000 VND</h6>
 										<h6 class="l-through">6.000.000 VND</h6>
 									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
 											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<span class="btn-text">Thêm vào giỏ</span>
 										</a>
 									</div>
 								</div>
@@ -495,23 +381,10 @@
 										<h6>3.500.000 VND</h6>
 										<h6 class="l-through">5.000.000 VND</h6>
 									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
 											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<span class="btn-text">Thêm vào giỏ</span>
 										</a>
 									</div>
 								</div>
@@ -527,23 +400,10 @@
 										<h6>3.500.000 VND</h6>
 										<h6 class="l-through">5.000.000 VND</h6>
 									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
 											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<span class="btn-text">Thêm vào giỏ</span>
 										</a>
 									</div>
 								</div>
@@ -559,23 +419,10 @@
 										<h6>2.500.000 VND</h6>
 										<h6 class="l-through">4.000.000 VND</h6>
 									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
 											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<span class="btn-text">Thêm vào giỏ</span>
 										</a>
 									</div>
 								</div>
@@ -591,23 +438,10 @@
 										<h6>2.500.000 VND</h6>
 										<h6 class="l-through">4.000.000 VND</h6>
 									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
 											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<span class="btn-text">Thêm vào giỏ</span>
 										</a>
 									</div>
 								</div>
@@ -623,23 +457,10 @@
 										<h6>5.500.000 VND</h6>
 										<h6 class="l-through">6.000.000 VND</h6>
 									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
 											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<span class="btn-text">Thêm vào giỏ</span>
 										</a>
 									</div>
 								</div>
@@ -655,23 +476,10 @@
 										<h6>4.500.000 VND</h6>
 										<h6 class="l-through">6.000.000 VND</h6>
 									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
 											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<span class="btn-text">Thêm vào giỏ</span>
 										</a>
 									</div>
 								</div>
@@ -687,23 +495,10 @@
 										<h6>4.500.000 VND</h6>
 										<h6 class="l-through">6.000.000 VND</h6>
 									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
 											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<span class="btn-text">Thêm vào giỏ</span>
 										</a>
 									</div>
 								</div>
@@ -719,23 +514,10 @@
 										<h6>3.500.000 VND</h6>
 										<h6 class="l-through">4.000.000 VND</h6>
 									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
 											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<span class="btn-text">Thêm vào giỏ</span>
 										</a>
 									</div>
 								</div>
@@ -1016,7 +798,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	 crossorigin="anonymous"></script>
 	<script src="js/vendor/bootstrap.min.js"></script>
 	<script src="js/jquery.ajaxchimp.min.js"></script>
-	<script src="js/jquery.nice-select.min.js"></script>
+	<!-- <script src="js/jquery.nice-select.min.js"></script> -->
 	<script src="js/jquery.sticky.js"></script>
 	<script src="js/nouislider.min.js"></script>
 	<script src="js/jquery.magnific-popup.min.js"></script>
