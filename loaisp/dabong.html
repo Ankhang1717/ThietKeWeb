@@ -34,6 +34,16 @@
              .slash {
         margin: 0px 10px; /* Điều chỉnh khoảng cách giữa dấu "/" và chữ "Sản phẩm" */
     }
+	#product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.single-product {
+    flex: 1 1 calc(33.333% - 10px); /* Adjust this value to change the number of products per row */
+    margin: 5px;
+    display: none; /* Hide all products by default */
+}
 	</style>
 
 </head>
@@ -1089,17 +1099,90 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             }
         });
 
-        // Xóa sản phẩm hiện tại trong danh sách
+        // Clear current product list
         while (productList.firstChild) {
             productList.removeChild(productList.firstChild);
         }
 
-        // Thêm lại sản phẩm đã được sắp xếp vào danh sách
+        // Append sorted products
         products.forEach(function(product) {
             productList.appendChild(product);
         });
+
+        setupPagination(products);
     }
+
+    function setupPagination(products) {
+        const productsPerPage = 6;
+        const totalPages = Math.ceil(products.length / productsPerPage);
+        const pagination = document.querySelector(".pagination");
+
+        // Clear previous pagination
+        pagination.querySelectorAll('.page-number').forEach(function(el) {
+            el.remove();
+        });
+
+        function showPage(page) {
+            products.forEach((product, index) => {
+                if (index >= (page - 1) * productsPerPage && index < page * productsPerPage) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        }
+
+        function createPagination() {
+            for (let i = 1; i <= totalPages; i++) {
+                const pageLink = document.createElement("a");
+                pageLink.href = "#";
+                pageLink.className = "page-number";
+                pageLink.textContent = i;
+                pageLink.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    document.querySelector(".page-number.active").classList.remove("active");
+                    pageLink.classList.add("active");
+                    showPage(i);
+                });
+                pagination.insertBefore(pageLink, pagination.querySelector(".next-arrow"));
+            }
+        }
+
+        pagination.querySelector(".prev-arrow").addEventListener("click", (e) => {
+            e.preventDefault();
+            const activePage = document.querySelector(".page-number.active");
+            const prevPage = activePage.previousElementSibling;
+            if (prevPage && prevPage.classList.contains("page-number")) {
+                activePage.classList.remove("active");
+                prevPage.classList.add("active");
+                showPage(parseInt(prevPage.textContent));
+            }
+        });
+
+        pagination.querySelector(".next-arrow").addEventListener("click", (e) => {
+            e.preventDefault();
+            const activePage = document.querySelector(".page-number.active");
+            const nextPage = activePage.nextElementSibling;
+            if (nextPage && nextPage.classList.contains("page-number")) {
+                activePage.classList.remove("active");
+                nextPage.classList.add("active");
+                showPage(parseInt(nextPage.textContent));
+            }
+        });
+
+        // Set the first page as active and show products
+        if (totalPages > 0) {
+            showPage(1);
+            pagination.querySelector(".page-number").classList.add("active");
+        }
+        createPagination();
+    }
+
+    // Initialize pagination on page load
+    var products = Array.from(document.getElementById('product-list').querySelectorAll('.single-product'));
+    setupPagination(products);
 });
+
 
 </script>
 </body>
