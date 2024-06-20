@@ -29,6 +29,32 @@
     <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
     <link rel="stylesheet" href="css/main.css">
     <style>
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .pagination a {
+            margin: 0 5px;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .pagination a.active {
+            font-weight: bold;
+            background-color: #007bff;
+            color: white;
+            border: 1px solid #007bff;
+        }
+        
+        .pagination a:hover {
+            background-color: #ddd;
+        }
+        
 
         .hidden {
             display: none;
@@ -416,6 +442,40 @@
                         </article>
 
 
+
+
+                        <article class="row blog_item" data-blog="XHGTT">
+                            <div class="col-md-3">
+                                <div class="blog_info text-right">
+                                    <div class="post_tag">
+                                        <a class="active" href="#">Xu hướng Giày Thể Thao</a>      
+                                    </div>
+                                    <ul class="blog_meta list">
+                                        <li><a href="#">Thanh Hùng FUTSAL<i class="lnr lnr-user"></i></a></li>
+                                    <li><a href="#">10/02/2024<i class="lnr lnr-calendar-full"></i></a></li>
+                                    <li><a href="#">0 Bình luận<i class="lnr lnr-bubble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-9">
+                                <div class="blog_post">
+                                    <img src="baivietblog/nikehong.jpg" alt="">
+                                    <div class="blog_details">
+                                        <a href="baivietblog/nike_blog.html">
+                                            <h2 class="styled-title">Khám phá Nike ‘Mad Brilliance Pack' - Cơn bão màu hồng dành cho EURO 2024 & Copa America 2024</h2>
+                                        </a>
+                                        <p>Với việc mọi sự chú ý đều đang hướng về phía trận chung kết Champions League và những giải đấu lớn vào mùa hè này, Nike vừa qua đã chính thức trình làng ‘Mad Brilliance Pack'. Đây là bộ sưu tập đá bóng sẽ mang đến những Air Zoom Mercurial, Phantom và Tiempo trong những phối màu hồng gradient vô cùng đẹp mắt!  
+                                            <br>
+                                            Trong phạm vi bài viết ngày hôm nay, hãy cùng Thanh Hùng Futsal tìm hiểu thêm về bộ sưu tập giày bóng đá ‘Mad Brilliance Pack' mới nhất đến từ nhà Swoosh lần này nhé!</p>
+                                        <a href="baivietblog/nike_blog.html" class="white_bg_btn">Xem tiếp</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+
+
                         <article class="row blog_item" data-blog="MSD">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -443,9 +503,6 @@
                                 </div>
                             </div>
                         </article>
-
-
-
 
 
 
@@ -483,7 +540,6 @@
 
 
 
-                        
 
 
                 
@@ -519,27 +575,99 @@
                                 </div>
                             </div>
                         </article>
+
+
+
+                        
+                        <article class="row blog_item" data-blog ="CCGDC">
+                            <div class="col-md-3">
+                                <div class="blog_info text-right">
+                                    <div class="post_tag">
+                                        <a class="active" href="#">Cách chọn bảng size của TINY SPORT</a>
+                                    </div>
+                                    <ul class="blog_meta list">
+                                        <li><a href="#">Tiny_Sports<i class="lnr lnr-user"></i></a></li>
+                                        <li><a href="#">06/06/2024<i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">0 Bình luận<i class="lnr lnr-bubble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="blog_post">
+                                    <img src="img/blog/main-blog/Giày-Stan-Smith-Full-Trắng-1.jpeg" alt="">
+                                    <div class="blog_details">
+                                        <a href="nguoinoitieng_blog.html">
+                                            <h2 class =" styled-title">Cách chọn bảng size của TINY SPORT
+                                            </h2>
+                                        </a>
+                                        <p>Hiện nay có rất nhiều tiêu chuẩn kích thước khác nhau như chuẩn Mỹ, chuẩn châu Âu, hay chuẩn Anh. Bên cạnh đó, các size giày Mỹ cũng có sự khác biệt nhất định. Nếu mua giày nam hàng hiệu, giày nữ online, bạn chỉ cần nắm một số bí quyết sau là đã có thể chọn size giày chính xác, vừa vặn với chân của mình. Hãy cùng tìm hiểu cách chọn size giày chuẩn nhé</p>
+                                        <a href="chongiay_blog.html" class="white_bg_btn">Xem tiếp</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+
+                        <!-- Javascript phân trang -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const articlesPerPage = 4;
+        const blogContainer = document.getElementById("blog_left_sidebar");
+        const paginationContainer = document.getElementById("pagination");
+        const articles = blogContainer.querySelectorAll(".blog_item");
+        const totalArticles = articles.length;
+        const totalPages = Math.ceil(totalArticles / articlesPerPage);
+    
+        function showPage(page) {
+            const start = (page - 1) * articlesPerPage;
+            const end = start + articlesPerPage;
+    
+            articles.forEach((article, index) => {
+                article.style.display = index >= start && index < end ? "block" : "none";
+            });
+        }
+    
+        function createPagination() {
+            paginationContainer.innerHTML = "";
+    
+            for (let i = 1; i <= totalPages; i++) {
+                const pageLink = document.createElement("a");
+                pageLink.href = "#";
+                pageLink.textContent = i;
+                pageLink.classList.add("page-link");
+    
+                if (i === 1) {
+                    pageLink.classList.add("active");
+                }
+    
+                pageLink.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    document.querySelectorAll(".pagination a").forEach(link => link.classList.remove("active"));
+                    this.classList.add("active");
+                    showPage(i);
+                });
+    
+                paginationContainer.appendChild(pageLink);
+            }
+        }
+    
+        showPage(1);
+        createPagination();
+    });
+</script>
+
+
+
+
+
+
                        
 
                        
                         <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
-                                <li class="page-item">
-                                    <a href="#" class="page-link" aria-label="Previous">
-                                        <span aria-hidden="true">
-                                            <span class="lnr lnr-chevron-left"></span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a href="blog.html" class="page-link">01</a></li>
-                                <li class="page-item"><a href="blog2.html" class="page-link">02</a></li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link" aria-label="Next">
-                                        <span aria-hidden="true">
-                                            <span class="lnr lnr-chevron-right"></span>
-                                        </span>
-                                    </a>
-                                </li>
+                            </div>
+                            <div id="pagination" class="pagination"></div>
                             </ul>
                         </nav>
                         
