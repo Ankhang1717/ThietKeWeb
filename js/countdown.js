@@ -37,5 +37,6 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = new Date(Date.parse(new Date()) + 30 * 24 * 60 * 60 * 1000);
+//Đặt deadline là 00h00 7/7/2024 theo giờ Việt Nam
+var deadline = new Date('2024-07-07T00:00:00+07:00');
 initializeClock('clockdiv', deadline);
