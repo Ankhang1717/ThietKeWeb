@@ -31,14 +31,22 @@
 	<link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
 	
 	<style>
- 
+		#product-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .single-product {
+            flex: 0 0 30%; /* Adjust the percentage to fit your layout needs */
+            margin: 10px;
+            box-sizing: border-box;
+        }
 	</style>
 
 </head>
 
 <body id="category">
 
-	<!-- Start Header Area -->
 	<header class="header_area sticky-header">
 		<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light main_box">
@@ -65,24 +73,10 @@
 									<li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
 								</ul>
 							</li>
-						
-
-							<nav class="navbar navbar-expand-lg navbar-light">
-								<div class="container">
-									<!-- Other navigation items -->
-									<div class="collapse navbar-collapse">
-										<ul class="navbar-nav ml-auto">
-											<!-- Other nav items -->
-											<li class="nav-item">
-												<a href="blog.html" class="nav-link">Blog</a>
-											</li>
-											<!-- Other nav items -->
-										</ul>
-									</div>
-								</div>
-							</nav>
-
 							
+							<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+	
+						   
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Pages</a>
@@ -93,41 +87,26 @@
 								</ul>
 							</li>
 							<li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-									aria-haspopup="true" aria-expanded="false">Giới thiệu</a>
+							<li class="nav-item submenu dropdown ">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Giới thiệu</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="gioithieu.html">Giới thiệu</a></li>
-									<li class="nav-item"><a class="nav-link" href="dichvu.html">Điều khoản dịch vụ</a>
-									</li>
-									<li class="nav-item"><a class="nav-link" href="doitra.html">Chính sách đổi trả</a>
-									</li>
-									<li class="nav-item"><a class="nav-link" href="baomat.html">Chính sách bảo mật</a>
-									</li>
-
+									<li class="nav-item  "><a class="nav-link" href="gioithieu.html">Giới thiệu</a></li>
+									<li class="nav-item"><a class="nav-link" href="dichvu.html">Điều khoản dịch vụ</a></li>
+									<li class="nav-item"><a class="nav-link" href="doitra.html">Chính sách đổi trả</a></li>
+									<li class="nav-item"><a class="nav-link" href="baomat.html">Chính sách bảo mật</a></li>
+	
 								</ul>
 							</li>
-							<li class="nav-item"><a class="nav-link" href="../tuyendung.html">Tuyển dụng</a></li>
+							<li class="nav-item"><a class="nav-link" href="tuyendung/tuyendung.html">Tuyển Dụng</a></li>
 						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
-							<li class="nav-item">
-								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
-							</li>
-						</ul>
+						
 					</div>
 				</div>
 			</nav>
 		</div>
-		<!-- <div class="search_input" id="search_input_box">
-			<div class="container">
-				<form class="d-flex justify-content-between">
-					<input type="text" class="form-control" id="search_input" placeholder="Search Here">
-					<button type="submit" class="btn"></button>
-					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
-				</form>
-			</div>
-		</div> -->
+	 
+		
 	</header>
 	<!-- End Header Area -->
 
@@ -147,7 +126,12 @@
 		</div>
 	</section>
 	<!-- End Banner Area -->
+	
+
 	<div class="container">
+		
+		
+					
 		<div class="row">
 			<div class="col-xl-3 col-lg-4 col-md-5">
 				<div class="sidebar-categories">
@@ -251,7 +235,87 @@
 							<option value="desc">Giá: Giảm dần</option>
 						</select>
 					</div>
+					<div class="search-bar">
+						<input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+						<button id="search-button">Tìm kiếm</button>
+					</div>
 				</div>
+				
+				<script>
+					document.addEventListener("DOMContentLoaded", function() {
+						const searchInput = document.getElementById('search-input');
+						const searchButton = document.getElementById('search-button');
+						const productContainer = document.getElementById('product-container');
+						const allProducts = Array.from(productContainer.querySelectorAll('.single-product'));
+						const prevPageButton = document.getElementById('prev-page');
+						const nextPageButton = document.getElementById('next-page');
+						const pageNumberSpan = document.getElementById('page-number');
+						
+						let currentPage = 1;
+						let filteredProducts = [];
+						const itemsPerPage = 6; // Adjust the number of items per page
+			
+						function renderProducts() {
+							// Clear the container
+							productContainer.innerHTML = '';
+			
+							// Calculate pagination
+							const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+							const startIndex = (currentPage - 1) * itemsPerPage;
+							const endIndex = startIndex + itemsPerPage;
+							const productsToShow = filteredProducts.slice(startIndex, endIndex);
+			
+							// Display products for the current page
+							productsToShow.forEach(product => {
+								const productClone = product.cloneNode(true);
+								productContainer.appendChild(productClone);
+							});
+			
+							// Update pagination controls
+							pageNumberSpan.innerText = currentPage;
+							prevPageButton.disabled = currentPage === 1;
+							nextPageButton.disabled = currentPage >= totalPages;
+			
+							// Ensure the container maintains its horizontal layout
+							productContainer.style.display = 'flex';
+							productContainer.style.flexWrap = 'wrap';
+						}
+			
+						function filterAndRenderProducts() {
+							const searchTerm = searchInput.value.trim().toLowerCase();
+							filteredProducts = allProducts.filter(product => {
+								const productName = product.querySelector('h6').innerText.toLowerCase();
+								return productName.includes(searchTerm);
+							});
+							currentPage = 1; // Reset to the first page on new search
+							renderProducts();
+						}
+			
+						searchButton.addEventListener('click', function() {
+							filterAndRenderProducts();
+						});
+			
+						prevPageButton.addEventListener('click', function() {
+							if (currentPage > 1) {
+								currentPage--;
+								renderProducts();
+							}
+						});
+			
+						nextPageButton.addEventListener('click', function() {
+							const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+							if (currentPage < totalPages) {
+								currentPage++;
+								renderProducts();
+							}
+						});
+			
+						// Initial render
+						renderProducts();
+					});
+				</script>
+				
+				
 				<!-- End Filter Bar -->
 				<!-- Start Best Seller -->
 				
@@ -743,6 +807,7 @@
 						</div>
 					</div>
 				</div>
+				
 				</section>
 				<!-- End Best Seller -->
 				<!-- Start Filter Bar -->
@@ -1026,7 +1091,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/gmaps.min.js"></script>
 	<script src="js/main.js"></script>
 	
-	 </script>	
+	 	
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
     const products = document.querySelectorAll(".single-product");
