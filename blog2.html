@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="CodePixar">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Karma Shop</title>
+    <!--
+			CSS
+			============================================= -->
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/nouislider.min.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+
+        .hidden {
+            display: none;
+        }
+        /* Hiệu ứng hover cho blog_item */
+    .blog_item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .blog_item:hover {
+        transform: translateY(-5px); /* Dịch chuyển lên trên khi hover */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Tăng shadow khi hover */
+    }
+
+    .blog_item .blog_details {
+        padding: 20px;
+        background-color: #fff;
+    }
+
+    .blog_item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .blog_details h2 {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .blog_details p {
+        margin-bottom: 15px;
+    }
+
+    .white_bg_btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #fff;
+        color: #333;
+        border: 1px solid #333;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .white_bg_btn:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+    /* Định dạng cho post_tag */
+    .post_tag {
+        margin-bottom: 10px;
+    }
+
+    .post_tag a {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: #ffbf80; /* Màu cam nhạt */
+        color: #fff; /* Màu chữ trắng */
+        border-radius: 3px;
+        margin-right: 5px;
+        font-size: 14px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        text-decoration: none; /* Loại bỏ đường gạch chân mặc định của thẻ a */
+    }
+    
+
+    .post_tag a:hover {
+        background-color: #864f19;
+        color: #fff;
+    }
+    
+    .post_tag a.active {
+        background-color: #333; 
+        color: #fff; /* Màu chữ khi active */
+    }
+    
+        .styled-title {
+            font-family: 'Roboto', sans-serif; /* Font đẹp từ Google Fonts */
+            font-size: 2.5em; /* Kích thước chữ lớn hơn để thu hút */
+            color: #333; /* Màu chữ đậm */
+            text-align: center; /* Căn giữa tiêu đề */
+            margin: 20px 0; /* Khoảng cách trên và dưới */
+            position: relative; /* Để tạo hiệu ứng đặc biệt */
+        }
+
+
+
+        .white_bg_btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #333;
+            border: 2px solid #333;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .white_bg_btn:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .blog_details p {
+            font-family: 'Arial', sans-serif;
+            font-size: 1em;
+            color: #666;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .page-item .active .page-link {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: white;
+        }
+        .pagination .page-item.active .page-link {
+            background-color: #007bff; /* Màu nền bạn muốn */
+            border-color: #007bff; /* Màu viền bạn muốn */
+            color: #fff; /* Màu chữ bạn muốn */
+        }   
+        
+        
+
+
+            /* Hiệu ứng hover cho blog_item */
+.blog_item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog_item:hover {
+    transform: translateY(-5px); /* Dịch chuyển lên trên khi hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Tăng shadow khi hover */
+}
+
+.blog_item .blog_details {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.blog_item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blog_details h2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.blog_details p {
+    margin-bottom: 15px;
+}
+
+.white_bg_btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.white_bg_btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Định dạng cho post_tag */
+.post_tag {
+    margin-bottom: 10px;
+}
+
+.post_tag a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ffbf80; /* Màu cam nhạt */
+    color: #fff; /* Màu chữ trắng */
+    border-radius: 3px;
+    margin-right: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none; /* Loại bỏ đường gạch chân mặc định của thẻ a */
+}
+
+
+.post_tag a:hover {
+    background-color: #864f19;
+    color: #fff;
+}
+
+.post_tag a.active {
+    background-color: #333; 
+    color: #fff; /* Màu chữ khi active */
+}
+
+    .styled-title {
+        font-family: 'Roboto', sans-serif; /* Font đẹp từ Google Fonts */
+        font-size: 2.5em; /* Kích thước chữ lớn hơn để thu hút */
+        color: #333; /* Màu chữ đậm */
+        text-align: center; /* Căn giữa tiêu đề */
+        margin: 20px 0; /* Khoảng cách trên và dưới */
+        position: relative; /* Để tạo hiệu ứng đặc biệt */
+    }
+
+
+
+    .white_bg_btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #fff;
+        color: #333;
+        border: 2px solid #333;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .white_bg_btn:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .blog_details p {
+        font-family: 'Arial', sans-serif;
+        font-size: 1em;
+        color: #666;
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    .page-item .active .page-link {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: white;
+    }
+    .pagination .page-item.active .page-link {
+        background-color: #007bff; /* Màu nền bạn muốn */
+        border-color: #007bff; /* Màu viền bạn muốn */
+        color: #fff; /* Màu chữ bạn muốn */
+    }        
+        
+    </style>
+</head>
+
+<body>
+<!-- Start Header Area -->
+<header class="header_area sticky-header">
+    <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light main_box">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+                        <li class="nav-item submenu dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                             aria-expanded="false">Sản phẩm</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="nav-link" href="category.html">Loại sản phẩm</a></li>
+                                <li class="nav-item"><a class="nav-link" href="checkout.html">Thanh toán sản phẩm</a></li>
+                                <li class="nav-item"><a class="nav-link" href="cart.html">Giỏ hàng</a></li>
+                                <li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item active"><a class="nav-link" href="blog.html">Blog</a></li>
+
+                       
+                        <li class="nav-item submenu dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                             aria-expanded="false">Pages</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="nav-link" href="login.html">Đăng nhập</a></li>
+                                <li class="nav-item"><a class="nav-link" href="tracking.html">Theo dõi đơn hàng</a></li>
+                                <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item "><a class="nav-link" href="contact.html">Liên hệ</a></li>
+                        <li class="nav-item submenu dropdown ">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                             aria-expanded="false">Giới thiệu</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item  "><a class="nav-link" href="gioithieu.html">Giới thiệu</a></li>
+                                <li class="nav-item"><a class="nav-link" href="dichvu.html">Điều khoản dịch vụ</a></li>
+                                <li class="nav-item"><a class="nav-link" href="doitra.html">Chính sách đổi trả</a></li>
+                                <li class="nav-item"><a class="nav-link" href="baomat.html">Chính sách bảo mật</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="tuyendung/tuyendung.html">Tuyển Dụng</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+    </div>
+ 
+    
+</header>
+<!-- End Header Area -->
+
+    <!-- Start Banner Area -->
+    <section class="banner-area organic-breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+                <div class="col-first">
+                    <h1>Blog</h1>
+                    <nav class="d-flex align-items-center">
+                        <a href="index.html">Trang Chủ<span class="lnr lnr-arrow-right"></span></a>
+                        <a href="category.html">Blog</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Area -->
+
+
+    <!--================Blog Area =================-->
+    <section class="blog_area single-post-area section_gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="blog_left_sidebar">
+                        
+
+                        <article class="row blog_item" data-blog ="CCGDC">
+                            <div class="col-md-3">
+                                <div class="blog_info text-right">
+                                    <div class="post_tag">
+                                        <a class="active" href="#">Cách chọn bảng size của TINY SPORT</a>
+                                    </div>
+                                    <ul class="blog_meta list">
+                                        <li><a href="#">Tiny_Sports<i class="lnr lnr-user"></i></a></li>
+                                        <li><a href="#">06/06/2024<i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">0 Bình luận<i class="lnr lnr-bubble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="blog_post">
+                                    <img src="img/blog/main-blog/Giày-Stan-Smith-Full-Trắng-1.jpeg" alt="">
+                                    <div class="blog_details">
+                                        <a href="nguoinoitieng_blog.html">
+                                            <h2 class =" styled-title">Cách chọn bảng size của TINY SPORT
+                                            </h2>
+                                        </a>
+                                        <p>Hiện nay có rất nhiều tiêu chuẩn kích thước khác nhau như chuẩn Mỹ, chuẩn châu Âu, hay chuẩn Anh. Bên cạnh đó, các size giày Mỹ cũng có sự khác biệt nhất định. Nếu mua giày nam hàng hiệu, giày nữ online, bạn chỉ cần nắm một số bí quyết sau là đã có thể chọn size giày chính xác, vừa vặn với chân của mình. Hãy cùng tìm hiểu cách chọn size giày chuẩn nhé</p>
+                                        <a href="chongiay_blog.html" class="white_bg_btn">Xem tiếp</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                       
+
+                       
+                        <nav class="blog-pagination justify-content-center d-flex">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Previous">
+                                        <span aria-hidden="true">
+                                            <span class="lnr lnr-chevron-left"></span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a href="blog.html" class="page-link">01</a></li>
+                                <li class="page-item"><a href="blog2.html" class="page-link">02</a></li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Next">
+                                        <span aria-hidden="true">
+                                            <span class="lnr lnr-chevron-right"></span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const listItems = document.querySelectorAll('ul li a[data-blog]');
+                                
+                                listItems.forEach(item => {
+                                    item.addEventListener('click', function (e) {
+                                        e.preventDefault();
+                                        const filterValue = item.getAttribute('data-blog');
+                                        const articles = document.querySelectorAll('article[data-blog]');
+                                        
+                                        articles.forEach(article => {
+                                            if (article.getAttribute('data-blog') === filterValue) {
+                                                article.classList.remove('hidden');
+                                            } else {
+                                                article.classList.add('hidden');
+                                            }
+                                        });
+                                    });
+                                });
+                            });
+                        </script>
+
+                        
+                    </div>
+                </div>
+
+
+                
+                <div class="col-lg-4">
+                    <div class="blog_right_sidebar">
+                        
+                        <aside class="single_sidebar_widget author_widget">
+                            <div style="text-align: center;">
+                                <img class="author_img rounded-circle" src="img/blog/Logo remove BG.png" alt="Tiny Sport Logo" style="max-width: 100px; height: auto;">
+                            </div>
+                            <h4 style="text-align: center; margin-top: 10px;">TINY SPORT</h4>
+                            <p style="text-align: justify;">Khám phá đam mê thể thao của bạn với Tiny Sport - nơi mang đến những sản phẩm chất lượng, dịch vụ tận tâm và phong cách sống năng động cho mọi lứa tuổi. Hãy cùng chúng tôi chinh phục mọi thử thách và tận hưởng cuộc sống khỏe mạnh từng ngày.</p>
+                            <div class="br"></div>
+                        </aside>
+                        
+                        <aside class="single_sidebar_widget popular_post_widget">
+                            <h3 class="widget_title styled-title">BÀI VIẾT VỪA XEM</h3>
+                            <div class="media post_item">
+                                
+                            </div>
+                            <div class="media post_item">
+                                
+                            </div>
+                            <div class="media post_item">
+                                
+                            <div class="media post_item">
+                                
+                            </div>
+                            <div class="br"></div>
+                        </aside>
+
+                        <script>
+                            // Function to save the viewed post to localStorage
+                            function saveViewedPost(postTitle, postUrl, postImage) {
+                                const viewedPosts = JSON.parse(localStorage.getItem('viewedPosts')) || [];
+                        
+                                // Check if the post already exists in the array
+                                const exists = viewedPosts.some(post => post.url === postUrl);
+                        
+                                if (!exists) {
+                                    // Add new post to the beginning of the array
+                                    viewedPosts.unshift({ title: postTitle, url: postUrl, image: postImage });
+                        
+                                    // Limit the array to 4 items
+                                    if (viewedPosts.length > 4) {
+                                        viewedPosts.pop();
+                                    }
+                        
+                                    // Save back to localStorage
+                                    localStorage.setItem('viewedPosts', JSON.stringify(viewedPosts));
+                                }
+                            }
+                        
+                            // Code sản phầm vừa xem javascript
+                            
+                            function displayViewedPosts() {
+                                const viewedPosts = JSON.parse(localStorage.getItem('viewedPosts')) || [];
+                        
+                                const container = document.querySelector('.popular_post_widget');
+                                container.innerHTML = '<h3 class="widget_title styled-title">BÀI VIẾT VỪA XEM</h3>';
+                        
+                                viewedPosts.forEach(post => {
+                                    const postItem = document.createElement('div');
+                                    postItem.classList.add('media', 'post_item');
+                        
+                                    postItem.innerHTML = `
+                                        <img src="${post.image}" alt="${post.title}" style="width: 80px; height: 80px; margin-right: 15px;">
+                                        <div class="media-body">
+                                            <a href="${post.url}">
+                                                <h3>${post.title}</h3>
+                                            </a>
+                                        </div>
+                                    `;
+                        
+                                    container.appendChild(postItem);
+                                });
+                        
+                                const br = document.createElement('div');
+                                br.classList.add('br');
+                                container.appendChild(br);
+                            }
+                        
+                            document.addEventListener('DOMContentLoaded', function () {
+                                // Save the current post when viewing its details
+                                const postTitle = document.querySelector('.blog_details h2').innerText;
+                                const postUrl = window.location.href;
+                                const postImage = document.querySelector('.blog_post img').src;
+                        
+                                saveViewedPost(postTitle, postUrl, postImage);
+                        
+                                // Display the viewed posts
+                                displayViewedPosts();
+                            });
+                        
+                            // Event listener to update viewed posts on clicking a new post link
+                            document.querySelectorAll('.blog_post a.white_bg_btn').forEach(link => {
+                                link.addEventListener('click', function() {
+                                    const postTitle = this.closest('.blog_post').querySelector('.blog_details h2').innerText;
+                                    const postUrl = this.href;
+                                    const postImage = this.closest('.blog_post').querySelector('img').src;
+                        
+                                    saveViewedPost(postTitle, postUrl, postImage);
+                                    displayViewedPosts();
+                                });
+                            });
+                        </script>
+                        
+
+                        <aside class="single_sidebar_widget ads_widget">
+                            <a href="#"><img class="img-fluid" src="img/blog/giay11.png" alt=""></a>
+                            <div class="br"></div>
+                        </aside>
+
+
+
+                        <aside class="single_sidebar_widget post_category_widget">
+                            <h4 class="widget_title styled-title">DANH MỤC BÀI VIẾT </h4>
+                            <ul class="list cat-list">
+                                <li>
+                                    <a href="" class="d-flex justify-content-between" blog ="XHGTT">
+                                        <p>Xu hướng Giày Thể Thao</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="d-flex justify-content-between" blog ="NTT">
+                                        <p>Người Nổi Tiếng và Giày Thể Thao</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="d-flex justify-content-between" blog = "MSD">
+                                        <p>Mẹo Sử Dụng và Chăm Sóc</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="d-flex justify-content-between" blog = "TTVPC">
+                                        <p>Thời Trang và Phong Cách</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between" blog = "CCKH">
+                                        <p>Câu Chuyện Khách Hàng</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between" blog = "KMVUD">
+                                        <p>Khuyến Mãi và Ưu Đãi</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between" blog = "CCGDC">
+                                        <p>Cách chọn giày đúng cách</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between" blog = "SKBTTK">
+                                        <p>Sự Khác Biệt Trong Thiết Kế</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between" blog = "THVHS">
+                                        <p>Thể Hình và Hiệu Suất</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="br"></div>
+                        </aside>
+
+
+                            <!--================Code hiển thị danh lọc blog danh mục sp =================-->
+
+                        <script>
+                            // Lấy tất cả các phần tử <li> trong danh mục bài viết
+                            const categoryLinks = document.querySelectorAll('.post_category_widget .cat-list li a');
+                            // Lấy tất cả các bài viết
+                            const blogItems = document.querySelectorAll('.blog_item');
+                            // Thêm sự kiện click cho các phần tử <li>
+                            categoryLinks.forEach(link => {
+                            link.addEventListener('click', function(e) {
+                            e.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+                            // Lấy giá trị của thuộc tính "blog" trong <li>
+                            const selectedCategory = this.getAttribute('blog');
+                            // Ẩn tất cả các bài viết
+                            blogItems.forEach(item => {
+                            item.style.display = 'none';
+                            });
+                           // Hiển thị các bài viết thuộc danh mục được chọn
+                            blogItems.forEach(item => {
+                                  const itemCategory = item.getAttribute('data-blog');
+                                    if (itemCategory === selectedCategory) {
+                                          item.style.display = 'flex';
+                                          }
+                                    });
+                              });
+                        });
+
+                          </script>
+                          
+                        
+
+
+
+                        <aside class="single-sidebar-widget newsletter_widget">
+                            <h4 class="widget_title styled-title"> EMAIL CỦA BẠN</h4>
+                            <p>
+                               Hãy nhập email của bạn để nhận thông báo mới nhất từ Tiny Sport!
+                            </p>
+                            <div class="form-group d-flex flex-row">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Nhập email"
+                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nhập email'">
+                                </div>
+                                <a href="#" class="bbtns">Gửi</a>
+                            </div>
+                            <div class="br"></div>
+                        </aside>
+                        
+                        
+
+
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Blog Area =================-->
+
+    <!-- start footer Area -->
+    <footer class="footer-area section_gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3  col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h6>About Us</h6>
+                    <p style="text-align: justify;">
+                        Tiny Sports, thành lập năm 2024, mang đến những món đồ thể thao chất lượng từ các thương hiệu nổi tiếng. Chúng tôi cam kết cung cấp trải nghiệm mua sắm tuyệt vời với dịch vụ tư vấn chuyên nghiệp, đổi trả linh hoạt và giao hàng nhanh chóng. Khám phá Tiny Sports để tìm những sản phẩm thể thao tốt nhất cho bạn!
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4  col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h6>Newsletter</h6>
+                    <p>Nhập email để nhận thông báo mới nhất từ Tiny Sport!</p>
+                    <div class="" id="mc_embed_signup">
+    
+                        <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                            method="get" class="form-inline">
+    
+                            <div class="d-flex flex-row">
+    
+                                <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Enter Email '" required="" type="email">
+    
+    
+                                <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right"
+                                        aria-hidden="true"></i></button>
+                                <div style="position: absolute; left: -5000px;">
+                                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
+                                        type="text">
+                                </div>
+    
+                                <!-- <div class="col-lg-4 col-md-4">
+                                                <button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
+                                            </div>  -->
+                            </div>
+                            <div class="info"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+    
+    
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6>Follow Us</h6>
+                        <p>Theo dõi Tiny Sport trên Instagram và Facebook để cập nhật những tin tức và ưu đãi mới nhất!</p>
+                        <div class="footer-social d-flex align-items-center">
+                            <a href="https://www.facebook.com/profile.php?id=61561220214597&is_tour_dismissed"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/tiny_sports12?igsh=bHQ5YnlocmFic3Fh&utm_source=qr"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+                <p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    </p>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer Area -->
+    
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+     crossorigin="anonymous"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <!--gmaps Js-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="js/gmaps.min.js"></script>
+    <script src="js/main.js"></script>
+    </body>
+    
+</html>
