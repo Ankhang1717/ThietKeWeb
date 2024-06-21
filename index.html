@@ -70,8 +70,8 @@
 			padding: 20px;
 			border-radius: 10px;
 			position: relative;
-			max-width: 80%;
-			max-height: 90%;
+			max-width: 40%;
+			max-height: 100%;
 		}
 
 		/* Close button */
@@ -85,11 +85,22 @@
 
 		/* Popup Image */
 		.popup-content img {
-			max-width: 60%;
-			max-height: 60%;
+			max-width: 100%;
+			max-height: 100%;
 			display: block;
 			margin: 0 auto;
 		}
+		.clock-wrap {
+    		display: flex;
+    		justify-content: space-around;
+    		text-align: center;
+    		margin-top: 20px;
+		}
+
+		.clockinner {
+    		flex: 1;
+		}
+		
 	</style>
 </head>
 
@@ -98,11 +109,35 @@
 	<div id="popup" class="popup">
 		<div class="popup-content">
 			<span class="close-btn" id="close-btn">&times;</span>
-			<img src="img/nikenewcollection.jpg" alt="Product Image">
+			<img src="img/banner/popup.png" alt="Product Image">
+			<div class="row clock_sec clockdiv" id="clockdiv">
+				<div class="col-lg-12">
+					<div class="row clock-wrap">
+						<div class="col clockinner1 clockinner">
+							<h1 class="days">15</h1>
+							<span class="smalltext">Ngày</span>
+						</div>
+						<div class="col clockinner clockinner1">
+							<h1 class="hours">23</h1>
+							<span class="smalltext">Giờ</span>
+						</div>
+						<div class="col clockinner clockinner1">
+							<h1 class="minutes">47</h1>
+							<span class="smalltext">Phút</span>
+						</div>
+						<div class="col clockinner clockinner1">
+							<h1 class="seconds">59</h1>
+							<span class="smalltext">Giây</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
+	
 
 	<script src="js/popup.js"></script>
+	<script src="js/countdown.js"></script>
 
 
 	<!-- Start Header Area -->
@@ -323,7 +358,7 @@
 					<div class="single-deal">
 						<div class="overlay"></div>
 						<img class="img-fluid w-100" src="img/category/c5.jpg" alt="">
-						<a href="img/category/c5.jpg" class="img-pop-up" target="_blank">
+						<a href="img/banner/popup.png" class="img-pop-up" target="_blank">
 							<div class="deal-details">
 								<h6 class="deal-title">Khuyến mãi</h6>
 							</div>
@@ -625,10 +660,10 @@
 				<div class="col-lg-6 no-padding exclusive-left">
 					<div class="row clock_sec clockdiv" id="clockdiv">
 						<div class="col-lg-12">
-							<h1>Đợt khuyến mãi chào hè sắp kết thúc!</h1>
-							<p>Nhanh chóng lựa chọn cho mình những đôi giày chất lượng nhất</p>
+							<h1>Đợt khuyến mãi 7/7 sắp tới!</h1>
+							<p>Đại tiệc giảm giá lớn nhất tháng 7!</p>
 						</div>
-						<div class="col-lg-12">
+						<!--<div class="col-lg-12">
 							<div class="row clock-wrap">
 								<div class="col clockinner1 clockinner">
 									<h1 class="days">15</h1>
@@ -647,9 +682,9 @@
 									<span class="smalltext">Secs</span>
 								</div>
 							</div>
-						</div>
+						</div>-->
 					</div>
-					<a href="category.html" class="primary-btn">Mua ngay</a>
+					<a href="khuyenmai.html" class="primary-btn">Mua ngay</a>
 				</div>
 				<div class="col-lg-6 no-padding exclusive-right">
 					<div class="active-exclusive-product-slider">
