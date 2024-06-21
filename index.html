@@ -70,26 +70,37 @@
 			padding: 20px;
 			border-radius: 10px;
 			position: relative;
-			max-width: 80%;
-			max-height: 90%;
+			max-width: 40%;
+			max-height: 100%;
 		}
 
 		/* Close button */
 		.close-btn {
 			position: absolute;
-			top: 5px;
-			right: 10px;
+			top: 1px;
+			right: 6px;
 			font-size: 24px;
 			cursor: pointer;
 		}
 
 		/* Popup Image */
 		.popup-content img {
-			max-width: 60%;
-			max-height: 60%;
+			max-width: 100%;
+			max-height: 100%;
 			display: block;
 			margin: 0 auto;
 		}
+		.clock-wrap {
+    		display: flex;
+    		justify-content: space-around;
+    		text-align: center;
+    		margin-top: 20px;
+		}
+
+		.clockinner {
+    		flex: 1;
+		}
+		
 	</style>
 </head>
 
@@ -98,11 +109,35 @@
 	<div id="popup" class="popup">
 		<div class="popup-content">
 			<span class="close-btn" id="close-btn">&times;</span>
-			<img src="img/nikenewcollection.jpg" alt="Product Image">
+			<img src="img/banner/popup.png" alt="Product Image">
+			<div class="row clock_sec clockdiv" id="clockdiv">
+				<div class="col-lg-12">
+					<div class="row clock-wrap">
+						<div class="col clockinner1 clockinner">
+							<h1 class="days">15</h1>
+							<span class="smalltext">Ngày</span>
+						</div>
+						<div class="col clockinner clockinner1">
+							<h1 class="hours">23</h1>
+							<span class="smalltext">Giờ</span>
+						</div>
+						<div class="col clockinner clockinner1">
+							<h1 class="minutes">47</h1>
+							<span class="smalltext">Phút</span>
+						</div>
+						<div class="col clockinner clockinner1">
+							<h1 class="seconds">59</h1>
+							<span class="smalltext">Giây</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
+	
 
 	<script src="js/popup.js"></script>
+	<script src="js/countdown.js"></script>
 
 
 	<!-- Start Header Area -->
@@ -127,9 +162,8 @@
 								 aria-expanded="false">Sản phẩm</a>
 								<ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link" href="category.html">Loại sản phẩm</a></li>
-									<li class="nav-item"><a class="nav-link" href="checkout.html">Thanh toán sản phẩm</a></li>
-									<li class="nav-item"><a class="nav-link" href="cart.html">Giỏ hàng</a></li>
-									<li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
+									<li class="nav-item"><a class="nav-link" href="khuyenmai.html">Sản phẩm khuyến mãi</a></li>
+
 								</ul>
 							</li>
 							
@@ -145,6 +179,7 @@
 									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
 								</ul>
 								
+							</li>
 							<li class="nav-item "><a class="nav-link" href="contact.html">Liên hệ</a></li>
 							<li class="nav-item submenu dropdown ">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -333,7 +368,7 @@
 					<div class="single-deal">
 						<div class="overlay"></div>
 						<img class="img-fluid w-100" src="img/category/c5.jpg" alt="">
-						<a href="img/category/c5.jpg" class="img-pop-up" target="_blank">
+						<a href="img/banner/popup.png" class="img-pop-up" target="_blank">
 							<div class="deal-details">
 								<h6 class="deal-title">Khuyến mãi</h6>
 							</div>
@@ -635,10 +670,10 @@
 				<div class="col-lg-6 no-padding exclusive-left">
 					<div class="row clock_sec clockdiv" id="clockdiv">
 						<div class="col-lg-12">
-							<h1>Đợt khuyến mãi chào hè sắp kết thúc!</h1>
-							<p>Nhanh chóng lựa chọn cho mình những đôi giày chất lượng nhất</p>
+							<h1>Đợt khuyến mãi 7/7 sắp tới!</h1>
+							<p>Đại tiệc giảm giá lớn nhất tháng 7!</p>
 						</div>
-						<div class="col-lg-12">
+						<!--<div class="col-lg-12">
 							<div class="row clock-wrap">
 								<div class="col clockinner1 clockinner">
 									<h1 class="days">15</h1>
@@ -657,9 +692,9 @@
 									<span class="smalltext">Secs</span>
 								</div>
 							</div>
-						</div>
+						</div>-->
 					</div>
-					<a href="category.html" class="primary-btn">Mua ngay</a>
+					<a href="khuyenmai.html" class="primary-btn">Mua ngay</a>
 				</div>
 				<div class="col-lg-6 no-padding exclusive-right">
 					<div class="active-exclusive-product-slider">
@@ -704,13 +739,13 @@
 	<section class="brand-area section_gap">
 		<div class="container">
 			<div class="row">
-				<a class="col single-img" href="#">
+				<a class="col single-img" href="https://www.nike.com/vn/">
 					<img class="img-fluid d-block mx-auto" src="img/brand/Nike.jpg" alt="">
 				</a>
-				<a class="col single-img" href="#">
+				<a class="col single-img" href="https://www.adidas.com.vn/vi?msclkid=5e54bb48678a1d5de3b1dd3dfb6792e8">
 					<img class="img-fluid d-block mx-auto" src="img/brand/Adidas.png" alt="">
 				</a>
-				<a class="col single-img" href="#">
+				<a class="col single-img" href="https://us.puma.com/us/en">
 					<img class="img-fluid d-block mx-auto" src="img/brand/Puma.jpg" alt="">
 				</a>
 			</div>
@@ -871,14 +906,14 @@
 					<div class="single-footer-widget mail-chimp">
 						<b class="mb-20">Bảng tin Instragram</b>
 						<ul class="instafeed d-flex flex-wrap">
-							<li><img src="img/i1.jpg" alt=""></li>
-							<li><img src="img/i2.jpg" alt=""></li>
-							<li><img src="img/i3.jpg" alt=""></li>
-							<li><img src="img/i4.jpg" alt=""></li>
-							<li><img src="img/i5.jpg" alt=""></li>
-							<li><img src="img/i6.jpg" alt=""></li>
-							<li><img src="img/i7.jpg" alt=""></li>
-							<li><img src="img/i8.jpg" alt=""></li>
+							<li><img src="img\category\9c4c9b96aa3357684fdfb4eea8070d4a.jpg" alt=""></li>
+							<li><img src="img\footer\copa_cream_1.jpg" alt=""></li>
+							<li><img src="img\footer\copa_cream_2.jpg" alt=""></li>
+							<li><img src="img\footer\copa_cream_3.jpg" alt=""></li>
+							<li><img src="img\footer\copa_red_1.jpg" alt=""></li>
+							<li><img src="img\footer\copa_red_2.jpg" alt=""></li>
+							<li><img src="img\footer\copa_red_3.jpg" alt=""></li>
+							<li><img src="img\footer\copa_white_1.jpg" alt=""></li>
 						</ul>
 					</div>
 				</div>

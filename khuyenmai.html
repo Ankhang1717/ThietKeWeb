@@ -29,12 +29,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
-<<<<<<< HEAD
-=======
-
->>>>>>> 3922feff1c9a76af04f9fbf13e181451d5c03e6d
 	
-
 	<style>
 		#product-container {
             display: flex;
@@ -46,68 +41,6 @@
             margin: 10px;
             box-sizing: border-box;
         }
-/* Reset default button styles for a cleaner look */
-button {
-	border: none;
-	margin: 0;
-	padding: 0;
-	background: none;
-	cursor: pointer;
-  }
-  
-  .filter-bar {
-	display: flex; /* Allow horizontal arrangement of sorting and search */
-	flex-wrap: wrap;
-	justify-content: space-between; /* Evenly distribute content horizontally */
-	align-items: center;
-	padding: 10px 20px; /* Add some padding for aesthetics */
-	background-color: #f5f5f5; /* Light background for better contrast */
-	border-radius: 4px; /* Subtle rounded corners */
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle drop shadow for depth */
-  }
-  
-  .sorting,
-  .search-bar {
-	display: flex;
-	align-items: center;
-  }
-  
-  .sorting select {
-	font: inherit; /* Inherit font styles from the base element */
-	padding: 5px 10px; /* Add some padding for better readability */
-	border: 1px solid #ccc; /* Light border for definition */
-	border-radius: 3px; /* Rounded corners for select element */
-	background-color: #fff; /* White background for better contrast */
-	cursor: pointer; /* Indicate interactivity on hover */
-  }
-  
-  .search-bar input[type="text"] {
-	font: inherit; /* Inherit font styles from the base element */
-	padding: 5px 10px; /* Consistent padding across elements */
-	border: 1px solid #ccc; /* Light border for definition */
-	border-radius: 3px; /* Rounded corners for text input */
-	background-color: #fff; /* White background for better contrast */
-	**width: 300px;** /* Set a specific width for the input */
-	/* OR */
-	flex: 1; /* Allow input to grow and fill available space */
-  }
-  
-  .search-bar button {
-	color: #fff; /* White text for better contrast */
-	background-color: #007bff; /* Blue button color */
-	padding: 5px 10px;
-	border: none;
-	border-radius: 3px; /* Consistent rounded corners */
-	cursor: pointer; /* Indicate interactivity on hover */
-	transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
-  }
-  
-  .search-bar button:hover {
-	background-color: #0069d9; /* Darken blue on hover */
-  }
-  
-		
-		
 	</style>
 
 	<link rel="stylesheet" href="css/gio.css">
@@ -138,15 +71,14 @@ button {
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
 									aria-haspopup="true" aria-expanded="false">Sản phẩm</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item active"><a class="nav-link" href="category.html">Loại sản phẩm</a></li>
-									<li class="nav-item"><a class="nav-link" href="khuyenmai.html">Sản phẩm khuyến mãi</a></li>
+									<li class="nav-item"><a class="nav-link" href="category.html">Loại sản phẩm</a></li>
+                                    <li class="nav-item active"><a class="nav-link" href="khuyenmai.html">Sản phẩm khuyến mãi</a></li>
 								</ul>
 							</li>
 
 							
 							<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
 	
-
 							<li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
 							<li class="nav-item submenu dropdown ">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -196,8 +128,8 @@ button {
 		<div class="row">
 			<div class="col-xl-3 col-lg-4 col-md-5">
 				<div class="sidebar-categories">
-					<div class="head">Loại sản phẩm</div>
-					<ul class="main-categories">
+					<div class="head">Các sản phẩm khuyến mãi</div>
+					<!-- <ul class="main-categories">
 						<li class="main-nav-list"><a data-toggle="collapse" href="#fruitsVegetable" aria-expanded="false" aria-controls="fruitsVegetable"><span
 								 class="lnr lnr-arrow-right"></span>Giày đá bóng<span class="number"></span></a>
 								 <ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
@@ -208,6 +140,12 @@ button {
 								</ul>
 
 						</li>
+						<script src="../js/brand-count.js"></script>
+
+						
+				
+						
+
 						<li class="main-nav-list"><a data-toggle="collapse" href="#meatFish" aria-expanded="false" aria-controls="meatFish"><span
 								 class="lnr lnr-arrow-right"></span>Giày chạy bộ<span class="number"></span></a>
 							<ul class="collapse" id="meatFish" data-toggle="collapse" aria-expanded="false" aria-controls="meatFish">
@@ -225,9 +163,9 @@ button {
 								<li class="main-nav-list child"><a href="loaisp/bongronike.html">Nike<span class="number" id="nike-basketball-count"></span></a></li>
 								<li class="main-nav-list child"><a href="loaisp/bongropuma.html">Puma<span class="number" id="puma-basketball-count"></span></a></li>
 							</ul>
+					   <script src="../js/brand-count.js"></script>
 				   </li>
-					</ul>
-					<script src="../js/brand-count.js"></script>
+					</ul> -->
 				</div>
 				<div class="sidebar-filter mt-50">
 					<div class="top-filter-head">Lọc sản phẩm</div>
@@ -285,7 +223,6 @@ button {
 				<!-- Start Filter Bar -->
 				<div class="filter-bar d-flex flex-wrap align-items-center">
 					<div class="sorting">
-						
 						<select id="sort-select">
 							<option value="default">Mặc định</option>
 							<option value="asc">Giá: Tăng dần</option>
@@ -300,108 +237,77 @@ button {
 				
 				<script>
 					document.addEventListener("DOMContentLoaded", function() {
-				
-						const products = document.querySelectorAll(".single-product");
-						const brandFilterForm = document.getElementById("brand-filter");
-						const pageLinks = document.querySelectorAll('.page-link');
-						const sortSelect = document.getElementById('sort-select');
 						const searchInput = document.getElementById('search-input');
 						const searchButton = document.getElementById('search-button');
-				
-						let filteredProducts = Array.from(products); // Initialize with all products
-						let currentSortOption = null;
+						const productContainer = document.getElementById('product-container');
+						const allProducts = Array.from(productContainer.querySelectorAll('.single-product'));
+						const prevPageButton = document.getElementById('prev-page');
+						const nextPageButton = document.getElementById('next-page');
+						const pageNumberSpan = document.getElementById('page-number');
+						
 						let currentPage = 1;
+						let filteredProducts = [];
 						const itemsPerPage = 6; // Adjust the number of items per page
-				
-						brandFilterForm.addEventListener("change", filterAndSearchProducts);
-						sortSelect.addEventListener('change', sortProducts);
-						searchButton.addEventListener('click', filterAndSearchProducts);
-				
-						pageLinks.forEach(link => {
-							link.addEventListener('click', paginate);
-						});
-				
-						function filterAndSearchProducts() {
-							const selectedBrand = document.querySelector('input[name="brand"]:checked')?.value;
-							const searchTerm = searchInput.value.trim().toLowerCase();
-				
-							filteredProducts = Array.from(products).filter(product => {
-								const brand = product.getAttribute('data-brand');
-								const productName = product.querySelector('h6').innerText.toLowerCase();
-								return (!selectedBrand || brand === selectedBrand) && productName.includes(searchTerm);
-							});
-				
-							currentPage = 1; // Reset to the first page on new search
-							sortProducts(); // Apply the current sort option if any
-							showPageProducts(currentPage); // Show the first page of search results
-						}
-				
-						function sortProducts() {
-							currentSortOption = sortSelect.value;
-				
-							filteredProducts.sort((a, b) => {
-								const priceA = parseInt(a.getAttribute('data-price'));
-								const priceB = parseInt(b.getAttribute('data-price'));
-				
-								if (currentSortOption === 'asc') {
-									return priceA - priceB;
-								} else if (currentSortOption === 'desc') {
-									return priceB - priceA;
-								} else {
-									return 0; // Default: no sorting
-								}
-							});
-				
-							// Update the filtered products after sorting
-							showPageProducts(currentPage); // Show the current page of sorted products
-						}
-				
-						function showPageProducts(page) {
-							const startIndex = (page - 1) * itemsPerPage;
-							const endIndex = startIndex + itemsPerPage;
-				
-							products.forEach(product => {
-								product.parentElement.style.display = 'none';
-							});
-				
-							for (let i = startIndex; i < endIndex && i < filteredProducts.length; i++) {
-								filteredProducts[i].parentElement.style.display = 'block';
-							}
-				
-							markCurrentPageActive(pageLinks[page - 1]); // Mark the current page as active
-							updatePaginationControls(page); // Update pagination controls
-						}
-				
-						function paginate(e) {
-							e.preventDefault();
-							const page = parseInt(this.textContent);
-							currentPage = page;
-							showPageProducts(currentPage); // Show the products for the selected page
-						}
-				
-						function markCurrentPageActive(currentLink) {
-							pageLinks.forEach(link => {
-								link.classList.remove('active');
-							});
-							currentLink.classList.add('active');
-						}
-				
-						function updatePaginationControls(page) {
+			
+						function renderProducts() {
+							// Clear the container
+							productContainer.innerHTML = '';
+			
+							// Calculate pagination
 							const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
-							pageLinks.forEach((link, index) => {
-								if (index < totalPages) {
-									link.style.display = 'inline-block';
-								} else {
-									link.style.display = 'none';
-								}
+							const startIndex = (currentPage - 1) * itemsPerPage;
+							const endIndex = startIndex + itemsPerPage;
+							const productsToShow = filteredProducts.slice(startIndex, endIndex);
+			
+							// Display products for the current page
+							productsToShow.forEach(product => {
+								const productClone = product.cloneNode(true);
+								productContainer.appendChild(productClone);
 							});
+			
+							// Update pagination controls
+							pageNumberSpan.innerText = currentPage;
+							prevPageButton.disabled = currentPage === 1;
+							nextPageButton.disabled = currentPage >= totalPages;
+			
+							// Ensure the container maintains its horizontal layout
+							productContainer.style.display = 'flex';
+							productContainer.style.flexWrap = 'wrap';
 						}
-				
-						// Initial display of products on the first page
-						showPageProducts(currentPage);
+			
+						function filterAndRenderProducts() {
+							const searchTerm = searchInput.value.trim().toLowerCase();
+							filteredProducts = allProducts.filter(product => {
+								const productName = product.querySelector('h6').innerText.toLowerCase();
+								return productName.includes(searchTerm);
+							});
+							currentPage = 1; // Reset to the first page on new search
+							renderProducts();
+						}
+			
+						searchButton.addEventListener('click', function() {
+							filterAndRenderProducts();
+						});
+			
+						prevPageButton.addEventListener('click', function() {
+							if (currentPage > 1) {
+								currentPage--;
+								renderProducts();
+							}
+						});
+			
+						nextPageButton.addEventListener('click', function() {
+							const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+							if (currentPage < totalPages) {
+								currentPage++;
+								renderProducts();
+							}
+						});
+			
+						// Initial render
+						renderProducts();
 					});
 				</script>
-				
 				
 				
 				<!-- End Filter Bar -->
@@ -410,86 +316,7 @@ button {
 				<section class="lattest-product-area pb-40 category-list">
 					<div id="product-list">
 					<div class="row" id ="product-container">
-						<!-- single product -->
-						<div class="col-lg-4 col-md-6">
-						
-							<div class="single-product" data-brand="nike" data-price="6000000" id ="football">
-							  <a href="chitietsp/single-product.html">
-								<img class="img-fluid" src="img/product/football/nike/tiempo/tiempo_pink_1.jpg" alt="">
-								<div class="product-details">
-								  <h6>NIKE TIEMPO LEGEND 10 ELITE FG Mad Brilliance</h6>
-								  <div class="price">
-									<h6>6.000.000 VND</h6>
-								  </div>
-								</a>
-								<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
-									<a href="" class="add-to-cart-btn">
-										<span class="ti-bag"></span>
-										<span class="btn-text">Thêm vào giỏ</span>
-									</a>
-								</div>
-							  </div>
-						
-						</div>
-						  </div>
-						<!-- single product -->
-						<div class="col-lg-4 col-md-6">
-							
-							<div class="single-product" data-brand="nike" data-price="4500000" id ="football">
-								<a href="chitietsp/tiempoxanh.html">
-								<img class="img-fluid" src="img/product/football/nike/tiempo/tiempo_green_1.jpg" alt="">
-								<div class="product-details">
-									<h6>Nike Tiempo Emerald Legend 10 Elite</h6>
-									<div class="price">
-										<h6>4.500.000 VND</h6>
-									</div>
-									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
-										<a href="" class="add-to-cart-btn">
-											<span class="ti-bag"></span>
-											<span class="btn-text">Thêm vào giỏ</span>
-										</a>
-									</div>
-								</div>
-							
-						</div>
-						</div>
-						<!-- single product -->
-						 
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="adidas" data-price="4000000" id ="football">
-								<img class="img-fluid" src="img/product/football/adidas/predator/pre_org_1.jpg" alt="">
-								<div class="product-details">
-									<h6>Adidas Predator Elite Tongue FG</h6>
-									<div class="price">
-										<h6>4.000.000 VND</h6>
-									</div>
-									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
-										<a href="" class="add-to-cart-btn">
-											<span class="ti-bag"></span>
-											<span class="btn-text">Thêm vào giỏ</span>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single product -->
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="nike" data-price="4500000" id ="football">
-								<img class="img-fluid" src="img/product/football/nike/mercurial/mer_pink_1.jpg" alt="">
-								<div class="product-details">
-									<h6>Nike Mercurial Vapor 15 Elite FG Mad Brilliance</h6>
-									<div class="price">
-										<h6>4.500.000 VND</h6>
-									</div>
-									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
-										<a href="" class="add-to-cart-btn">
-											<span class="ti-bag"></span>
-											<span class="btn-text">Thêm vào giỏ</span>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
+
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
 							<div class="single-product" data-brand="adidas" data-price="5500000" id ="football">
@@ -575,42 +402,6 @@ button {
 									<div class="price">
 										<h6>3.500.000 VND</h6>
 										<h6 class="l-through">5.000.000 VND</h6>
-									</div>
-									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
-										<a href="" class="add-to-cart-btn">
-											<span class="ti-bag"></span>
-											<span class="btn-text">Thêm vào giỏ</span>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single product -->
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="puma" data-price="2500000" id ="football">
-								<img class="img-fluid" src="img/product/football/puma/ultra/ultra_white_1.jpg" alt="">
-								<div class="product-details">
-									<h6>PUMA Ultra Ultimate FG Fire Orchid</h6>
-									<div class="price">
-										<h6>2.500.000 VND</h6>
-									</div>
-									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
-										<a href="" class="add-to-cart-btn">
-											<span class="ti-bag"></span>
-											<span class="btn-text">Thêm vào giỏ</span>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single product -->
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product" data-brand="puma" data-price="2500000" id ="football">
-								<img class="img-fluid" src="img/product/football/puma/king/king_blue_1.jpg" alt="">
-								<div class="product-details">
-									<h6>PUMA King Ultimate FG Silver Sky</h6>
-									<div class="price">
-										<h6>2.500.000 VND</h6>
 									</div>
 									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
 										<a href="" class="add-to-cart-btn">
@@ -1337,39 +1128,61 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     const products = document.querySelectorAll(".single-product");
     const brandFilterForm = document.getElementById("brand-filter");
     const pageLinks = document.querySelectorAll('.page-link');
-    let filteredProducts = Array.from(products); // Khởi tạo mảng với tất cả sản phẩm
+    const sortSelect = document.getElementById('sort-select');
+    let filteredProducts = Array.from(products); // Initialize with all products
+    let currentSortOption = null;
 
     brandFilterForm.addEventListener("change", filterProducts);
+    sortSelect.addEventListener('change', sortProducts);
 
     function filterProducts() {
         const selectedBrand = document.querySelector('input[name="brand"]:checked')?.value;
-        filteredProducts = []; // Làm mới mảng khi có sự thay đổi lựa chọn
+        filteredProducts = []; // Reset filtered products
 
         products.forEach(product => {
             const brand = product.getAttribute('data-brand');
             if (!selectedBrand || brand === selectedBrand) {
-                filteredProducts.push(product); // Thêm vào mảng sản phẩm đã lọc
+                filteredProducts.push(product);
             }
         });
 
-        showFirstPageProducts(); // Hiển thị các sản phẩm đã lọc trên trang đầu tiên
+        sortProducts(); // Apply the current sort option
+        showFirstPageProducts(); // Show the first page of filtered products
+    }
+
+    function sortProducts() {
+        currentSortOption = sortSelect.value;
+        filteredProducts.sort((a, b) => {
+            const priceA = parseInt(a.getAttribute('data-price'));
+            const priceB = parseInt(b.getAttribute('data-price'));
+
+            if (currentSortOption === 'asc') {
+                return priceA - priceB;
+            } else if (currentSortOption === 'desc') {
+                return priceB - priceA;
+            } else {
+                return 0; // Default: no sorting
+            }
+        });
+
+        showFirstPageProducts(); // Show the first page of sorted products
     }
 
     function showFirstPageProducts() {
         const itemsPerPage = 6;
-        // Ẩn tất cả các sản phẩm
+        // Hide all products
         products.forEach(product => {
             product.parentElement.style.display = 'none';
         });
 
-        // Hiển thị tối đa 6 sản phẩm đã lọc trên trang đầu tiên
+        // Show up to 6 products on the first page
         for (let i = 0; i < itemsPerPage; i++) {
             if (filteredProducts[i]) {
                 filteredProducts[i].parentElement.style.display = 'block';
             }
         }
 
-        markCurrentPageActive(pageLinks[0]); // Đánh dấu trang đầu tiên là active
+        markCurrentPageActive(pageLinks[0]); // Mark the first page as active
     }
 
     pageLinks.forEach(link => {
@@ -1382,19 +1195,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         const startIndex = (page - 1) * 6;
         const endIndex = startIndex + 6;
 
-        // Ẩn tất cả các sản phẩm
+        // Hide all products
         products.forEach(product => {
             product.parentElement.style.display = 'none';
         });
 
-        // Hiển thị các sản phẩm đã lọc ở trang tương ứng
+        // Show the filtered products for the current page
         for (let i = startIndex; i < endIndex; i++) {
             if (filteredProducts[i]) {
                 filteredProducts[i].parentElement.style.display = 'block';
             }
         }
 
-        markCurrentPageActive(this); // Đánh dấu trang hiện tại là active
+        markCurrentPageActive(this); // Mark the current page as active
     }
 
     function markCurrentPageActive(currentLink) {
@@ -1403,9 +1216,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         });
         currentLink.classList.add('active');
     }
-    showFirstPageProducts(); // Ban đầu hiển thị các sản phẩm trên trang đầu tiên
+
+    // Initial display of products on the first page
+    showFirstPageProducts();
 });
-	</script>	
+    </script>
 </body>
 
 </html>

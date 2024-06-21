@@ -142,47 +142,29 @@ background-color: #0069d9; /* Darken blue on hover */
 								 aria-expanded="false">Sản phẩm</a>
 								<ul class="dropdown-menu">
 									<li class="nav-item active"><a class="nav-link" href="../category.html">Loại sản phẩm</a></li>
-									<li class="nav-item"><a class="nav-link" href="../checkout.html">Thanh toán sản phẩm</a></li>
-									<li class="nav-item"><a class="nav-link" href="../cart.html">Giỏ hàng</a></li>
-									<li class="nav-item"><a class="nav-link" href="../confirmation.html">Confirmation</a></li>
+									<li class="nav-item"><a class="nav-link" href="../khuyenmai.html">Sản phẩm khuyến mãi</a></li>
+
 								</ul>
 							</li>
-						
-
-							<nav class="navbar navbar-expand-lg navbar-light">
-								<div class="container">
-									<!-- Other navigation items -->
-									<div class="collapse navbar-collapse">
-										<ul class="navbar-nav ml-auto">
-											<!-- Other nav items -->
-											<li class="nav-item">
-												<a href="../blog.html" class="nav-link">Blog</a>
-											</li>
-											<!-- Other nav items -->
-										</ul>
-									</div>
-								</div>
-							</nav>
-
 							
-							<li class="nav-item submenu dropdown">
+							<li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+	
+							</li>
+							<li class="nav-item "><a class="nav-link" href="../contact.html">Liên hệ</a></li>
+							<li class="nav-item submenu dropdown ">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Pages</a>
+								 aria-expanded="false">Giới thiệu</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="../login.html">Đăng nhập</a></li>
-									<li class="nav-item"><a class="nav-link" href="../tracking.html">Theo dõi đơn hàng</a></li>
-									<li class="nav-item"><a class="nav-link" href="../elements.html">Elements</a></li>
+									<li class="nav-item  "><a class="nav-link" href="../gioithieu.html">Giới thiệu</a></li>
+									<li class="nav-item"><a class="nav-link" href="../dichvu.html">Điều khoản dịch vụ</a></li>
+									<li class="nav-item"><a class="nav-link" href="../doitra.html">Chính sách đổi trả</a></li>
+									<li class="nav-item"><a class="nav-link" href="../baomat.html">Chính sách bảo mật</a></li>
+	
 								</ul>
 							</li>
-							<li class="nav-item"><a class="nav-link" href="../contact.html">Liên hệ</a></li>
-							<li class="nav-item"><a class="nav-link" href="../tuyendung/tuyendung.html">Tuyển dụng</a></li>
+							<li class="nav-item"><a class="nav-link" href="../tuyendung/tuyendung.html">Tuyển Dụng</a></li>
 						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
-							<li class="nav-item">
-								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
-							</li>
-						</ul>
+						
 					</div>
 				</div>
 			</nav>
@@ -753,14 +735,14 @@ background-color: #0069d9; /* Darken blue on hover */
 					<div class="single-footer-widget mail-chimp">
 						<b class="mb-20">Bảng tin Instragram</b>
 						<ul class="instafeed d-flex flex-wrap">
-							<li><img src="../img/i1.jpg" alt=""></li>
-							<li><img src="../img/i2.jpg" alt=""></li>
-							<li><img src="../img/i3.jpg" alt=""></li>
-							<li><img src="../img/i4.jpg" alt=""></li>
-							<li><img src="../img/i5.jpg" alt=""></li>
-							<li><img src="../img/i6.jpg" alt=""></li>
-							<li><img src="../img/i7.jpg" alt=""></li>
-							<li><img src="../img/i8.jpg" alt=""></li>
+							<li><img src="..\img\category\9c4c9b96aa3357684fdfb4eea8070d4a.jpg" alt=""></li>
+							<li><img src="..\img\footer\copa_cream_1.jpg" alt=""></li>
+							<li><img src="..\img\footer\copa_cream_2.jpg" alt=""></li>
+							<li><img src="..\img\footer\copa_cream_3.jpg" alt=""></li>
+							<li><img src="..\img\footer\copa_red_1.jpg" alt=""></li>
+							<li><img src="..\img\footer\copa_red_2.jpg" alt=""></li>
+							<li><img src="..\img\footer\copa_red_3.jpg" alt=""></li>
+							<li><img src="..\img\footer\copa_white_1.jpg" alt=""></li>
 						</ul>
 					</div>
 				</div>
@@ -870,172 +852,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="../js/main.js"></script>
 	
 	 </script>	
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-    const products = document.querySelectorAll(".single-product");
-    const brandFilterForm = document.getElementById("brand-filter");
-    const pageLinks = document.querySelectorAll('.page-link');
-    let filteredProducts = Array.from(products); // Khởi tạo mảng với tất cả sản phẩm
-
-    brandFilterForm.addEventListener("change", filterProducts);
-
-    function filterProducts() {
-        const selectedBrand = document.querySelector('input[name="brand"]:checked')?.value;
-        filteredProducts = []; // Làm mới mảng khi có sự thay đổi lựa chọn
-
-        products.forEach(product => {
-            const brand = product.getAttribute('data-brand');
-            if (!selectedBrand || brand === selectedBrand) {
-                filteredProducts.push(product); // Thêm vào mảng sản phẩm đã lọc
-            }
-        });
-
-        showFirstPageProducts(); // Hiển thị các sản phẩm đã lọc trên trang đầu tiên
-    }
-
-    function showFirstPageProducts() {
-        const itemsPerPage = 6;
-        // Ẩn tất cả các sản phẩm
-        products.forEach(product => {
-            product.parentElement.style.display = 'none';
-        });
-
-        // Hiển thị tối đa 6 sản phẩm đã lọc trên trang đầu tiên
-        for (let i = 0; i < itemsPerPage; i++) {
-            if (filteredProducts[i]) {
-                filteredProducts[i].parentElement.style.display = 'block';
-            }
-        }
-
-        markCurrentPageActive(pageLinks[0]); // Đánh dấu trang đầu tiên là active
-    }
-
-    pageLinks.forEach(link => {
-        link.addEventListener('click', paginate);
-    });
-
-    function paginate(e) {
-        e.preventDefault();
-        const page = parseInt(this.textContent);
-        const startIndex = (page - 1) * 6;
-        const endIndex = startIndex + 6;
-
-        // Ẩn tất cả các sản phẩm
-        products.forEach(product => {
-            product.parentElement.style.display = 'none';
-        });
-
-        // Hiển thị các sản phẩm đã lọc ở trang tương ứng
-        for (let i = startIndex; i < endIndex; i++) {
-            if (filteredProducts[i]) {
-                filteredProducts[i].parentElement.style.display = 'block';
-            }
-        }
-
-        markCurrentPageActive(this); // Đánh dấu trang hiện tại là active
-    }
-
-    function markCurrentPageActive(currentLink) {
-        pageLinks.forEach(link => {
-            link.classList.remove('active');
-        });
-        currentLink.classList.add('active');
-    }
-
-    showFirstPageProducts(); // Ban đầu hiển thị các sản phẩm trên trang đầu tiên
-});
-	</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-    var selectElement = document.getElementById('sort-select');
-
-    selectElement.addEventListener('change', function() {
-        var selectedOption = this.value;
-        sortProducts(selectedOption);
-    });
-
-    function sortProducts(option) {
-        var productList = document.getElementById('product-list');
-        var products = Array.from(productList.querySelectorAll('.single-product'));
-
-        products.sort(function(a, b) {
-            var priceA = parseInt(a.getAttribute('data-price'));
-            var priceB = parseInt(b.getAttribute('data-price'));
-
-            if (option === 'asc') {
-                return priceA - priceB;
-            } else if (option === 'desc') {
-                return priceB - priceA;
-            }
-        });
-
-        // Clear current product list
-        while (productList.firstChild) {
-            productList.removeChild(productList.firstChild);
-        }
-
-        // Append sorted products
-        products.forEach(function(product) {
-            productList.appendChild(product);
-        });
-
-        setupPagination(products);
-    }
-
-    function setupPagination(products) {
-        const productsPerPage = 6;
-        const totalPages = Math.ceil(products.length / productsPerPage);
-        const pagination = document.querySelector(".pagination");
-
-        // Clear previous pagination
-        pagination.querySelectorAll('.page-number').forEach(function(el) {
-            el.remove();
-        });
-
-        function showPage(page) {
-            products.forEach((product, index) => {
-                if (index >= (page - 1) * productsPerPage && index < page * productsPerPage) {
-                    product.style.display = "block";
-                } else {
-                    product.style.display = "none";
-                }
-            });
-        }
-
-        function createPagination() {
-            for (let i = 1; i <= totalPages; i++) {
-                const pageLink = document.createElement("a");
-                pageLink.href = "#";
-                pageLink.className = "page-number";
-                pageLink.textContent = i;
-                pageLink.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    document.querySelector(".page-number.active").classList.remove("active");
-                    pageLink.classList.add("active");
-                    showPage(i);
-                });
-                pagination.insertBefore(pageLink, pagination.querySelector(".next-arrow"));
-            }
-        }
-
-
-
-        // Set the first page as active and show products
-        if (totalPages > 0) {
-            showPage(1);
-            pagination.querySelector(".page-number").classList.add("active");
-        }
-        createPagination();
-    }
-
-    // Initialize pagination on page load
-    var products = Array.from(document.getElementById('product-list').querySelectorAll('.single-product'));
-    setupPagination(products);
-});
-
-
-</script>
+	 <script src="../js/giavaphantrang.js"></script>
 </body>
 
 </html>
