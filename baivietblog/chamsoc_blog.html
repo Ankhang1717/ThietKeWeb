@@ -526,7 +526,83 @@ body {
                         
                     </div>
                     
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            // Function to handle comment form submission
+                            var commentForm = document.getElementById('commentForm');
+                            commentForm.addEventListener('submit', function (event) {
+                                event.preventDefault();
                     
+                                // Collect form data
+                                var name = document.getElementById('name').value;
+                                var email = document.getElementById('email').value;
+                                var message = document.getElementById('message').value;
+                    
+                                // Create new comment element
+                                var newComment = document.createElement('div');
+                                newComment.classList.add('single-comment', 'justify-content-between', 'd-flex');
+                                newComment.innerHTML = `
+                                    <div class="user justify-content-between d-flex">
+                                        <div class="thumb">
+                                            <img src="../img/blog/default-avatar.jpg" alt="User Avatar">
+                                        </div>
+                                        <div class="desc">
+                                            <h5>${name}</h5>
+                                            <p class="date">${getCurrentDateTime()}</p>
+                                            <p class="comment">${message}</p>
+                                            <div class="reply-form" style="display: none;">
+                                                <form class="reply-form">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Nhập tên" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <textarea class="form-control" rows="3" placeholder="Nhập nội dung" required></textarea>
+                                                    </div>
+                                                    <div class="form-group text-center">
+                                                        <button type="submit" class="btn primary-btn">Gửi</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="reply-btn">
+                                                <a href="#" class="btn-reply text-uppercase">reply</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                    
+                                // Append new comment to comment list
+                                var commentList = document.querySelector('.comment-list');
+                                commentList.appendChild(newComment);
+                    
+                                // Reset form after submission
+                                commentForm.reset();
+                    
+                                // Event listener for reply button click (including for newly added comments)
+                                var replyButtons = newComment.querySelectorAll('.btn-reply');
+                                replyButtons.forEach(function (btn) {
+                                    btn.addEventListener('click', function (event) {
+                                        event.preventDefault();
+                    
+                                        // Toggle reply form display
+                                        var replyFormContainer = this.parentElement.nextElementSibling;
+                                        replyFormContainer.style.display = replyFormContainer.style.display === 'none' ? 'block' : 'none';
+                    
+                                        // If showing reply form, scroll to it
+                                        if (replyFormContainer.style.display === 'block') {
+                                            replyFormContainer.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                    });
+                                });
+                            });
+                    
+                            // Function to get current date and time formatted as desired
+                            function getCurrentDateTime() {
+                                var now = new Date();
+                                var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+                                return now.toLocaleDateString('en-US', options);
+                            }
+                        });
+                    </script>
                     <div class="comment-form">
                         <h4 class ="styled-title">Hãy Để Lại Bình Luận</h4>
                         <form>
@@ -562,7 +638,11 @@ body {
                             <div class="br"></div>
                         </aside>
                         
-                       
+                        
+                        
+                        
+                        
+                        
 
 
 
