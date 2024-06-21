@@ -30,6 +30,7 @@
 	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
     <link rel="stylesheet" href="../css/gio.css">
+	<link rel="stylesheet" href="../css/timkiem.css">
 	
 	<style>
              .slash {
@@ -55,65 +56,7 @@
 	margin: 10px;
 	box-sizing: border-box;
 }
-/* Reset default button styles for a cleaner look */
-button {
-border: none;
-margin: 0;
-padding: 0;
-background: none;
-cursor: pointer;
-}
 
-.filter-bar {
-display: flex; /* Allow horizontal arrangement of sorting and search */
-flex-wrap: wrap;
-justify-content: space-between; /* Evenly distribute content horizontally */
-align-items: center;
-padding: 10px 20px; /* Add some padding for aesthetics */
-background-color: #f5f5f5; /* Light background for better contrast */
-border-radius: 4px; /* Subtle rounded corners */
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle drop shadow for depth */
-}
-
-.sorting,
-.search-bar {
-display: flex;
-align-items: center;
-}
-
-.sorting select {
-font: inherit; /* Inherit font styles from the base element */
-padding: 5px 10px; /* Add some padding for better readability */
-border: 1px solid #ccc; /* Light border for definition */
-border-radius: 3px; /* Rounded corners for select element */
-background-color: #fff; /* White background for better contrast */
-cursor: pointer; /* Indicate interactivity on hover */
-}
-
-.search-bar input[type="text"] {
-font: inherit; /* Inherit font styles from the base element */
-padding: 5px 10px; /* Consistent padding across elements */
-border: 1px solid #ccc; /* Light border for definition */
-border-radius: 3px; /* Rounded corners for text input */
-background-color: #fff; /* White background for better contrast */
-**width: 300px;** /* Set a specific width for the input */
-/* OR */
-flex: 1; /* Allow input to grow and fill available space */
-}
-
-.search-bar button {
-color: #fff; /* White text for better contrast */
-background-color: #007bff; /* Blue button color */
-padding: 5px 10px;
-border: none;
-border-radius: 3px; /* Consistent rounded corners */
-cursor: pointer; /* Indicate interactivity on hover */
-transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
-}
-
-.search-bar button:hover {
-background-color: #0069d9; /* Darken blue on hover */
-}
 	</style>
 
 </head>
@@ -282,108 +225,8 @@ background-color: #0069d9; /* Darken blue on hover */
 					</div>
 				</div>
 				
-				<script>
-					document.addEventListener("DOMContentLoaded", function() {
+				<script src="../js/timkiem.js">
 				
-						const products = document.querySelectorAll(".single-product");
-						const brandFilterForm = document.getElementById("brand-filter");
-						const pageLinks = document.querySelectorAll('.page-link');
-						const sortSelect = document.getElementById('sort-select');
-						const searchInput = document.getElementById('search-input');
-						const searchButton = document.getElementById('search-button');
-				
-						let filteredProducts = Array.from(products); // Initialize with all products
-						let currentSortOption = null;
-						let currentPage = 1;
-						const itemsPerPage = 6; // Adjust the number of items per page
-				
-						brandFilterForm.addEventListener("change", filterAndSearchProducts);
-						sortSelect.addEventListener('change', sortProducts);
-						searchButton.addEventListener('click', filterAndSearchProducts);
-				
-						pageLinks.forEach(link => {
-							link.addEventListener('click', paginate);
-						});
-				
-						function filterAndSearchProducts() {
-							const selectedBrand = document.querySelector('input[name="brand"]:checked')?.value;
-							const searchTerm = searchInput.value.trim().toLowerCase();
-				
-							filteredProducts = Array.from(products).filter(product => {
-								const brand = product.getAttribute('data-brand');
-								const productName = product.querySelector('h6').innerText.toLowerCase();
-								return (!selectedBrand || brand === selectedBrand) && productName.includes(searchTerm);
-							});
-				
-							currentPage = 1; // Reset to the first page on new search
-							sortProducts(); // Apply the current sort option if any
-							showPageProducts(currentPage); // Show the first page of search results
-						}
-				
-						function sortProducts() {
-							currentSortOption = sortSelect.value;
-				
-							filteredProducts.sort((a, b) => {
-								const priceA = parseInt(a.getAttribute('data-price'));
-								const priceB = parseInt(b.getAttribute('data-price'));
-				
-								if (currentSortOption === 'asc') {
-									return priceA - priceB;
-								} else if (currentSortOption === 'desc') {
-									return priceB - priceA;
-								} else {
-									return 0; // Default: no sorting
-								}
-							});
-				
-							// Update the filtered products after sorting
-							showPageProducts(currentPage); // Show the current page of sorted products
-						}
-				
-						function showPageProducts(page) {
-							const startIndex = (page - 1) * itemsPerPage;
-							const endIndex = startIndex + itemsPerPage;
-				
-							products.forEach(product => {
-								product.parentElement.style.display = 'none';
-							});
-				
-							for (let i = startIndex; i < endIndex && i < filteredProducts.length; i++) {
-								filteredProducts[i].parentElement.style.display = 'block';
-							}
-				
-							markCurrentPageActive(pageLinks[page - 1]); // Mark the current page as active
-							updatePaginationControls(page); // Update pagination controls
-						}
-				
-						function paginate(e) {
-							e.preventDefault();
-							const page = parseInt(this.textContent);
-							currentPage = page;
-							showPageProducts(currentPage); // Show the products for the selected page
-						}
-				
-						function markCurrentPageActive(currentLink) {
-							pageLinks.forEach(link => {
-								link.classList.remove('active');
-							});
-							currentLink.classList.add('active');
-						}
-				
-						function updatePaginationControls(page) {
-							const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
-							pageLinks.forEach((link, index) => {
-								if (index < totalPages) {
-									link.style.display = 'inline-block';
-								} else {
-									link.style.display = 'none';
-								}
-							});
-						}
-				
-						// Initial display of products on the first page
-						showPageProducts(currentPage);
-					});
 				</script>
 				<!-- End Filter Bar -->
 				<!-- Start Best Seller -->
