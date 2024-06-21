@@ -24,10 +24,11 @@
 	<link rel="stylesheet" href="../css/owl.carousel.css">
 	<link rel="stylesheet" href="../css/font-awesome.min.css">
 	<link rel="stylesheet" href="../css/themify-icons.css">
-	<link rel="stylesheet" href="../css/nice-select.css">
+	<!-- <link rel="stylesheet" href="../css/nice-select.css"> -->
 	<link rel="stylesheet" href="../css/nouislider.min.css">
 	<link rel="stylesheet" href="../css/bootstrap.css">
 	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/gio.css">
 	
     <style>
             .slash {
@@ -163,7 +164,7 @@
 						</form>
                         <script src="../js/total-product.js"></script>
 					</div>
-					<div class="common-filter">
+					<!-- <div class="common-filter">
 						<div class="head">Màu sắc</div>
 						<form action="#">
 							<ul>
@@ -177,8 +178,8 @@
 								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Blue<span>(19)</span></label></li>
 							</ul>
 						</form>
-					</div>
-					<div class="common-filter">
+					</div> -->
+					<!-- <div class="common-filter">
 						<div class="head">Giá</div>
 						<div class="price-range-area">
 							<div id="price-range"></div>
@@ -191,7 +192,7 @@
 								<div id="upper-value"></div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<div class="col-xl-9 col-lg-8 col-md-7">
@@ -222,23 +223,10 @@
 										<h6>2.200.000 VND</h6>
 										<h6 class="l-through">2.900.000 VND</h6>
 									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info">
+									<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+										<a href="" class="add-to-cart-btn">
 											<span class="ti-bag"></span>
-											<p class="hover-text">add to bag</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Wishlist</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">view more</p>
+											<span class="btn-text">Thêm vào giỏ</span>
 										</a>
 									</div>
 								</div>
@@ -254,25 +242,12 @@
                                         <h6>2.400.000 VND</h6>
                                         <h6 class="l-through">3.000.000 VND</h6>
                                         </div>
-                                            <div class="prd-bottom">
-                        
-                                                <a href="" class="social-info">
-                                                    <span class="ti-bag"></span>
-                                                    <p class="hover-text">add to bag</p>
-                                                </a>
-                                                <a href="" class="social-info">
-                                                    <span class="lnr lnr-heart"></span>
-                                                    <p class="hover-text">Wishlist</p>
-                                                </a>
-                                                <a href="" class="social-info">
-                                                    <span class="lnr lnr-sync"></span>
-                                                    <p class="hover-text">compare</p>
-                                                </a>
-                                                <a href="" class="social-info">
-                                                    <span class="lnr lnr-move"></span>
-                                                    <p class="hover-text">view more</p>
-                                                </a>
-                                            </div>
+										<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+											<a href="" class="add-to-cart-btn">
+												<span class="ti-bag"></span>
+												<span class="btn-text">Thêm vào giỏ</span>
+											</a>
+										</div>
                                     </div>
                             </div>
                     </div>
@@ -286,25 +261,12 @@
                 <h6>1.900.000 VND</h6>
                 <h6 class="l-through">3.000.000 VND</h6>
             </div>
-            <div class="prd-bottom">
-
-                <a href="" class="social-info">
-                    <span class="ti-bag"></span>
-                    <p class="hover-text">add to bag</p>
-                </a>
-                <a href="" class="social-info">
-                    <span class="lnr lnr-heart"></span>
-                    <p class="hover-text">Wishlist</p>
-                </a>
-                <a href="" class="social-info">
-                    <span class="lnr lnr-sync"></span>
-                    <p class="hover-text">compare</p>
-                </a>
-                <a href="" class="social-info">
-                    <span class="lnr lnr-move"></span>
-                    <p class="hover-text">view more</p>
-                </a>
-            </div>
+			<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+				<a href="" class="add-to-cart-btn">
+					<span class="ti-bag"></span>
+					<span class="btn-text">Thêm vào giỏ</span>
+				</a>
+			</div>
         </div>
     </div>
 </div>
@@ -584,7 +546,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	 crossorigin="anonymous"></script>
 	<script src="../js/vendor/bootstrap.min.js"></script>
 	<script src="../js/jquery.ajaxchimp.min.js"></script>
-	<script src="../js/jquery.nice-select.min.js"></script>
+	<!-- <script src="../js/jquery.nice-select.min.js"></script> -->
 	<script src="../js/jquery.sticky.js"></script>
 	<script src="../js/nouislider.min.js"></script>
 	<script src="../js/jquery.magnific-popup.min.js"></script>
@@ -630,7 +592,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                 filteredProducts[i].parentElement.style.display = 'block';
             }
         }
-
         markCurrentPageActive(pageLinks[0]); // Đánh dấu trang đầu tiên là active
     }
 

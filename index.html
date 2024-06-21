@@ -30,6 +30,7 @@
 	<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="../css/gio.css">
 
 	<style>
 		.banner-content p {
@@ -70,13 +71,13 @@
 			border-radius: 10px;
 			position: relative;
 			max-width: 80%;
-			max-height: 80%;
+			max-height: 90%;
 		}
 
 		/* Close button */
 		.close-btn {
 			position: absolute;
-			top: 10px;
+			top: 5px;
 			right: 10px;
 			font-size: 24px;
 			cursor: pointer;
@@ -143,6 +144,8 @@
 									<li class="nav-item"><a class="nav-link" href="tracking.html">Theo dõi đơn hàng</a></li>
 									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
 								</ul>
+								<a href="blog.html" class="nav-link"
+									aria-haspopup="true" aria-expanded="false">Blog</a>
 							</li>
 							<li class="nav-item "><a class="nav-link" href="contact.html">Liên hệ</a></li>
 							<li class="nav-item submenu dropdown ">
@@ -156,7 +159,7 @@
 	
 								</ul>
 							</li>
-							<li class="nav-item"><a class="nav-link" href="tuyendung/tuyendung.html">Tuyển Dụng</a></li>
+							<li class="nav-item"><a class="nav-link" href="../tuyendung/tuyendung.html">Tuyển Dụng</a></li>
 						</ul>
 						
 					</div>
@@ -187,7 +190,7 @@
 										nên cơn sốt trên sân cỏ.</p>
 									<div class="add-bag d-flex align-items-center">
 										<a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
-										<span class="add-text text-uppercase">Add to Bag</span>
+										<span class="add-text text-uppercase">Thêm vào giỏ hàng</span>
 									</div>
 								</div>						
 							</div>
@@ -211,7 +214,7 @@
 										phối màu trắng - xanh - đỏ vô cùng nổi bật. </p>
 									<div class="add-bag d-flex align-items-center">
 										<a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
-										<span class="add-text text-uppercase">Add to Bag</span>
+										<span class="add-text text-uppercase">Thêm vào giỏ hàng</span>
 									</div>
 								</div>
 							</div>
@@ -371,23 +374,10 @@
 									<h6>4.500.000 VND</h6>
 									<h6 class="l-through">6.000.000 VND</h6>
 								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
+								<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+									<a href="" class="add-to-cart-btn">
 										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
+										<span class="btn-text">Thêm vào giỏ</span>
 									</a>
 								</div>
 							</div>
@@ -397,38 +387,29 @@
 					 
 					<div class="col-lg-4 col-md-6">
 						<div class="single-product" data-brand="adidas" data-price="4000000">
-							<img class="img-fluid" src="img/product/football/adidas/predator/pre_org_1.jpg" alt="">
+							<a href="chitietsp/tiempoxanh.html">
+							<img class="img-fluid"  src="img/product/football/adidas/predator/pre_org_1.jpg" alt="">
 							<div class="product-details">
 								<h6>Adidas Predator Elite Tongue FG</h6>
 								<div class="price">
 									<h6>4.000.000 VND</h6>
 									<h6 class="l-through">5.500.000 VND</h6>
 								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
+								<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+									<a href="" class="add-to-cart-btn">
 										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
+										<span class="btn-text">Thêm vào giỏ</span>
 									</a>
 								</div>
 							</div>
+						</a>
 						</div>
 					</div>
 					<!-- single product -->
 					<div class="col-lg-4 col-md-6">
+						
 						<div class="single-product" data-brand="nike" data-price="4500000">
+							<a href="chitietsp/tiempoxanh.html">
 							<img class="img-fluid" src="img/product/football/nike/mercurial/mer_pink_1.jpg" alt="">
 							<div class="product-details">
 								<h6>Nike Mercurial Vapor 15 Elite FG Mad Brilliance</h6>
@@ -436,31 +417,22 @@
 									<h6>4.500.000 VND</h6>
 									<h6 class="l-through">5.000.000 VND</h6>
 								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
+								<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+									<a href="" class="add-to-cart-btn">
 										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
+										<span class="btn-text">Thêm vào giỏ</span>
 									</a>
 								</div>
 							</div>
+						</a>
 						</div>
+					
 					</div>
 					<!-- single product -->
 					<div class="col-lg-4 col-md-6">
+						
 						<div class="single-product" data-brand="adidas" data-price="5500000">
+							<a href="chitietsp/tiempoxanh.html">
 							<img class="img-fluid" src="img/product/football/adidas/f50/f50_purple_1.jpg" alt="">
 							<div class="product-details">
 								<h6>Adidas F50 ELITE FIRM GROUND CLEATS</h6>
@@ -468,31 +440,20 @@
 									<h6>5.500.000 VND</h6>
 									<h6 class="l-through">6.000.000 VND</h6>
 								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
+								<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+									<a href="" class="add-to-cart-btn">
 										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
+										<span class="btn-text">Thêm vào giỏ</span>
 									</a>
 								</div>
 							</div>
+						</a>
 						</div>
 					</div>
 					<!-- single product -->
 					<div class="col-lg-4 col-md-6">
 						<div class="single-product" data-brand="nike" data-price="3500000">
+							<a href="chitietsp/tiempoxanh.html">
 							<img class="img-fluid" src="img/product/football/nike/phantom/gx2_grey_1.jpg" alt="">
 							<div class="product-details">
 								<h6>Nike Phantom GX2 Elite FG Rising Gem</h6>
@@ -500,31 +461,20 @@
 									<h6>3.500.000 VND</h6>
 									<h6 class="l-through">5.000.000 VND</h6>
 								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
+								<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+									<a href="" class="add-to-cart-btn">
 										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
+										<span class="btn-text">Thêm vào giỏ</span>
 									</a>
 								</div>
 							</div>
+						</a>
 						</div>
 					</div>
 					<!-- single product -->
 					<div class="col-lg-4 col-md-6">
 						<div class="single-product" data-brand="puma" data-price="5500000">
+							<a href="chitietsp/tiempoxanh.html">
 							<img class="img-fluid" src="img/product/football/puma/future/fut_white_1.jpg" alt="">
 							<div class="product-details">
 								<h6>PUMA Future 7 “NJR Creativity”</h6>
@@ -532,26 +482,14 @@
 									<h6>5.500.000 VND</h6>
 									<h6 class="l-through">6.000.000 VND</h6>
 								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
+								<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+									<a href="" class="add-to-cart-btn">
 										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
+										<span class="btn-text">Thêm vào giỏ</span>
 									</a>
 								</div>
 							</div>
+						</a>
 						</div>
 					</div>
 				</div>
@@ -581,23 +519,10 @@
 									<h6>4.500.000 VND</h6>
 									<h6 class="l-through">6.000.000 VND</h6>
 								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
+								<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+									<a href="" class="add-to-cart-btn">
 										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
+										<span class="btn-text">Thêm vào giỏ</span>
 									</a>
 								</div>
 							</div>
@@ -614,23 +539,10 @@
 									<h6>4.000.000 VND</h6>
 									<h6 class="l-through">5.500.000 VND</h6>
 								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
+								<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+									<a href="" class="add-to-cart-btn">
 										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
+										<span class="btn-text">Thêm vào giỏ</span>
 									</a>
 								</div>
 							</div>
@@ -646,23 +558,10 @@
 									<h6>4.500.000 VND</h6>
 									<h6 class="l-through">5.000.000 VND</h6>
 								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
+								<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+									<a href="" class="add-to-cart-btn">
 										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
+										<span class="btn-text">Thêm vào giỏ</span>
 									</a>
 								</div>
 							</div>
@@ -678,23 +577,10 @@
 									<h6>4.500.000 VND</h6>
 									<h6 class="l-through">5.000.000 VND</h6>
 								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
+								<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+									<a href="" class="add-to-cart-btn">
 										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
+										<span class="btn-text">Thêm vào giỏ</span>
 									</a>
 								</div>
 							</div>
@@ -710,23 +596,10 @@
 									<h6>4.500.000 VND</h6>
 									<h6 class="l-through">5.000.000 VND</h6>
 								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
+								<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+									<a href="" class="add-to-cart-btn">
 										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
+										<span class="btn-text">Thêm vào giỏ</span>
 									</a>
 								</div>
 							</div>
@@ -742,23 +615,10 @@
 									<h6>5.500.000 VND</h6>
 									<h6 class="l-through">6.000.000 VND</h6>
 								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
+								<div class="new-class-name"> <!-- Thay đổi tên lớp này thành lớp CSS mới -->
+									<a href="" class="add-to-cart-btn">
 										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
+										<span class="btn-text">Thêm vào giỏ</span>
 									</a>
 								</div>
 							</div>
