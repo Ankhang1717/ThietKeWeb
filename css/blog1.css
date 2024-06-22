@@ -1,0 +1,254 @@
+
+.hidden {
+    display: none;
+}
+/* Hiệu ứng hover cho blog_item */
+.blog_item {
+position: relative;
+overflow: hidden;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease;
+}
+
+.blog_item:hover {
+transform: translateY(-5px); /* Dịch chuyển lên trên khi hover */
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Tăng shadow khi hover */
+}
+
+.blog_item .blog_details {
+padding: 20px;
+background-color: #fff;
+}
+
+.blog_item img {
+width: 100%;
+height: auto;
+display: block;
+}
+
+.blog_details h2 {
+margin-top: 10px;
+margin-bottom: 15px;
+}
+
+.blog_details p {
+margin-bottom: 15px;
+}
+
+.white_bg_btn {
+display: inline-block;
+padding: 10px 20px;
+background-color: #fff;
+color: #333;
+border: 1px solid #333;
+text-decoration: none;
+border-radius: 5px;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.white_bg_btn:hover {
+background-color: #333;
+color: #fff;
+}
+
+/* Định dạng cho post_tag */
+.post_tag {
+margin-bottom: 10px;
+}
+
+.post_tag a {
+display: inline-block;
+padding: 5px 10px;
+background-color: #ffbf80; /* Màu cam nhạt */
+color: #fff; /* Màu chữ trắng */
+border-radius: 3px;
+margin-right: 5px;
+font-size: 14px;
+transition: background-color 0.3s ease, color 0.3s ease;
+text-decoration: none; /* Loại bỏ đường gạch chân mặc định của thẻ a */
+}
+
+
+.post_tag a:hover {
+background-color: #864f19;
+color: #fff;
+}
+
+.post_tag a.active {
+background-color: #333; 
+color: #fff; /* Màu chữ khi active */
+}
+
+.styled-title {
+    font-family: 'Roboto', sans-serif; /* Font đẹp từ Google Fonts */
+    font-size: 2.5em; /* Kích thước chữ lớn hơn để thu hút */
+    color: #333; /* Màu chữ đậm */
+    text-align: center; /* Căn giữa tiêu đề */
+    margin: 20px 0; /* Khoảng cách trên và dưới */
+    position: relative; /* Để tạo hiệu ứng đặc biệt */
+}
+
+
+
+.white_bg_btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.white_bg_btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.blog_details p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.page-item .active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+.pagination .page-item.active .page-link {
+    background-color: #007bff; /* Màu nền bạn muốn */
+    border-color: #007bff; /* Màu viền bạn muốn */
+    color: #fff; /* Màu chữ bạn muốn */
+}   
+
+
+
+
+    /* Hiệu ứng hover cho blog_item */
+.blog_item {
+position: relative;
+overflow: hidden;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease;
+}
+
+.blog_item:hover {
+transform: translateY(-5px); /* Dịch chuyển lên trên khi hover */
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Tăng shadow khi hover */
+}
+
+.blog_item .blog_details {
+padding: 20px;
+background-color: #fff;
+}
+
+.blog_item img {
+width: 100%;
+height: auto;
+display: block;
+}
+
+.blog_details h2 {
+margin-top: 10px;
+margin-bottom: 15px;
+}
+
+.blog_details p {
+margin-bottom: 15px;
+}
+
+.white_bg_btn {
+display: inline-block;
+padding: 10px 20px;
+background-color: #fff;
+color: #333;
+border: 1px solid #333;
+text-decoration: none;
+border-radius: 5px;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.white_bg_btn:hover {
+background-color: #333;
+color: #fff;
+}
+
+/* Định dạng cho post_tag */
+.post_tag {
+margin-bottom: 10px;
+}
+
+.post_tag a {
+display: inline-block;
+padding: 5px 10px;
+background-color: #ffbf80; /* Màu cam nhạt */
+color: #fff; /* Màu chữ trắng */
+border-radius: 3px;
+margin-right: 5px;
+font-size: 14px;
+transition: background-color 0.3s ease, color 0.3s ease;
+text-decoration: none; /* Loại bỏ đường gạch chân mặc định của thẻ a */
+}
+
+
+.post_tag a:hover {
+background-color: #864f19;
+color: #fff;
+}
+
+.post_tag a.active {
+background-color: #333; 
+color: #fff; /* Màu chữ khi active */
+}
+
+.styled-title {
+font-family: 'Roboto', sans-serif; /* Font đẹp từ Google Fonts */
+font-size: 2.5em; /* Kích thước chữ lớn hơn để thu hút */
+color: #333; /* Màu chữ đậm */
+text-align: center; /* Căn giữa tiêu đề */
+margin: 20px 0; /* Khoảng cách trên và dưới */
+position: relative; /* Để tạo hiệu ứng đặc biệt */
+}
+
+
+
+.white_bg_btn {
+display: inline-block;
+padding: 10px 20px;
+background-color: #fff;
+color: #333;
+border: 2px solid #333;
+text-decoration: none;
+font-weight: bold;
+transition: background-color 0.3s, color 0.3s;
+}
+
+.white_bg_btn:hover {
+background-color: #333;
+color: #fff;
+}
+
+.blog_details p {
+font-family: 'Arial', sans-serif;
+font-size: 1em;
+color: #666;
+line-height: 1.6;
+text-align: justify;
+}
+
+.page-item .active .page-link {
+background-color: #007bff;
+border-color: #007bff;
+color: white;
+}
+.pagination .page-item.active .page-link {
+background-color: #007bff; /* Màu nền bạn muốn */
+border-color: #007bff; /* Màu viền bạn muốn */
+color: #fff; /* Màu chữ bạn muốn */
+}        
