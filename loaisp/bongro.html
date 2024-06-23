@@ -31,35 +31,11 @@
 	<link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
     <link rel="stylesheet" href="../css/gio.css">
 	<link rel="stylesheet" href="../css/timkiem.css">
-	
+	<link rel="stylesheet" href="../css/loaisp.css">
 	<style>
-             .slash {
-        margin: 0px 10px; /* Điều chỉnh khoảng cách giữa dấu "/" và chữ "Sản phẩm" */
-    }
-	#product-list {
-    display: flex;
-    flex-wrap: wrap;
-		#product-container {
-            display: flex;
-            flex-wrap: wrap;
-        }
 
-        .single-product {
-            flex: 0 0 30%; /* Adjust the percentage to fit your layout needs */
-            margin: 10px;
-            box-sizing: border-box;
-        }
-
-  
 		
 		
-}
-
-.single-product {
-    flex: 1 1 calc(33.333% - 10px); /* Adjust this value to change the number of products per row */
-    margin: 5px;
-    display: none; /* Hide all products by default */
-}
 	</style>
 
 </head>
@@ -215,7 +191,6 @@
 				<!-- Start Filter Bar -->
 				<div class="filter-bar d-flex flex-wrap align-items-center">
 					<div class="sorting">
-						
 						<select id="sort-select">
 							<option value="default">Mặc định</option>
 							<option value="asc">Giá: Tăng dần</option>
@@ -226,10 +201,9 @@
 						<input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
 						<button id="search-button">Tìm kiếm</button>
 					</div>
+					<script src="../js/giavaphantrang.js"></script>
 				</div>
 				
-				<script src="../js/timkiem.js">
-				</script>
 				<!-- End Filter Bar -->
 				<!-- Start Best Seller -->
 				
@@ -702,7 +676,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="../js/main.js"></script>
 	
 	 </script>	
-	 <script src="../js/giavaphantrang.js"></script>
 </body>
 
 </html>
