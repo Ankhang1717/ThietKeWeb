@@ -1,81 +1,90 @@
 document.addEventListener("DOMContentLoaded", function() {
-				
-    const products = document.querySelectorAll(".single-product");
+    const productsContainer = document.querySelector(".products-container");
+    const products = Array.from(document.querySelectorAll(".single-product"));
     const brandFilterForm = document.getElementById("brand-filter");
+    const searchInput = document.getElementById("search-input");
+    const searchButton = document.getElementById("search-button");
     const pageLinks = document.querySelectorAll('.page-link');
-    const sortSelect = document.getElementById('sort-select');
-    const searchInput = document.getElementById('search-input');
-    const searchButton = document.getElementById('search-button');
-
-    let filteredProducts = Array.from(products); // Initialize with all products
-    let currentSortOption = null;
-    let currentPage = 1;
-    const itemsPerPage = 6; // Adjust the number of items per page
+    let filteredProducts = products; // Khởi tạo mảng với tất cả sản phẩm
 
     brandFilterForm.addEventListener("change", filterAndSearchProducts);
-    sortSelect.addEventListener('change', sortProducts);
     searchButton.addEventListener('click', filterAndSearchProducts);
-
-    pageLinks.forEach(link => {
-        link.addEventListener('click', paginate);
-    });
+    searchInput.addEventListener('input', filterAndSearchProducts);
 
     function filterAndSearchProducts() {
         const selectedBrand = document.querySelector('input[name="brand"]:checked')?.value;
         const searchTerm = searchInput.value.trim().toLowerCase();
 
-        filteredProducts = Array.from(products).filter(product => {
+        // Lọc sản phẩm dựa trên thương hiệu và từ khóa tìm kiếm
+        filteredProducts = products.filter(product => {
             const brand = product.getAttribute('data-brand');
-            const productName = product.querySelector('h6').innerText.toLowerCase();
-            return (!selectedBrand || brand === selectedBrand) && productName.includes(searchTerm);
+            const title = product.querySelector('h6').textContent.toLowerCase();
+            const matchesBrand = !selectedBrand || brand === selectedBrand;
+            const matchesSearch = title.includes(searchTerm);
+            return matchesBrand && matchesSearch;
         });
 
-        currentPage = 1; // Reset to the first page on new search
-        sortProducts(); // Apply the current sort option if any
-        showPageProducts(currentPage); // Show the first page of search results
+        // Hiển thị sản phẩm đã lọc và cập nhật phân trang
+        showFirstPageProducts();
+        updatePagination();
     }
 
-    function sortProducts() {
-        currentSortOption = sortSelect.value;
-
-        filteredProducts.sort((a, b) => {
-            const priceA = parseInt(a.getAttribute('data-price'));
-            const priceB = parseInt(b.getAttribute('data-price'));
-
-            if (currentSortOption === 'asc') {
-                return priceA - priceB;
-            } else if (currentSortOption === 'desc') {
-                return priceB - priceA;
-            } else {
-                return 0; // Default: no sorting
-            }
-        });
-
-        // Update the filtered products after sorting
-        showPageProducts(currentPage); // Show the current page of sorted products
-    }
-
-    function showPageProducts(page) {
-        const startIndex = (page - 1) * itemsPerPage;
-        const endIndex = startIndex + itemsPerPage;
-
+    function clearProducts() {
         products.forEach(product => {
             product.parentElement.style.display = 'none';
         });
+    }
 
-        for (let i = startIndex; i < endIndex && i < filteredProducts.length; i++) {
-            filteredProducts[i].parentElement.style.display = 'block';
+    function showFirstPageProducts() {
+        const itemsPerPage = 6;
+        clearProducts(); // Ẩn tất cả các sản phẩm trước khi hiển thị các sản phẩm đã lọc
+
+        // Hiển thị tối đa 6 sản phẩm đã lọc trên trang đầu tiên
+        for (let i = 0; i < itemsPerPage; i++) {
+            if (filteredProducts[i]) {
+                filteredProducts[i].parentElement.style.display = 'block';
+            }
         }
 
-        markCurrentPageActive(pageLinks[page - 1]); // Mark the current page as active
-        updatePaginationControls(page); // Update pagination controls
+        markCurrentPageActive(pageLinks[0]); // Đánh dấu trang đầu tiên là active
     }
+
+    pageLinks.forEach(link => {
+        link.addEventListener('click', paginate);
+    });
 
     function paginate(e) {
         e.preventDefault();
         const page = parseInt(this.textContent);
-        currentPage = page;
-        showPageProducts(currentPage); // Show the products for the selected page
+        const startIndex = (page - 1) * 6;
+        const endIndex = startIndex + 6;
+
+        clearProducts(); // Ẩn tất cả các sản phẩm trước khi hiển thị các sản phẩm đã lọc ở trang tương ứng
+
+        // Hiển thị các sản phẩm đã lọc ở trang tương ứng
+        for (let i = startIndex; i < endIndex; i++) {
+            if (filteredProducts[i]) {
+                filteredProducts[i].parentElement.style.display = 'block';
+            }
+        }
+
+        markCurrentPageActive(this); // Đánh dấu trang hiện tại là active
+    }
+
+    function updatePagination() {
+        // Ẩn tất cả các liên kết trang
+        pageLinks.forEach(link => {
+            link.style.display = 'none';
+        });
+
+        // Hiển thị các sản phẩm đã được hiển thị và đánh dấu lại phân trang
+        const totalPages = Math.ceil(filteredProducts.length / 6);
+        for (let i = 0; i < totalPages; i++) {
+            pageLinks[i].style.display = 'inline-block';
+        }
+
+        // Đánh dấu lại trang đầu tiên là active
+        markCurrentPageActive(pageLinks[0]);
     }
 
     function markCurrentPageActive(currentLink) {
@@ -85,17 +94,6 @@ document.addEventListener("DOMContentLoaded", function() {
         currentLink.classList.add('active');
     }
 
-    function updatePaginationControls(page) {
-        const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
-        pageLinks.forEach((link, index) => {
-            if (index < totalPages) {
-                link.style.display = 'inline-block';
-            } else {
-                link.style.display = 'none';
-            }
-        });
-    }
-
-    // Initial display of products on the first page
-    showPageProducts(currentPage);
+    // Ban đầu hiển thị các sản phẩm trên trang đầu tiên và cập nhật phân trang
+    filterAndSearchProducts();
 });

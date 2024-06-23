@@ -29,8 +29,65 @@
 	<link rel="stylesheet" href="../css/bootstrap.css">
 	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="../css/chitietblog.css">
+    <link rel="stylesheet" href="../css/vanban.css">
 
-  
+
+  <style>
+
+    
+     /* Thêm một số CSS cơ bản cho giao diện */
+     .comments-area, .comment-form {
+        margin: 20px;
+    }
+    .styled-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .single-comment {
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+    }
+    .thumb img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    .desc {
+        margin-left: 10px;
+    }
+    .desc h5 {
+        margin: 0;
+    }
+    .desc .date {
+        font-size: 12px;
+        color: gray;
+    }
+    .reply-btn {
+        margin-left: auto;
+    }
+    .reply-btn a {
+        color: blue;
+        cursor: pointer;
+    }
+    .form-group {
+        margin-bottom: 10px;
+    }
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .primary-btn {
+        padding: 10px 20px;
+        background-color: blue;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+
+    
+  </style>
 </head>
 
 <body>
@@ -85,10 +142,6 @@
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="../tuyendung/tuyendung.html">Tuyển Dụng</a></li>
-
-
-
-
                     </ul>
                     
                 </div>
@@ -116,7 +169,7 @@
     </section>
 
     <!--================Blog Area =================-->
-    <section class="blog_area single-post-area section_gap">
+    <section class="blog_area single-post-area section_gap ">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 posts-list">
@@ -133,7 +186,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-9 col-md-9 blog_details">
+                        <div class="col-lg-9 col-md-9 blog_details ">
                             <h2 class = "styled-title">Bí kíp chăm sóc giày đúng cách</h2>
                             <p class="excert">
                                 Cách chăm sóc giày luôn là một quá trình quan trọng quyết định giúp đôi giày của bạn có sạch hay không, cùng với đó là những nguyên nhân khiến cho đôi giày của bạn bị cũ đi, và các bước giặt giày toàn diện đúng cách cho đôi giày bạn luôn như mới… Tất cả những thông tin trên sẽ được Minhshop giải đáp hoàn toàn trong bài viết dưới đây ‘Cách chăm sóc giày đúng cách đẹp như mới' để giúp bạn luôn giữ đôi giày của bạn luôn được bền đẹp như mới.                         <p>                            </p>
@@ -161,7 +214,7 @@
                                 <div class="col-6">
                                     <img class="img-fluid" src="../img/blog/minhblog2.jpg" alt="">
                                 </div>
-                                <div class="col-lg-12 mt-25">
+                                <div class="col-lg-12 mt-25 ">
                                     <p><strong>1.3. Sử dụng quá mức
                                     </strong></p>
                                     <p>
@@ -203,7 +256,6 @@
                         <button class="back-button" onclick="showModal()">Quay về trang chủ</button>
                     </div>
                     
-                
                     <div id="confirmationModal" class="modal">
                         <div class="modal-content">
                             <div class="modal-header">Thông báo</div>
@@ -213,40 +265,22 @@
                                 <button class="cancel" onclick="closeModal()">Không</button>
                             </div>
                         </div>
-
-
                     </div>
                 
 
 
 
 
+                    
                     <div class="comments-area">
                         <h4 class = "styled-title">Bình Luận </h4>
                         <div class="comment-list">
                             <div class="single-comment justify-content-between d-flex">
-                                <div class="user justify-content-between d-flex">
-                                    <div class="thumb">
-                                        <img src="../img/blog/c1.jpg" alt="">
-                                    </div>
-                                    <div class="desc ">
-                                        <h5><a href="#">Phi Yến</a></h5>
-                                        <p class="date">05/07/2024  3:12 pm </p>
-                                        <p class="comment">
-                                            Hay!
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="reply-btn">
-                                    <a href="" class="btn-reply text-uppercase">reply</a>
-                                </div>
                             </div>
                         </div>
-                       
-                        
                     </div>
                     
-        
+                    
                     <div class="comment-form">
                         <h4 class ="styled-title">Hãy Để Lại Bình Luận</h4>
                         <form>
@@ -267,7 +301,46 @@
                             </div>
                         </form>
                     </div>
+
+                    <Script>
+                        const commentForm = document.getElementById('comment-form');
+    const commentList = document.querySelector('.comment-list');
+    const submitBtn = document.getElementById('submit-btn');
+    
+    commentForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+    
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+    
+      // Validate inputs (optional but recommended)
+      if (name === '' || email === '' || message === '') {
+        alert('Vui lòng nhập đầy đủ thông tin!');
+        return;
+      }
+    
+      // Create a new comment element dynamically
+      const newComment = document.createElement('div');
+      newComment.classList.add('single-comment', 'justify-content-between', 'd-flex');
+      newComment.innerHTML = `
+        <p><b>${name}</b> - ${email}</p>
+        <p>${message}</p>
+      `;
+    
+      // Append the new comment to the comment list
+      commentList.appendChild(newComment);
+    
+      // Clear the form for new comments
+      commentForm.reset();
+    });
+    
+                    </Script>
+
                 </div>
+
+               
+                
                
                 
                 <div class="col-lg-4">
@@ -283,10 +356,6 @@
                         </aside>
                         
                         
-                        
-                        
-                        
-                        
 
 
 
@@ -295,7 +364,7 @@
                             <div class="br"></div>
                         </aside>
 
-
+                        
                         
                         <aside class="single-sidebar-widget newsletter_widget">
                             <h4 class="widget_title styled-title"> EMAIL CỦA BẠN</h4>
@@ -314,6 +383,7 @@
                             </div>
                             <div class="br"></div>
                         </aside>
+                        
                         
                        
                     </div>
